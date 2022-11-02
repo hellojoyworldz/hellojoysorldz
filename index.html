@@ -1,35 +1,38 @@
 <!DOCTYPE html>
-<html lang="ko" class="skrollr skrollr-desktop">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8"><!-- //문자가 인코딩되는 방식 명시적으로 선언 EUC-KR:완성형 김 나 라, UTF-8:조합형 ㄱ ㅣ ㅁ ㄴ ㅏ ㄹ -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"> <!-- //인터넷 익스플로러가 항상 최신 버전의 레아아웃 엔진을 사용하여 문서를 랜더링 -->
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="author" content="제작자">
+    <meta name="description" content="설명">
+    <meta name="keywords" content="키워드">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <title>G.SUNAH PORTFOLIO</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/common.css">
     <link rel="stylesheet" href="./assets/css/global.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/form.css">
     <link rel="stylesheet" href="./assets/css/respond.css">
 </head>
+
 <body class="body">
-
-    <div class="customCursor _customCursor"></div>
-    <!--cursor-->
-
     <div class="skipToMain">
         <a href="#nav">전체메뉴 바로가기</a>
         <a href="#main">메인으로 바로가기</a>
         <a href="#footer">하단정보로 바로가기</a>
     </div>
     <!--skipToMain-->
-    
+
+    <button class="goTop _goTop" type="button">TOP</button>
+    <button class="goDown  _goDown" type="button">🔽</button>
+
     <header id="header" class="header">
         <h1 class="headerLogo">
             <a class="headerLogo__link" href="./index.html">
                 <span class="headerLogo__icon">
-                    <span class="mouth"></span>
+                    <span class="mouth js-mouth"></span>
                 </span>
                 <span class="headerLogo__text">FE<br/>DEVELOPER</span>
             </a>
@@ -38,15 +41,15 @@
         <div class="scrollGage">
             <span class="screenHide">현재 위치</span>
             <span class="scrollGage__percent"></span>
-            <!--
-            <span class="scrollGage__bar"></span>-->
+            <!--<span class="scrollGage__bar"></span>-->
             <span class="scrollGage__position"></span>
+            
         </div>
 
         <nav id="nav" class="nav">
             <button class="nav__btn--open " type="button"><span class="screenHide">전체메뉴보기</span></button>
             <div id="gnb" class="gnb">
-                <ul class="gnb__list">
+                <ul clas="gnb__list">
                     <li class="gnb__item">
                         <a class="gnb__link" href=""></a>
                     </li>
@@ -56,430 +59,393 @@
         </nav>
     </header>
     <!---header-->
-    
-    <main id="main" class="js-container">
-        <section class="visual">
-            <div class="visual__tit">
-                <h2>G.SUNAH<br/>PORTFOLIO</h2>
-                <span class="visual__tit-move">HELLO, WORLD!</span>
-            </div>
 
-            <div class="visual__sbj">
-                <div class="visual__sbj-move _visSbjMove" data-text="I'M FRONTEND DEVELOPER">
-                    <span>I'M FRONTEND DEVELOPER</span>
-                    <span>I'M FRONTEND DEVELOPER</span>
-                    <span>I'M FRONTEND DEVELOPER</span>
-                    <span>I'M FRONTEND DEVELOPER</span>
-                </div>
-            </div>
-
-            <div class="visual__emoji">
-                <div class="visual__emojiBg">
-                    <span class="bg01"><img src="./assets/img/visual__emojiBg01.svg" alt=""></span>
-                    <span class="bg02"><img src="./assets/img/visual__emojiBg02.svg" alt=""></span>
-                    <span class="bg03"><img src="./assets/img/visual__emojiBg03.svg" alt=""></span>
-                    <span class="bg04"><img src="./assets/img/visual__emojiBg04.svg" alt=""></span>
-                    <span class="bg05"><img src="./assets/img/visual__emojiBg05.svg" alt=""></span>
-                    <span class="bg06"><img src="./assets/img/visual__emojiBg06.svg" alt=""></span>
+    <div class="js-container">
+        <main id="main">
+            <section class="visual" data-bgcolor="#fff">
+                <div class="visual__tit">
+                    <h2>G.SUNAH<br/>PORTFOLIO</h2>
+                    <span class="visual__tit--move">HELLO, WORLD!</span>
                 </div>
 
-                <div class="visual__emojiCircle">
-                    <span class="circle01"><img src="./assets/img/visual__emojiCircle01.svg" alt=""></span>
-                    <span class="circle02"><img src="./assets/img/visual__emojiCircle02.svg" alt=""></span>
-                    <span class="circle03"><img src="./assets/img/visual__emojiCircle03.svg" alt=""></span>
-                    <span class="circle04"><img src="./assets/img/visual__emojiCircle04.svg" alt=""></span>
-                    <span class="circle05"><img src="./assets/img/visual__emojiCircle05.svg" alt=""></span>
-                    <span class="circle06"><img src="./assets/img/visual__emojiCircle06.svg" alt=""></span>
-                </div>
-
-                <div class="visual__emojiItem">
-                    <span class="item01"><img srcset="./assets/img/visual__emojiItem01.svg 2x" src="./assets/img/visual__emojiItem01.svg" alt=""></span>
-                    <span class="item02"><img src="./assets/img/visual__emojiItem02.svg" alt=""></span>
-                    <span class="item03"><img src="./assets/img/visual__emojiItem03.svg" alt=""></span>
-                    <span class="item04"><img src="./assets/img/visual__emojiItem04.svg" alt=""></span>
-                    <span class="item05"><img src="./assets/img/visual__emojiItem05.svg" alt=""></span>
-                    <span class="item06"><img src="./assets/img/visual__emojiItem06.svg" alt=""></span>
-                    <span class="item07"><img src="./assets/img/visual__emojiItem07.svg" alt=""></span>
-                    <span class="item08"><img src="./assets/img/visual__emojiItem08.svg" alt=""></span>
-                    <span class="item09"><img src="./assets/img/visual__emojiItem09.svg" alt=""></span>
-                </div>
-            </div>
-        </section>
-        <!-- //visual -->
-
-        <section class="mainCate">
-            <h2>Plan and<br/>orgnize<br/><span class="highlight">anything</span></h2>
-            <div class="mainCate__listWrap">
-                <div class="mainCate__list">
-                    <ul class="list">
-                        <li class="list__item" >
-                            <strong class="list__tit">Blog</strong>
-                            <span class="list__icon"><img src="./assets/img/mainCate__itemIcon01.svg" alt=""></span>
-                            <picture class="list__img"><img srcset="./assets/img/mainCate__itemBg01@2.jpg 2x" src="./assets/img/mainCate__itemBg01.jpg" alt=""></picture>
-                        </li>
-                        <li class="list__item">
-                            <strong class="list__tit">JavaScript &<br/>CSS Animation</strong>
-                            <span class="list__icon"><img src="./assets/img/mainCate__itemIcon02.svg" alt=""></span>
-                            <picture class="list__img"><img srcset="./assets/img/mainCate__itemBg02@2.jpg 2x" src="./assets/img/mainCate__itemBg02.jpg" alt=""></picture>
-                        </li>
-                        <li class="list__item">
-                            <strong class="list__tit">Work<br/>Projects</strong>
-                            <span class="list__icon"><img src="./assets/img/mainCate__itemIcon03.svg" alt=""></span>
-                            <picture class="list__img"><img srcset="./assets/img/mainCate__itemBg03@2.jpg 2x" src="./assets/img/mainCate__itemBg03.jpg" alt=""></picture>
-                        </li>
-                        <li class="list__item">
-                            <strong class="list__tit">Website<br/>Portfolio</strong>
-                            <span class="list__icon"><img src="./assets/img/mainCate__itemIcon04.svg" alt=""></span>
-                            <picture class="list__img"><img srcset="./assets/img/mainCate__itemBg04@2.jpg 2x" src="./assets/img/mainCate__itemBg04.jpg" alt=""></picture>
-                        </li>
-                        <li class="list__item">
-                            <strong class="list__tit">Contact Me</strong>
-                            <span class="list__icon"><img src="./assets/img/mainCate__itemIcon05.svg" alt=""></span>
-                            <picture class="list__img"><img srcset="./assets/img/mainCate__itemBg05@2.jpg 2x" src="./assets/img/mainCate__itemBg05.jpg" alt=""></picture>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <!-- //mainCate-->
-
-        <section class="mainWork">
-            <h2 class="mainWork__tit">Hello,<br/><span class="highlight">Work</span> Projects</h2> 
-            <ul class="list">
-                <li class="list__item">
-                    <strong class="list__tit">
-                        <span>PROJECT NAME - 프로젝트 타이틀 제목입니다</span>
-                        <span>( VERSION - DESKTOP · MOBILE )</span>
-                        <span><a href="">URL - https://www.naver.com</a></span>
-                    </strong>
-                    
-	                <picture class="list__thumb" data-1890="width: 0%; margin: 0 0 0 auto;" data-2980="width:100%;" data-3727="width: 0%;">
-                        <img srcset="./assets/img/mainWork__item01@2.jpg 2x" src="./assets/img/mainWork__item01.jpg" alt="">
-                    </picture>
-                
-                </li>
-                <li class="list__item">
-                    <strong class="list__tit">
-                        <span>PROJECT NAME - 프로젝트 타이틀 제목입니다2</span>
-                        <span>( VERSION - DESKTOP · MOBILE )</span>
-                        <span><a href="">URL - https://www.naver.com</a></span>
-                    </strong>
-                    
-	                <picture class="list__thumb" data-2980="width:0%; margin: 0 auto 0 0 ;" data-3290="width: 100%;" data-3780="width: 0%;">
-                        <img srcset="./assets/img/mainWork__item02@2.jpg 2x" src="./assets/img/mainWork__item02.jpg" alt="">
-                    </picture>
-                    
-                </li>
-                <li class="list__item">
-                    <strong class="list__tit">
-                        <span>PROJECT NAME - 프로젝트 타이틀 제목입니다33333</span>
-                        <span>( VERSION - DESKTOP · MOBILE )</span>
-                        <span><a href="">URL - https://www.naver.com</a></span>
-                    </strong>
-                    
-	                <picture class="list__thumb" data-3170="width: 0%;margin: 0 0 0 auto" data-3500="width: 100%;" data-4000="width: 0%" >
-                        <img srcset="./assets/img/mainWork__item01@2.jpg 2x" src="./assets/img/mainWork__item01.jpg" alt="">
-                    </picture>
-                    
-                </li>
-                <li class="list__item">
-                    <strong class="list__tit">
-                        <span>PROJECT NAME - 프로젝트 타이틀 제목입니다4444</span>
-                        <span>( VERSION - DESKTOP · MOBILE )</span>
-                        <span><a href="">URL - https://www.naver.com</a></span>
-                    </strong>
-                    
-	                <picture class="list__thumb" data-3360="width: 0%; margin: 0 auto 0 0;" data-3700="width: 100%;" >
-                        <img srcset="./assets/img/mainWork__item02@2.jpg 2x" src="./assets/img/mainWork__item02.jpg" alt="">
-                    </picture>
-                    
-                </li>
-            </ul>
-        </section>
-        <!-- //mainWork-->
-
-        <section class="mainSite row_scroll">
-            <h2 class="mainSite__tit">Hello,<br/>Website Porfolio</h2>
-            <div class="scrollWrap">
-                <div class="list blank_page">
-                    <div class="list__item">
-                        <div class="list__contents">
-                            <ul class="list__desc">
-                                <li><strong class="list__sbj">Name</strong><span>카드게임</span></li>
-                                <li><strong class="list__sbj">Date</strong><span>카드게임</span></li>
-                                <li><strong class="list__sbj">Program</strong><span>카드게임</span></li>
-                                <li><strong class="list__sbj">Role</strong><span>카드게임</span></li>
-                                <li>
-                                    <strong class="list__sbj">Description</strong>
-                                    <p>
-                                        다양한 디바이스의 대응하여 화면
-                                        크기에 따라 반응하도록 작업한
-                                        반응형 사이트 입니다 미디어쿼리를
-                                        이용하여 레이아웃의 배치와 
-                                        디자인을 다르게 하였고
-                                        CSS애니메이션을 이용한
-                                        마우스오버 애니메이션
-                                        효과를 볼수 있습니다.
-                                    </p>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="list__thumb">
-                            <img class="list__img" src="./assets/img/mainSite__img01.jpg" alt="">
-                        </div>
+                <div class="visual__sbj">
+                    <div class="visual__sbj-move js-marquee" data-text="I'M FRONTEND DEVELOPER">
+                        <span>I'M FRONTEND DEVELOPER</span>
+                        <span>I'M FRONTEND DEVELOPER</span>
+                        <span>I'M FRONTEND DEVELOPER</span>
+                        <span>I'M FRONTEND DEVELOPER</span>
                     </div>
-                    <div class="list__item">
-                        <div class="list__contents">
-                            <ul class="list__desc">
-                                <li><strong class="list__sbj">Name</strong><span>카드게임</span></li>
-                                <li><strong class="list__sbj">Date</strong><span>카드게임</span></li>
-                                <li><strong class="list__sbj">Program</strong><span>카드게임</span></li>
-                                <li><strong class="list__sbj">Role</strong><span>카드게임</span></li>
-                                <li>
-                                    <strong class="list__sbj">Description</strong>
-                                    <p>
-                                        다양한 디바이스의 대응하여 화면
-                                        크기에 따라 반응하도록 작업한
-                                        반응형 사이트 입니다 미디어쿼리를
-                                        이용하여 레이아웃의 배치와 
-                                        디자인을 다르게 하였고
-                                        CSS애니메이션을 이용한
-                                        마우스오버 애니메이션
-                                        효과를 볼수 있습니다.
-                                    </p>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="list__thumb">
-                            <img class="list__img" src="./assets/img/mainSite__img01.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="list__item">
-                        <div class="list__contents">
-                            <ul class="list__desc">
-                                <li><strong class="list__sbj">Name</strong><span>카드게임</span></li>
-                                <li><strong class="list__sbj">Date</strong><span>카드게임</span></li>
-                                <li><strong class="list__sbj">Program</strong><span>카드게임</span></li>
-                                <li><strong class="list__sbj">Role</strong><span>카드게임</span></li>
-                                <li>
-                                    <strong class="list__sbj">Description</strong>
-                                    <p>
-                                        다양한 디바이스의 대응하여 화면
-                                        크기에 따라 반응하도록 작업한
-                                        반응형 사이트 입니다 미디어쿼리를
-                                        이용하여 레이아웃의 배치와 
-                                        디자인을 다르게 하였고
-                                        CSS애니메이션을 이용한
-                                        마우스오버 애니메이션
-                                        효과를 볼수 있습니다.
-                                    </p>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="list__thumb">
-                            <img class="list__img" src="./assets/img/mainSite__img01.jpg" alt="">
-                        </div>
-                    </div>
-                </div>    
-            </div>
-        </section>
+                </div>
 
-        <script>
-            function scroll() {
-                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                let offset = document.querySelector(".row_scroll").offsetTop;
-                let left = scrollTop - offset;
-                if (scrollTop > offset) {
-                    document.querySelector(".blank_page").style.transform = "translatex(-" + left + "px)";
-                    //document.querySelector(".blank_page").style.cssText = "visability: visable";
+                <div class="visual__emoji">
+                    <div class="visual__emojiBg">
+                        <span class="bg01"><img src="./assets/img/visual__emojiBg01.svg" alt=""></span>
+                        <span class="bg02"><img src="./assets/img/visual__emojiBg02.svg" alt=""></span>
+                        <span class="bg03"><img src="./assets/img/visual__emojiBg03.svg" alt=""></span>
+                        <span class="bg04"><img src="./assets/img/visual__emojiBg04.svg" alt=""></span>
+                        <span class="bg05"><img src="./assets/img/visual__emojiBg05.svg" alt=""></span>
+                        <span class="bg06"><img src="./assets/img/visual__emojiBg06.svg" alt=""></span>
+                    </div>
+
+                    <div class="visual__emojiCircle">
+                        <span class="circle01"><img src="./assets/img/visual__emojiCircle01.svg" alt=""></span>
+                        <span class="circle02"><img src="./assets/img/visual__emojiCircle02.svg" alt=""></span>
+                        <span class="circle03"><img src="./assets/img/visual__emojiCircle03.svg" alt=""></span>
+                        <span class="circle04"><img src="./assets/img/visual__emojiCircle04.svg" alt=""></span>
+                        <span class="circle05"><img src="./assets/img/visual__emojiCircle05.svg" alt=""></span>
+                        <span class="circle06"><img src="./assets/img/visual__emojiCircle06.svg" alt=""></span>
+                    </div>
+
+                    <div class="visual__emojiItem">
+                        <span class="item01"><img srcset="./assets/img/visual__emojiItem01.svg 2x" src="./assets/img/visual__emojiItem01.svg" alt=""></span>
+                        <span class="item02"><img src="./assets/img/visual__emojiItem02.svg" alt=""></span>
+                        <span class="item03"><img src="./assets/img/visual__emojiItem03.svg" alt=""></span>
+                        <span class="item04"><img src="./assets/img/visual__emojiItem04.svg" alt=""></span>
+                        <span class="item05"><img src="./assets/img/visual__emojiItem05.svg" alt=""></span>
+                        <span class="item06"><img src="./assets/img/visual__emojiItem06.svg" alt=""></span>
+                        <span class="item07"><img src="./assets/img/visual__emojiItem07.svg" alt=""></span>
+                        <span class="item08"><img src="./assets/img/visual__emojiItem08.svg" alt=""></span>
+                        <span class="item09"><img src="./assets/img/visual__emojiItem09.svg" alt=""></span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mainCate js-mainCate" data-bgcolor="#fff">
+                <h2>Plan and<br/>orgnize<br/><span class="highlight">anything</span></h2>
+                <div class="mainCate__listWrap">
+                    <div class="mainCate__list js-mainCateList">
+                        <ul class="list">
+                            <li class="list__item" >
+                                <strong class="list__tit">Blog</strong>
+                                <span class="list__icon"><img src="./assets/img/mainCate__itemIcon01.svg" alt=""></span>
+                                <picture class="list__img"><img srcset="./assets/img/mainCate__itemBg01@2.jpg 2x" src="./assets/img/mainCate__itemBg01.jpg" alt=""></picture>
+                            </li>
+                            <li class="list__item">
+                                <strong class="list__tit">JavaScript &<br/>CSS Animation</strong>
+                                <span class="list__icon"><img src="./assets/img/mainCate__itemIcon02.svg" alt=""></span>
+                                <picture class="list__img"><img srcset="./assets/img/mainCate__itemBg02@2.jpg 2x" src="./assets/img/mainCate__itemBg02.jpg" alt=""></picture>
+                            </li>
+                            <li class="list__item">
+                                <strong class="list__tit">Work<br/>Projects</strong>
+                                <span class="list__icon"><img src="./assets/img/mainCate__itemIcon03.svg" alt=""></span>
+                                <picture class="list__img"><img srcset="./assets/img/mainCate__itemBg03@2.jpg 2x" src="./assets/img/mainCate__itemBg03.jpg" alt=""></picture>
+                            </li>
+                            <li class="list__item">
+                                <strong class="list__tit">Website<br/>Portfolio</strong>
+                                <span class="list__icon"><img src="./assets/img/mainCate__itemIcon04.svg" alt=""></span>
+                                <picture class="list__img"><img srcset="./assets/img/mainCate__itemBg04@2.jpg 2x" src="./assets/img/mainCate__itemBg04.jpg" alt=""></picture>
+                            </li>
+                            <li class="list__item">
+                                <strong class="list__tit">Contact Me</strong>
+                                <span class="list__icon"><img src="./assets/img/mainCate__itemIcon05.svg" alt=""></span>
+                                <picture class="list__img"><img srcset="./assets/img/mainCate__itemBg05@2.jpg 2x" src="./assets/img/mainCate__itemBg05.jpg" alt=""></picture>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mainList">
+                <h2 class="filled-text">SELECTIVE FOCUS</h2>
+			    <h2 class="outline-text">SELECTIVE FOCUS</h2>
+			    <img class="image" src="https://images.pexels.com/photos/2209315/pexels-photo-2209315.jpeg">
+            </section>
+
+            <style>
+                .mainList{
+                    padding: 60px ;
+                    height: 100vh ;
+                    position: relative;
+                    width: 100% ;
                 }
-                /* document.querySelector(".scroll").innerHTML = scrollTop;
-                requestAnimationFrame(scroll); */
-            }
 
-            document.addEventListener("scroll", function () {
-                scroll();
-            }, false);
-        </script>
-
-        <section class="mainCode">
-            <div class="mainCode__header">
-                <h2 class="mainCode__tit">Hello,<br/>My Code!</h2>
-                <div class="mainCode__tab">
-                    <span class="tab__item active"><a href="">Manage you day1</a></span>
-                    <span class="tab__item"><a href="">Manage you day2</a></span>
-                    <span class="tab__item"><a href="">Manage you day3</a></span>
-                </div>
-            </div>
-
-            <ul class="list">
-                <li class="list__item item01">
-                    <a href="" class="list__link"></a>
-                    <strong class="list__tit">Music<br/>Player</strong>
-                    <span class="list__cate">JavaScript</span>
-                    <span class="list__thumb"><img class="list__img" src="./assets/img/mainCode__img01.jpg" alt=""></span>
-                </li>
-                <li class="list__item item02">
-                    <a href="" class="list__link"></a>
-                    <strong class="list__tit">Music<br/>Player</strong>
-                    <span class="list__cate">JavaScript</span>
-                    <span class="list__thumb"><img class="list__img" src="./assets/img/mainCode__img02.jpg" alt=""></span>
-                </li>
-                <li class="list__item item03">
-                    <a href="" class="list__link"></a>
-                    <strong class="list__tit">Music<br/>Player</strong>
-                    <span class="list__cate">JavaScript</span>
-                    <span class="list__thumb"><img class="list__img" src="./assets/img/mainCode__img03.jpg" alt=""></span>
-                </li>
-                <li class="list__item item04">
-                    <a href="" class="list__link"></a>
-                    <strong class="list__tit">Music<br/>Player</strong>
-                    <span class="list__cate">JavaScript</span>
-                    <span class="list__thumb"><img class="list__img" src="./assets/img/mainCode__img04.jpg" alt=""></span>
-                </li>
-                <li class="list__item item05">
-                    <a href="" class="list__link"></a>
-                    <strong class="list__tit">Music<br/>Player</strong>
-                    <span class="list__cate">JavaScript</span>
-                    <span class="list__thumb"><img class="list__img" src="./assets/img/mainCode__img05.jpg" alt=""></span>
-                </li>
-                <li class="list__item item06">
-                    <a href="" class="list__link"></a>
-                    <strong class="list__tit">Music<br/>Player</strong>
-                    <span class="list__thumb"><img class="list__img" src="./assets/img/mainCode__img06.jpg" alt=""></span>
-                    <span class="list__cate">JavaScript</span>
-                </li>
-                <li class="list__item item07">
-                    <a href="" class="list__link"></a>
-                    <strong class="list__tit">Music<br/>Player</strong>
-                    <span class="list__cate">JavaScript</span>
-                    <span class="list__thumb"><img class="list__img" src="./assets/img/mainCode__img07.jpg" alt=""></span>
-                </li>
-                <li class="list__item item08">
-                    <a href="" class="list__link"></a>
-                    <strong class="list__tit">Music<br/>Player</strong>
-                    <span class="list__cate">JavaScript</span>
-                    <span class="list__thumb"><img class="list__img" src="./assets/img/mainCode__img08.jpg" alt=""></span>
-                </li>
-                <li class="list__item item09">
-                    <a href="" class="list__link"></a>
-                    <strong class="list__tit">Music<br/>Player</strong>
-                    <span class="list__cate">JavaScript</span>
-                    <span class="list__thumb"><img class="list__img" src="./assets/img/mainCode__img09.jpg" alt=""></span>
-                </li>
-            </ul>
-        </section>  
-        <!--mainCode-->
-
-        <section class="mainBlog">
-            <h2 class="screenHide">Hello!<br/>My Blog</h2>
-
-            <div class="mainBlog__intro">
-                <div class="areaLeft fron skrollable skrollable-before"
-                    data-0="width: 0%"
-                    data-1000="width:100%"
-                    data-1300="width: 100%; transform: translateX(0%)"
-                    data-3000="transform: translateX(100%)"
-                    data-3500="display:flex"
-                    data-3501="display:none"
-                >
-                    <strong class="areaLeft__tit">Hello!<br/>Blog</strong>
-                    <ul class="introList">   
-                        <li class="introList__item"><picture class="introList__thumb"><img srcset="./assets/img/mainPortfolio__leftItem02@2.jpg 2x" src="./assets/img/mainPortfolio__leftItem02.jpg" alt=""></picture></li>
-                        <li class="introList__item"><picture class="introList__thumb"><img srcset="./assets/img/mainPortfolio__leftItem03@2.jpg 2x" src="./assets/img/mainPortfolio__leftItem03.jpg" alt=""></picture></li>
-                        <li class="introList__item"><picture class="introList__thumb"><img srcset="./assets/img/mainPortfolio__leftItem04@2.jpg 2x" src="./assets/img/mainPortfolio__leftItem04.jpg" alt=""></picture></li>
-                        <li class="introList__item"><picture class="introList__thumb"><img srcset="./assets/img/mainPortfolio__leftItem04@2.jpg 2x" src="./assets/img/mainPortfolio__leftItem04.jpg" alt=""></picture></li>
-                        <li class="introList__item"><picture class="introList__thumb"><img srcset="./assets/img/mainPortfolio__leftItem04@2.jpg 2x" src="./assets/img/mainPortfolio__leftItem04.jpg" alt=""></picture></li>
-                        <li class="introList__item"><picture class="introList__thumb"><img srcset="./assets/img/mainPortfolio__leftItem02@2.jpg 2x" src="./assets/img/mainPortfolio__leftItem02.jpg" alt=""></picture></li>
-                        <li class="introList__item"><picture class="introList__thumb"><img srcset="./assets/img/mainPortfolio__leftItem03@2.jpg 2x" src="./assets/img/mainPortfolio__leftItem03.jpg" alt=""></picture></li>
-                        <li class="introList__item"><picture class="introList__thumb"><img srcset="./assets/img/mainPortfolio__leftItem04@2.jpg 2x" src="./assets/img/mainPortfolio__leftItem04.jpg" alt=""></picture></li>
-                        <li class="introList__item"><picture class="introList__thumb"><img srcset="./assets/img/mainPortfolio__leftItem04@2.jpg 2x" src="./assets/img/mainPortfolio__leftItem04.jpg" alt=""></picture></li>
-                        <li class="introList__item"><picture class="introList__thumb"><img srcset="./assets/img/mainPortfolio__leftItem04@2.jpg 2x" src="./assets/img/mainPortfolio__leftItem04.jpg" alt=""></picture></li>
-                    </ul>      
-                </div>
-                <div class="areaRight back skrollable skrollable-between"
-                    data-0="transform : translateX(70.7%)"
-                    data-1000="transform:translateX(0)"
-                    data-1300="transform: translateX(0%)"
-                    data-2700="transform: translateX(-46%)"
-                    data-3300="transform: translateX(-39%)"
-                >
-                    <strong class="areaRight__tit">Hello!<br/>My Blog</strong>
-                    <ul class="introList">
-                        <li class="introList__item"><picture class="introList__thumb"><img srcset="./assets/img/mainPortfolio__rightItem02@2.jpg 2x" src="./assets/img/mainPortfolio__rightItem02.jpg" alt=""></picture></li>
-                        <li class="introList__item"><picture class="introList__thumb"><img srcset="./assets/img/mainPortfolio__rightItem03@2.jpg 2x" src="./assets/img/mainPortfolio__rightItem03.jpg" alt=""></picture></li>
-                        <li class="introList__item"><picture class="introList__thumb"><img srcset="./assets/img/mainPortfolio__rightItem04@2.jpg 2x" src="./assets/img/mainPortfolio__rightItem04.jpg" alt=""></picture></li>
-                        <li class="introList__item"><picture class="introList__thumb"><img srcset="./assets/img/mainPortfolio__rightItem04@2.jpg 2x" src="./assets/img/mainPortfolio__rightItem04.jpg" alt=""></picture></li>
-                        <li class="introList__item"><picture class="introList__thumb"><img srcset="./assets/img/mainPortfolio__rightItem04@2.jpg 2x" src="./assets/img/mainPortfolio__rightItem04.jpg" alt=""></picture></li>
-                        <li class="introList__item"><picture class="introList__thumb"><img srcset="./assets/img/mainPortfolio__rightItem04@2.jpg 2x" src="./assets/img/mainPortfolio__rightItem04.jpg" alt=""></picture></li>
-                        <li class="introList__item"><picture class="introList__thumb"><img srcset="./assets/img/mainPortfolio__rightItem04@2.jpg 2x" src="./assets/img/mainPortfolio__rightItem04.jpg" alt=""></picture></li>
-                    </ul>
-                </div>
-            </div>
-            <!--
-            <div class="mainBlog__card">
-                <div>
-                    <h3>ALGORIZM</h3>
-                    <ul class="list">
-                        <li class="list__item">
-                            <a href=""></a>
-                            <span class="list__img"></span>
-                            <strong class="list__tit"></strong>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            -->
-
-        </section>
-        <!-- //mainBlog-->
-        
-        <section class="mainJs">
-
-        </section>
-
-        <section class="mainProfile">
-            <svg class="textWrap" width="1440" height="539" viewBox="0 0 1440 539" fill="none" xmlns="http://www.w3.org/2000/svg" >
-                <path d="M-17.4829 15.9294C297.2 -24.1211 339.25 187.141 393.211 351.93C447.171 516.719 617.113 575.553 790.539 486.617C963.965 397.68 1095.42 189.366 1488.7 319.17" stroke="#FF7896" stroke-width="50" id="text-path-master"></path>
-                <text dy="1.5%" y="15px">
-                    <textPath xlink:href="#text-path-master" fill="currentColor" startOffset="-197.5816">
-                        HTML • CSS • jQuery • JavaScript • React • Viw • HTML • CSS • jQuery • JavaScript • React • Viw • HTML • CSS • jQuery • JavaScript • React • Viw • HTML • CSS • jQuery • JavaScript • React • Viw • HTML • CSS • jQuery • JavaScript • React • Viw • 
-                        HTML • CSS • jQuery • JavaScript • React • Viw • HTML • CSS • jQuery • JavaScript • React • Viw • HTML • CSS • jQuery • JavaScript • React • Viw • HTML • CSS • jQuery • JavaScript • React • Viw • HTML • CSS • jQuery • JavaScript • React • Viw
-                        <animate attributeName="startOffset" begint="0" dur="20s" from="0" to="-1024" repeatCount="indefinite"/>
-                    </textPath>
+                .filled-text{
+                    position: absolute;
+                    top: 200px ;
+                    left: 100px ;
+                    z-index: 1 ;
+                    font-size: 100px ;
+                    font-weight: 600 ;
                     
-                </text>
-            </svg>
-            <div class="imgWrap">
-                <div class="img img__left"><img src="./assets/img/IMG_0183.JPG" alt=""></div>
-                <div class="img img__right"><img src="./assets/img/IMG_1333.JPG" alt=""></div>
-            </div>
-        </section>
-    </main>
-    <!--main-->
+                }
 
-    <footer class="footer">
-        <h2 class="screenHide">CONTACT ME</h2>
-        <span class="footer__sbj">CONTACT ME · CONTACT ME · CONTACT ME· CONTACT ME · CONTACT ME· CONTACT ME · CONTACT ME· CONTACT ME · CONTACT ME· CONTACT ME · CONTACT ME· CONTACT ME · CONTACT ME</span>
-        <address class="footer__info">
-            <ul class="list">
-                <li class="list__item"><strong class="list__tit">NAME</strong>Gwak Sunah</li>
-                <li class="list__item"><strong class="list__tit">E-mail</strong>clickb1270@naver.com</li>
-                <li class="list__item"><strong class="list__tit">Phone</strong>+82 10-9783-6236</li>
-                <li class="list__item"><strong class="list__tit">Portfolio</strong>wwww.naver.com</li>
-                <li class="list__item"><strong class="list__tit">Git-Hub</strong>www.sunah.co.kr</li>
-                <li class="list__item"><strong class="list__tit">Blog</strong>www.sunah.com</li>
-            </ul>  
-        </address>
-        <span class="footer__sbj">Just Do It · Just Do It · Just Do It · Just Do It · Just Do It · Just Do It · Just Do It · Just Do It · Just Do It · Just Do It · Just Do It</span>
-        <button class="goTop _goTop" type="button">TOP</button>
-        <button class="goDown  _goDown" type="button">🔽</button>
-    </footer>
-    <!--footer-->
+                .outline-text {
+                    position: absolute;
+                    top: 200px ;
+                    left: 100px ;
+                    z-index: 3 ;
+                    font-size: 100px ;
+                    font-weight: 600 ;
+                    -webkit-text-stroke-width: 4px;
+                    -webkit-text-stroke-color: ghostwhite;
+                    color: transparent;
+                    
+                }
+
+                .mainList img {
+                    position: absolute;
+                    top: 50px ;
+                    left: 600px ;
+                    z-index: 2 ;
+                    height: 400px ;
+                    width: auto ;
+                }
+            </style>
+    <!--
+            <section class="mainWork" data-bgcolor="#fcffe0">
+                <h2 class="mainWork__tit">Hello,<br/><span class="highlight">Work</span> Projects</h2> 
+                <ul class="list">
+                    <li class="list__item">
+                        <strong class="list__tit">
+                            <span>PROJECT NAME - 프로젝트 타이틀 제목입니다</span>
+                            <span>( VERSION - DESKTOP · MOBILE )</span>
+                            <span><a href="">URL - https://www.naver.com</a></span>
+                        </strong>
+                        
+                        <picture class="list__thumb" data-1890="width: 0%; margin: 0 0 0 auto;" data-2980="width:100%;" data-3727="width: 0%;">
+                            <img srcset="./assets/img/mainWork__item01@2.jpg 2x" src="./assets/img/mainWork__item01.jpg" alt="">
+                        </picture>
+                    
+                    </li>
+                    <li class="list__item">
+                        <strong class="list__tit">
+                            <span>PROJECT NAME - 프로젝트 타이틀 제목입니다2</span>
+                            <span>( VERSION - DESKTOP · MOBILE )</span>
+                            <span><a href="">URL - https://www.naver.com</a></span>
+                        </strong>
+                        
+                        <picture class="list__thumb" data-2980="width:0%; margin: 0 auto 0 0 ;" data-3290="width: 100%;" data-3780="width: 0%;">
+                            <img srcset="./assets/img/mainWork__item02@2.jpg 2x" src="./assets/img/mainWork__item02.jpg" alt="">
+                        </picture>
+                        
+                    </li>
+                    <li class="list__item">
+                        <strong class="list__tit">
+                            <span>PROJECT NAME - 프로젝트 타이틀 제목입니다33333</span>
+                            <span>( VERSION - DESKTOP · MOBILE )</span>
+                            <span><a href="">URL - https://www.naver.com</a></span>
+                        </strong>
+                        
+                        <picture class="list__thumb" data-3170="width: 0%;margin: 0 0 0 auto" data-3500="width: 100%;" data-4000="width: 0%" >
+                            <img srcset="./assets/img/mainWork__item01@2.jpg 2x" src="./assets/img/mainWork__item01.jpg" alt="">
+                        </picture>
+                        
+                    </li>
+                    <li class="list__item">
+                        <strong class="list__tit">
+                            <span>PROJECT NAME - 프로젝트 타이틀 제목입니다4444</span>
+                            <span>( VERSION - DESKTOP · MOBILE )</span>
+                            <span><a href="">URL - https://www.naver.com</a></span>
+                        </strong>
+                        
+                        <picture class="list__thumb" data-3360="width: 0%; margin: 0 auto 0 0;" data-3700="width: 100%;" >
+                            <img srcset="./assets/img/mainWork__item02@2.jpg 2x" src="./assets/img/mainWork__item02.jpg" alt="">
+                        </picture>
+                        
+                    </li>
+                </ul>
+            </section>
+    -->     
+            <section class="mainSite" data-bgcolor="#EE92A2">
+                <h2 class="mainSite__tit">Hello,<br/>Website Portfolio</h2>
+                <div class="scrollWrap js-horizontal-scroll">
+                    <div class="list js-pin-wrap">
+                        <div class="list__item">
+                            <div class="list__contents">
+                                <ul class="list__desc">
+                                    <li><strong class="list__sbj">Name</strong><span>카드게임</span></li>
+                                    <li><strong class="list__sbj">Date</strong><span>카드게임</span></li>
+                                    <li><strong class="list__sbj">Program</strong><span>카드게임</span></li>
+                                    <li><strong class="list__sbj">Role</strong><span>카드게임</span></li>
+                                    <li>
+                                        <strong class="list__sbj">Description</strong>
+                                        <p>
+                                            다양한 디바이스의 대응하여 화면
+                                            크기에 따라 반응하도록 작업한
+                                            반응형 사이트 입니다 미디어쿼리를
+                                            이용하여 레이아웃의 배치와 
+                                            디자인을 다르게 하였고
+                                            CSS애니메이션을 이용한
+                                            마우스오버 애니메이션
+                                            효과를 볼수 있습니다.
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="list__thumb">
+                                <img class="list__img" src="./assets/img/mainSite__img01.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="list__item">
+                            <div class="list__contents">
+                                <ul class="list__desc">
+                                    <li><strong class="list__sbj">Name</strong><span>카드게임</span></li>
+                                    <li><strong class="list__sbj">Date</strong><span>카드게임</span></li>
+                                    <li><strong class="list__sbj">Program</strong><span>카드게임</span></li>
+                                    <li><strong class="list__sbj">Role</strong><span>카드게임</span></li>
+                                    <li>
+                                        <strong class="list__sbj">Description</strong>
+                                        <p>
+                                            다양한 디바이스의 대응하여 화면
+                                            크기에 따라 반응하도록 작업한
+                                            반응형 사이트 입니다 미디어쿼리를
+                                            이용하여 레이아웃의 배치와 
+                                            디자인을 다르게 하였고
+                                            CSS애니메이션을 이용한
+                                            마우스오버 애니메이션
+                                            효과를 볼수 있습니다.
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="list__thumb">
+                                <img class="list__img" src="./assets/img/mainSite__img01.jpg" alt="">
+                            </div>
+                        </div>
+                        
+                    </div>    
+                </div>
+            </section>
+
+            <section class="mainCode" data-bgcolor="#fff">
+                <div class="mainCode__header">
+                    <h2 class="mainCode__tit">Hello,<br/>My Code!</h2>
+                    <!--
+                    <div class="mainCode__tab">
+                        <span class="tab__item active"><a href="">Manage you day1</a></span>
+                        <span class="tab__item"><a href="">Manage you day2</a></span>
+                        <span class="tab__item"><a href="">Manage you day3</a></span>
+                    </div>
+                    -->
+                </div>
+
+                <ul class="list">
+                    <li class="list__item item01">
+                        <a href="" class="list__link"></a>
+                        <strong class="list__tit">Music<br/>Player</strong>
+                        <span class="list__cate">JavaScript</span>
+                        <span class="list__thumb"><img class="list__img" src="./assets/img/mainCode__img01.jpg" alt=""></span>
+                    </li>
+                    <li class="list__item item02">
+                        <a href="" class="list__link"></a>
+                        <strong class="list__tit">Music<br/>Player</strong>
+                        <span class="list__cate">JavaScript</span>
+                        <span class="list__thumb"><img class="list__img" src="./assets/img/mainCode__img02.jpg" alt=""></span>
+                    </li>
+                    <li class="list__item item03">
+                        <a href="" class="list__link"></a>
+                        <strong class="list__tit">Music<br/>Player</strong>
+                        <span class="list__cate">JavaScript</span>
+                        <span class="list__thumb"><img class="list__img" src="./assets/img/mainCode__img03.jpg" alt=""></span>
+                    </li>
+                    <li class="list__item item04">
+                        <a href="" class="list__link"></a>
+                        <strong class="list__tit">Music<br/>Player</strong>
+                        <span class="list__cate">JavaScript</span>
+                        <span class="list__thumb"><img class="list__img" src="./assets/img/mainCode__img04.jpg" alt=""></span>
+                    </li>
+                    <li class="list__item item05">
+                        <a href="" class="list__link"></a>
+                        <strong class="list__tit">Music<br/>Player</strong>
+                        <span class="list__cate">JavaScript</span>
+                        <span class="list__thumb"><img class="list__img" src="./assets/img/mainCode__img05.jpg" alt=""></span>
+                    </li>
+                    <li class="list__item item06">
+                        <a href="" class="list__link"></a>
+                        <strong class="list__tit">Music<br/>Player</strong>
+                        <span class="list__thumb"><img class="list__img" src="./assets/img/mainCode__img06.jpg" alt=""></span>
+                        <span class="list__cate">JavaScript</span>
+                    </li>
+                    <li class="list__item item07">
+                        <a href="" class="list__link"></a>
+                        <strong class="list__tit">Music<br/>Player</strong>
+                        <span class="list__cate">JavaScript</span>
+                        <span class="list__thumb"><img class="list__img" src="./assets/img/mainCode__img07.jpg" alt=""></span>
+                    </li>
+                    <li class="list__item item08">
+                        <a href="" class="list__link"></a>
+                        <strong class="list__tit">Music<br/>Player</strong>
+                        <span class="list__cate">JavaScript</span>
+                        <span class="list__thumb"><img class="list__img" src="./assets/img/mainCode__img08.jpg" alt=""></span>
+                    </li>
+                    <li class="list__item item09">
+                        <a href="" class="list__link"></a>
+                        <strong class="list__tit">Music<br/>Player</strong>
+                        <span class="list__cate">JavaScript</span>
+                        <span class="list__thumb"><img class="list__img" src="./assets/img/mainCode__img09.jpg" alt=""></span>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="mainBlog" data-bgcolor="#fff">mainBlog</section>
+            
+            <section class="mainProfile" data-bgcolor="#EE92A2">
+                <svg class="textWrap" width="1440" height="539" viewBox="0 0 1440 539" fill="none" xmlns="http://www.w3.org/2000/svg" >
+                    <path d="M-17.4829 15.9294C297.2 -24.1211 339.25 187.141 393.211 351.93C447.171 516.719 617.113 575.553 790.539 486.617C963.965 397.68 1095.42 189.366 1488.7 319.17" stroke="#FF7896" stroke-width="50" id="text-path-master"></path>
+                    <text dy="1.5%" y="15px">
+                        <textPath xlink:href="#text-path-master" fill="currentColor" startOffset="-197.5816">
+                            HTML • CSS • jQuery • JavaScript • React • Viw • HTML • CSS • jQuery • JavaScript • React • Viw • HTML • CSS • jQuery • JavaScript • React • Viw • HTML • CSS • jQuery • JavaScript • React • Viw • HTML • CSS • jQuery • JavaScript • React • Viw • 
+                            HTML • CSS • jQuery • JavaScript • React • Viw • HTML • CSS • jQuery • JavaScript • React • Viw • HTML • CSS • jQuery • JavaScript • React • Viw • HTML • CSS • jQuery • JavaScript • React • Viw • HTML • CSS • jQuery • JavaScript • React • Viw
+                            <animate attributeName="startOffset" begint="0" dur="20s" from="0" to="-1024" repeatCount="indefinite"/>
+                        </textPath>
+                        
+                    </text>
+                </svg>
+                <div class="imgWrap">
+                    <div class="img img__left"><img src="./assets/img/IMG_0183.JPG" alt=""></div>
+                    <div class="img img__right"><img src="./assets/img/IMG_1333.JPG" alt=""></div>
+                </div>
+            </section>
+        </main>
+        <!--main-->
+
+        <footer class="footer">
+            <h2 class="screenHide">CONTACT ME</h2>
+            <span class="footer__sbj">CONTACT ME · CONTACT ME · CONTACT ME· CONTACT ME · CONTACT ME· CONTACT ME · CONTACT ME· CONTACT ME · CONTACT ME· CONTACT ME · CONTACT ME· CONTACT ME · CONTACT ME</span>
+            <address class="footer__info">
+                <ul class="list">
+                    <li class="list__item"><strong class="list__tit">NAME</strong>Gwak Sunah</li>
+                    <li class="list__item"><strong class="list__tit">E-mail</strong>clickb1270@naver.com</li>
+                    <li class="list__item"><strong class="list__tit">Phone</strong>+82 10-9783-6236</li>
+                    <li class="list__item"><strong class="list__tit">Portfolio</strong>wwww.naver.com</li>
+                    <li class="list__item"><strong class="list__tit">Git-Hub</strong>www.sunah.co.kr</li>
+                    <li class="list__item"><strong class="list__tit">Blog</strong>www.sunah.com</li>
+                </ul>  
+            </address>
+            <span class="footer__sbj">Just Do It · Just Do It · Just Do It · Just Do It · Just Do It · Just Do It · Just Do It · Just Do It · Just Do It · Just Do It · Just Do It</span>
+        </footer>
+        <!--footer-->
+    </div>
+    <!-- container -->
+
     <script src="./assets/js/common.js"></script>
-    <script src="./assets/js/vanila.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+    
+    <script src="./assets/js/global.js"></script>
+    <script type="text/javascript">
+
+		gsap.to(".filled-text, .outline-text", {
+			scrollTrigger:{
+				trigger: ".filled-text, .outline-text", 
+				start: "top bottom", 
+				end: "bottom top", 
+				scrub: 1
+			},
+			x: 200
+		})
+
+		gsap.to(".image", {
+			scrollTrigger:{
+				trigger: ".image",
+				start: "top bottom", 
+				end: "bottom top", 
+				scrub: 1,
+				markers: true
+			},
+			x: -250,
+
+		})
+	</script>
 </body>
 </html>
-
-
-

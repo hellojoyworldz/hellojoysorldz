@@ -54,20 +54,18 @@ function marquee(){
 }
 marquee();
 
-
-
-
+// mainCateMove
 function mainCateMove(){
 	let tg = ".js-mainCateList";
-	let start = ".js-mainCate"
+	let start = ".mainCate__tit"
 	let w = document.querySelector(tg).scrollWidth - window.innerWidth;
-	console.log(w)
+	
 	
 	gsap.to(tg, {
 		scrollTrigger: {
 			trigger: tg,
-			start: "top top",
-			end: "bottom bottom",
+			start: "top bottom",
+			end: "bottom top",
 			toggleClass:"active",
 			scrub: 1,
 			//markers: true
@@ -77,3 +75,4 @@ function mainCateMove(){
 }
 
 mainCateMove();
+

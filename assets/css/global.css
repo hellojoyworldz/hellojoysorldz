@@ -94,7 +94,7 @@
   padding: 96px 0;
   overflow-x: hidden;
 }
-.mainCate h2 {
+.mainCate__tit {
   margin-bottom: 64px;
   font-family: "Fredoka";
   font-weight: 600;
@@ -103,7 +103,7 @@
   color: #222222;
   text-align: center;
 }
-.mainCate h2 .highlight {
+.mainCate__tit .highlight {
   color: #4BEBC9;
 }
 .mainCate__listWrap {
@@ -405,6 +405,74 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+/* mainblog*/
+.mainBlog {
+  overflow: hidden;
+}
+.mainBlog__intro {
+  position: relative;
+}
+.mainBlog__intro .areaLeft,
+.mainBlog__intro .areaRight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  overflow: hidden;
+}
+.mainBlog__intro .areaLeft__tit,
+.mainBlog__intro .areaRight__tit {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 96px;
+  font-family: "Fredoka";
+  font-weight: 600;
+  font-size: 5vw;
+  line-height: 1.2em;
+  text-align: center;
+}
+.mainBlog__intro .areaLeft {
+  background: #222222;
+}
+.mainBlog__intro .areaLeft__tit {
+  color: #ffffff;
+}
+.mainBlog__intro .areaRight {
+  position: absolute;
+  top: 0;
+  transform: translate(100%, 0px);
+  background: #D05FE5;
+}
+.mainBlog__intro .areaRight .box {
+  transform: translate(100%, 0px);
+}
+.mainBlog__intro .areaRight__tit {
+  color: #222222;
+}
+.mainBlog__intro .list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  white-space: nowrap;
+}
+.mainBlog__intro .list__item {
+  width: 300px;
+}
+.mainBlog__intro .list__thumb {
+  display: block;
+  height: 100%;
+  border-radius: 40px;
+  overflow: hidden;
+}
+.mainBlog__intro .list__thumb img {
+  display: block;
+  max-width: inherit;
+  width: 100%;
+  height: auto;
 }
 
 /* mainProfile */

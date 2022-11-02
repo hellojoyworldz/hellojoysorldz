@@ -61,7 +61,7 @@
   .mainCate {
     padding: 48px 0;
   }
-  .mainCate h2 {
+  .mainCate__tit {
     margin-bottom: 32px;
     font-size: 40px;
   }

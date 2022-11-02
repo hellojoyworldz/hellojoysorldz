@@ -121,7 +121,7 @@
     padding: 96px 0;
     overflow-x: hidden;
 
-    h2 {
+    &__tit {
         margin-bottom: 64px;
         font-family: $font__third;
         font-weight: 600;
@@ -502,6 +502,94 @@
         }
     }
 }
+
+/* mainblog*/
+
+.mainBlog {
+
+    overflow: hidden;
+
+    &__intro{
+
+        position: relative;
+    
+        & .areaLeft,
+          .areaRight {
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            overflow: hidden;
+
+            &__tit{
+                
+                display: flex;
+                justify-content: center;
+                margin-bottom: 96px;
+                font-family: $font__third;
+                font-weight: 600;
+                font-size: 5vw;
+                line-height: 1.2em;
+                text-align: center;
+            }
+        }
+
+        & .areaLeft {
+            background: $black222;
+            
+            &__tit {
+                color: $whitefff;
+            }
+        }
+
+        & .areaRight {
+            position: absolute;
+            top: 0;
+            transform:translate(100%, 0px);
+            background: $purpleD05;
+
+            & .box{
+                transform:translate(100%, 0px);
+            }
+            
+            &__tit {
+                color: $black222;
+            }
+        }
+
+        .list{
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            white-space: nowrap;
+    
+            &__item { 
+               width: 300px;    
+            }
+    
+            &__thumb {
+                display: block;
+                height: 100%;
+                border-radius: 40px;
+                overflow: hidden;
+    
+                & img{
+                    display: block;
+                    max-width: inherit;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+    
+        }
+    
+    }
+}
+
 
 /* mainProfile */
 .mainProfile {
