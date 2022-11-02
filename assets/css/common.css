@@ -56,21 +56,21 @@ html.has-scroll-dragging {
 }
 
 /* library css */
-.horizontal-scroll {
+.js-horizontal-scroll {
   height: 100vh;
   overflow: hidden;
   display: flex;
   left: 0;
 }
 
-.pin-wrap {
+.js-pin-wrap {
   height: 100vh;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   padding: 50px 10vw;
 }
-.pin-wrap > * {
+.js-pin-wrap > * {
   min-width: 60vw;
   padding: 0 5vw;
 }
@@ -169,7 +169,8 @@ html.has-scroll-dragging {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  margin-top: -15px;
+  margin-left: -15px;
   width: 30px;
   height: 30px;
   background: #ffffff;

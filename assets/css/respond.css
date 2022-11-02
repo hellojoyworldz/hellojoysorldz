@@ -1,9 +1,10 @@
 @media (max-width: 1440px) {
+  .mainCode {
+    padding: 48px 16px;
+  }
   .mainCode .list {
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 12px;
+    grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: auto;
-    grid-template-areas: "a b" "c c" "d e" "d f" "d f" "g g" "h i" "j j";
     width: auto;
   }
   .mainProfile .imgWrap {
@@ -20,12 +21,14 @@
     height: 40px;
   }
   .headerLogo__icon .mouth {
+    margin-top: -15px;
+    margin-left: -10px;
     width: 20px;
     height: 20px;
   }
   .nav__btn--open {
-    left: 16px;
-    top: 16px;
+    right: 8px;
+    top: 12px;
   }
   /* main vis */
   .visual__tit {
@@ -79,7 +82,6 @@
   }
   .mainSite .list {
     padding: 0 24px;
-    height: auto;
   }
   .mainSite .list__item {
     flex-direction: column;
@@ -99,6 +101,13 @@
   }
   .mainCode__header {
     margin: 0 auto 32px;
+    width: auto;
+  }
+  .mainCode .list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 12px;
+    grid-auto-rows: auto;
+    grid-template-areas: "a b" "c c" "d e" "d f" "d f" "g g" "h i" "j j";
     width: auto;
   }
   .mainCode .list__tit {

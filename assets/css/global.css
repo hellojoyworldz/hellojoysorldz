@@ -75,7 +75,7 @@
   margin: -30% 0 0 auto;
   width: 1440px;
   height: 1073px;
-  z-index: 0;
+  z-index: -1;
 }
 .visual__emoji img {
   max-width: 100%;
@@ -252,13 +252,12 @@
   margin: 0 auto;
   padding-top: 96px;
   font-family: "Fredoka";
-  color: #ffffff;
-  font-size: 64px;
+  font-size: 4vw;
   line-height: 1.2em;
+  color: #ffffff;
   text-align: right;
 }
 .mainSite .list {
-  height: 100vh;
   display: flex;
   justify-content: flex-start;
   align-items: center;

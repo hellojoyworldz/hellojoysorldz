@@ -26,7 +26,7 @@
 window.addEventListener("load", function () {
 	gsap.registerPlugin(ScrollTrigger);
 
-	const pageContainer = document.querySelector(".js-containe");
+	const pageContainer = document.querySelector(".js-container");
 	pageContainer.setAttribute("data-scroll-container", "");
 
 	const scroller = new LocomotiveScroll({
