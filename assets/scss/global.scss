@@ -503,10 +503,9 @@
     }
 }
 
-/* mainblog*/
+/* mainBlog*/
 
 .mainBlog {
-
     overflow: hidden;
 
     &__intro{
@@ -516,12 +515,22 @@
         & .areaLeft,
           .areaRight {
             
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
             width: 100vw;
+            height: 100%;
             overflow: hidden;
+
+            & .box{
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                align-content: center;
+                justify-content: center;
+                align-items: center;
+                padding: 96px 0;
+                width: 100%;
+                height: 100%;
+                box-sizing: border-box;
+            }
 
             &__tit{
                 
@@ -548,9 +557,11 @@
             position: absolute;
             top: 0;
             transform:translate(100%, 0px);
-            background: $purpleD05;
+            background: $whiteFff;
 
             & .box{
+                position: absolute;
+                top: 0;
                 transform:translate(100%, 0px);
             }
             
@@ -568,7 +579,7 @@
             white-space: nowrap;
     
             &__item { 
-               width: 300px;    
+               width: 240px;    
             }
     
             &__thumb {
