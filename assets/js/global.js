@@ -75,8 +75,6 @@ function mainCateMove(){
 }
 
 
-
-
 function mainSiteMove(){
     	// Pinning and horizontal scrolling
 	let horizontalSections = document.querySelectorAll(".js-horizontal-scroll");
@@ -149,7 +147,6 @@ const showDemo = () => {
 imagesLoaded(images).on('always', showDemo);
 
 
-
 function demoMove(){
     gsap.utils.toArray('.demo').forEach((section, index) => {
         const w = section.querySelector('.wrapper');
@@ -163,9 +160,6 @@ function demoMove(){
         });
     });
 }
-demoMove();
-
-
 
 
 
@@ -205,6 +199,8 @@ window.addEventListener("load", function () {
     mainSiteMove();
     mainBlogMove();
     colorChange();
+
+    demoMove();
 });
 
 

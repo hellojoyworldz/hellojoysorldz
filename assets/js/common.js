@@ -89,7 +89,7 @@ window.addEventListener("load", function () {
 	ScrollTrigger.create({
 		trigger: colorSection,
 		scroller: "[data-scroll-container]",
-		start: "top 50%",
+		start: "top 70%",
 		onEnter: () =>
 			gsap.to("body", {
 			backgroundColor: colorSection.dataset.bgcolor,

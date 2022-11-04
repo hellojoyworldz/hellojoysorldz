@@ -68,9 +68,11 @@ html.has-scroll-dragging {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  padding: 50px 10vw;
 }
 .js-pin-wrap > * {
   min-width: 60vw;
+  padding: 0 5vw;
 }
 
 /* common */
