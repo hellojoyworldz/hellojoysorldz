@@ -247,21 +247,42 @@
   overflow: hidden;
   box-sizing: border-box;
 }
+.mainSite__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100vw;
+  height: 100vh;
+}
 .mainSite__tit {
-  width: 1440px;
-  margin: 0 auto;
-  padding-top: 96px;
+  margin-right: 128px;
+  text-align: right;
   font-family: "Fredoka";
-  font-size: 4vw;
+  font-size: 6vw;
   line-height: 1.2em;
   color: #ffffff;
-  text-align: right;
+}
+.mainSite__emoji {
+  position: relative;
+  width: 1440px;
+  height: 800px;
+  overflow: hidden;
+}
+.mainSite__emoji img {
+  width: 100%;
+}
+.mainSite__emojiCircle, .mainSite__emojiIcon, .mainSite__emojiDot, .mainSite__emojiBg {
+  position: relative;
+}
+.mainSite__emojiCircle > span, .mainSite__emojiIcon > span, .mainSite__emojiDot > span, .mainSite__emojiBg > span {
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 .mainSite .list {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 0 10vw;
 }
 .mainSite .list__item {
   display: flex;
