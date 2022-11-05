@@ -1,0 +1,135 @@
+@charset "UTF-8";
+
+// variable 
+@import 'variable';
+
+/* visual */
+.visual {
+    h2{
+        font-family: $font__second;
+    }
+
+    .in {
+        position: relative;
+    }
+
+    &__tit{
+        position: absolute;
+        top: 196px;
+        left: 96px;
+        z-index: 1;
+
+        & h2{
+            margin-bottom: 16px;
+            font-size: 40px;
+            line-height: 1.2em;
+            color: $black222;
+        }
+
+        &--move{
+            display: inline-block;
+            padding: 0 24px;
+            height: 40px;
+            font-size: 16px;
+            line-height: 40px;
+            color: $whitefff;
+            background: #2EA34E;
+            border-radius: 40px;
+
+        }
+    }
+
+    &__sbj {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        min-height: 730px;
+        font-weight: bold;
+        font-style: italic;
+        font-size: 6vw;
+        line-height: 1em;
+        color: $black222;
+        text-transform: uppercase;
+        white-space: nowrap;
+        transform: rotate(-6deg);
+
+        &-move span {
+            position: relative;
+            display: inline-block;
+            padding: 0 2.5vw
+        }
+
+        &-move span::before{
+            content:'';
+            position: absolute;
+            left: 0%;
+            bottom: -5%;
+            width: 16%;
+            height: 50%;
+            background: #FF6488;
+            transform: rotate(-10deg);
+            opacity: 0.4;
+            z-index:-1;
+        }//#EE92A2, #FF6488)
+
+        &-move span::after{
+            content:'';
+            position: absolute;
+            right: 1%;
+            bottom: -5%;
+            width: 44%;
+            height: 50%;
+            background-color: $greyddd;
+            opacity: 0.5;
+            z-index:-1;
+        }
+    }
+
+    &__emoji {
+        position: relative;
+        margin: -30% 0 0 auto;
+        width: 1440px;
+        height: 1073px;
+        z-index: -1;
+
+        & img{
+            max-width: 100%;
+        }
+
+        &Bg,
+        &Item,
+        &Circle {
+            position: relative;
+        }
+
+        &Bg > span,
+        &Item > span,
+        &Circle > span {
+            position: absolute;
+            top: 0;
+            right: 0;  
+        } 
+
+    }
+}
+
+
+.horizontal-scroll {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    left: 0;
+}
+  
+.pin-wrap {
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 50px 10vw;
+}
+.pin-wrap > * {
+    min-width: 60vw;
+    padding: 0 5vw;
+}
