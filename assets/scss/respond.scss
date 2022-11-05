@@ -5,6 +5,12 @@
 $in : auto;
 
 @media (max-width: 1440px) {
+
+    .visual{
+        &__emoji{
+            margin-left: -2%;
+        }
+    }
     
     .mainCode{
         padding: 48px 16px;
@@ -22,6 +28,7 @@ $in : auto;
             width: auto;
         }
     }
+
 
 }
 
@@ -95,7 +102,7 @@ $in : auto;
         &__emoji{
             width: auto;
             height: auto;
-            padding-bottom:75%
+            padding-bottom:75%;
         }
 
         & .circle02, .circle05, .emoji06 

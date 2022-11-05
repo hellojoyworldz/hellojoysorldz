@@ -1,4 +1,7 @@
 @media (max-width: 1440px) {
+  .visual__emoji {
+    margin-left: -2%;
+  }
   .mainCode {
     padding: 48px 16px;
   }
