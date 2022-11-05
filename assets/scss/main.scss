@@ -63,14 +63,21 @@
         &--move span::before{
             content:'';
             position: absolute;
-            left: 0%;
+            left: 2%;
             bottom: -5%;
-            width: 16%;
+            width: 15%;
             height: 50%;
             background: #FF6488;
             transform: rotate(-10deg);
             opacity: 0.4;
             z-index:-1;
+            transition: 0.3s;
+        }//#EE92A2, #FF6488)
+
+        &--move span:hover::before{
+            content:'';
+            background: #FF6488;
+            opacity: 0.8;
         }//#EE92A2, #FF6488)
 
         &--move span::after{
@@ -83,6 +90,13 @@
             background-color: $greyddd;
             opacity: 0.5;
             z-index:-1;
+            transition: 0.3s;
+        }
+
+        &--move span:hover::after{
+            content:'';
+            width: 84%;
+            opacity: 0.8;
         }
     }
 
@@ -100,7 +114,11 @@
         &Bg,
         &Item,
         &Circle {
-            position: relative;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
         }
 
         &Bg > span,
@@ -113,7 +131,6 @@
 
     }
 }
-
 
 .horizontal-scroll {
     height: 100vh;

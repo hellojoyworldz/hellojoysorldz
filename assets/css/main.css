@@ -50,14 +50,20 @@
 .visual__sbj--move span::before {
   content: "";
   position: absolute;
-  left: 0%;
+  left: 2%;
   bottom: -5%;
-  width: 16%;
+  width: 15%;
   height: 50%;
   background: #FF6488;
   transform: rotate(-10deg);
   opacity: 0.4;
   z-index: -1;
+  transition: 0.3s;
+}
+.visual__sbj--move span:hover::before {
+  content: "";
+  background: #FF6488;
+  opacity: 0.8;
 }
 .visual__sbj--move span::after {
   content: "";
@@ -69,6 +75,12 @@
   background-color: #dddddd;
   opacity: 0.5;
   z-index: -1;
+  transition: 0.3s;
+}
+.visual__sbj--move span:hover::after {
+  content: "";
+  width: 84%;
+  opacity: 0.8;
 }
 .visual__emoji {
   position: relative;
@@ -81,7 +93,11 @@
   max-width: 100%;
 }
 .visual__emojiBg, .visual__emojiItem, .visual__emojiCircle {
-  position: relative;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
 }
 .visual__emojiBg > span, .visual__emojiItem > span, .visual__emojiCircle > span {
   position: absolute;

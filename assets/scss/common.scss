@@ -175,7 +175,8 @@ html.has-scroll-dragging {
             height: 30px;
             background: $whitefff;
             border-radius: 50%;
-            animation: visMouse  5s ease-in 1s infinite alternate forwards paused;
+            transform: rotate(0);
+            animation: visMouse 5s ease-in 1s infinite;
         }
 
         &__icon .mouth::before{
@@ -213,10 +214,19 @@ html.has-scroll-dragging {
 
 @keyframes visMouse {
     0% {
-      transform: rotate(45);
+      transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-45deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(45deg);
     }
     100% {
-        transform: rotate(-45);
+        transform: rotate(0deg);
     }
   }
 

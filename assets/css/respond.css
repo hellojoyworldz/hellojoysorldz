@@ -16,12 +16,20 @@
     top: 16px;
     left: 16px;
   }
+  .headerLogo__text {
+    margin-left: 16px;
+  }
+  .headerLogo__text::before {
+    left: -14px;
+    width: 8px;
+    height: 8px;
+  }
   .headerLogo__icon {
     width: 40px;
     height: 40px;
   }
   .headerLogo__icon .mouth {
-    margin-top: -15px;
+    margin-top: -10px;
     margin-left: -10px;
     width: 20px;
     height: 20px;
@@ -33,6 +41,7 @@
   /* main vis */
   .visual__tit {
     top: 100px;
+    left: 24px;
   }
   .visual__tit h2 {
     margin-bottom: 8px;
@@ -52,7 +61,10 @@
   .visual__emoji {
     width: auto;
     height: auto;
-    padding-bottom: 80%;
+    padding-bottom: 75%;
+  }
+  .visual .circle02, .visual .circle05, .visual .emoji06 {
+    top: -20%;
   }
   .mainWork__tit {
     font-size: 40px;

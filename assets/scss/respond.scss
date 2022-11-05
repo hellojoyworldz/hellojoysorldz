@@ -31,12 +31,23 @@ $in : auto;
         left: 16px;
 
         &Logo{
+
+            &__text{
+                margin-left: 16px;
+            }
+
+            &__text::before{
+                left: -14px;
+                width: 8px;
+                height: 8px;
+            }
+
             &__icon{
                 width: 40px;
                 height: 40px;
 
                 & .mouth{
-                    margin-top: -15px;
+                    margin-top: -10px;
                     margin-left: -10px;
                     width: 20px;
                     height: 20px;
@@ -60,6 +71,7 @@ $in : auto;
 
         &__tit{
             top: 100px;
+            left: 24px;
             
             & h2{
                 margin-bottom: 8px;
@@ -83,7 +95,12 @@ $in : auto;
         &__emoji{
             width: auto;
             height: auto;
-            padding-bottom:80%
+            padding-bottom:75%
+        }
+
+        & .circle02, .circle05, .emoji06 
+        {
+            top: -20%
         }
     }
 

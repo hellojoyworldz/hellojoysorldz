@@ -165,8 +165,9 @@ html.has-scroll-dragging {
   height: 30px;
   background: #ffffff;
   border-radius: 50%;
-  -webkit-animation: visMouse 5s ease-in 1s infinite alternate forwards paused;
-          animation: visMouse 5s ease-in 1s infinite alternate forwards paused;
+  transform: rotate(0);
+  -webkit-animation: visMouse 5s ease-in 1s infinite;
+          animation: visMouse 5s ease-in 1s infinite;
 }
 .headerLogo__icon .mouth::before {
   content: "";
@@ -199,19 +200,37 @@ html.has-scroll-dragging {
 
 @-webkit-keyframes visMouse {
   0% {
-    transform: rotate(45);
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(45deg);
   }
   100% {
-    transform: rotate(-45);
+    transform: rotate(0deg);
   }
 }
 
 @keyframes visMouse {
   0% {
-    transform: rotate(45);
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(45deg);
   }
   100% {
-    transform: rotate(-45);
+    transform: rotate(0deg);
   }
 }
 /* scrollGage */
