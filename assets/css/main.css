@@ -42,12 +42,12 @@
   white-space: nowrap;
   transform: rotate(-6deg);
 }
-.visual__sbj-move span {
+.visual__sbj--move span {
   position: relative;
   display: inline-block;
   padding: 0 2.5vw;
 }
-.visual__sbj-move span::before {
+.visual__sbj--move span::before {
   content: "";
   position: absolute;
   left: 0%;
@@ -59,7 +59,7 @@
   opacity: 0.4;
   z-index: -1;
 }
-.visual__sbj-move span::after {
+.visual__sbj--move span::after {
   content: "";
   position: absolute;
   right: 1%;

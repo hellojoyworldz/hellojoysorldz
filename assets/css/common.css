@@ -165,6 +165,8 @@ html.has-scroll-dragging {
   height: 30px;
   background: #ffffff;
   border-radius: 50%;
+  -webkit-animation: visMouse 5s ease-in 1s infinite alternate forwards paused;
+          animation: visMouse 5s ease-in 1s infinite alternate forwards paused;
 }
 .headerLogo__icon .mouth::before {
   content: "";
@@ -195,6 +197,23 @@ html.has-scroll-dragging {
   border-radius: 50%;
 }
 
+@-webkit-keyframes visMouse {
+  0% {
+    transform: rotate(45);
+  }
+  100% {
+    transform: rotate(-45);
+  }
+}
+
+@keyframes visMouse {
+  0% {
+    transform: rotate(45);
+  }
+  100% {
+    transform: rotate(-45);
+  }
+}
 /* scrollGage */
 .scrollGage {
   position: fixed;

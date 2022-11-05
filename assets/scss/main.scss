@@ -54,13 +54,13 @@
         white-space: nowrap;
         transform: rotate(-6deg);
 
-        &-move span {
+        &--move span {
             position: relative;
             display: inline-block;
             padding: 0 2.5vw
         }
 
-        &-move span::before{
+        &--move span::before{
             content:'';
             position: absolute;
             left: 0%;
@@ -73,7 +73,7 @@
             z-index:-1;
         }//#EE92A2, #FF6488)
 
-        &-move span::after{
+        &--move span::after{
             content:'';
             position: absolute;
             right: 1%;
