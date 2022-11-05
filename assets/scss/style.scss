@@ -671,3 +671,29 @@
 }
 
 
+.demo-gallery:not(.last) {
+    padding-bottom: 1rem;
+  }
+  
+  .demo-gallery .wrapper {
+    display: flex;
+  }
+  
+  .demo-gallery li{
+      flex-shrink: 0;
+      width: clamp(500px, 60vw, 800px);
+      padding-right: 1rem;
+  }
+  
+  .demo-gallery li img{
+      width: 100%;
+      height: auto;
+      background: #f0f0f0;
+  }
+  
+  
+  .demo-text .text {
+    font-size: clamp(8rem, 15vw, 16rem);
+    line-height: 1;
+    font-weight: 900;
+  }
