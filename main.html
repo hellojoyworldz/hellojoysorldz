@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-
+    <title>locomotivescroll</title>
+    <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/common.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
@@ -13,18 +13,48 @@
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
   </head>
   <body>
-    <main id="contents">
 
-        <section id="section1" class="visual" data-textcolor="#bcb8ad" data-bgcolor="#fff">
+    <header id="header" class="header">
+        <h1 class="headerLogo">
+            <a class="headerLogo__link" href="./index.html">
+                <span class="headerLogo__icon">
+                    <span class="mouth js-mouth"></span>
+                </span>
+                <span class="headerLogo__text">FE<br/>DEVELOPER</span>
+            </a>
+        </h1>
+
+        <div class="scrollGage">
+            <span class="screenHide">현재 위치</span>
+            <span class="scrollGage__percent"></span>
+            <!--<span class="scrollGage__bar"></span>-->
+            <span class="scrollGage__position"></span>
+            
+        </div>
+
+        <nav id="nav" class="nav">
+            <button class="nav__btn--open " type="button"><span class="screenHide">전체메뉴보기</span></button>
+            <div id="gnb" class="gnb">
+                <ul class="gnb__list">
+                    <li class="gnb__item">
+                        <a class="gnb__link" href=""></a>
+                    </li>
+                </ul>
+                <button class="gnb__btn--close" type="button"><span class="screenHide">전체메뉴닫기</span></button>
+            </div>
+        </nav>
+    </header>
+    <!---header-->
+
+    <main id="contents">
+        <section class="visual" data-textcolor="#bcb8ad" data-bgcolor="#fff">
             <div class="visual__tit">
                 <h2>G.SUNAH<br/>PORTFOLIO</h2>
                 <span class="visual__tit--move">HELLO, WORLD!</span>
             </div>
 
-            <div class="visual__sbj demo">
-                <div class="visual__sbj-move wrapper" data-text="I'M FRONTEND DEVELOPER">
-                    <span>I'M FRONTEND DEVELOPER</span>
-                    <span>I'M FRONTEND DEVELOPER</span>
+            <div class="visual__sbj">
+                <div class="visual__sbj-move" data-scroll data-scroll-speed="3" data-scroll-direction="horizontal">
                     <span>I'M FRONTEND DEVELOPER</span>
                     <span>I'M FRONTEND DEVELOPER</span>
                 </div>
@@ -32,57 +62,61 @@
 
             <div class="visual__emoji">
                 <div class="visual__emojiBg">
-                    <span class="bg01"><img src="./assets/img/visual__emojiBg01.svg" alt=""></span>
-                    <span class="bg02"><img src="./assets/img/visual__emojiBg02.svg" alt=""></span>
-                    <span class="bg03"><img src="./assets/img/visual__emojiBg03.svg" alt=""></span>
-                    <span class="bg04"><img src="./assets/img/visual__emojiBg04.svg" alt=""></span>
-                    <span class="bg05"><img src="./assets/img/visual__emojiBg05.svg" alt=""></span>
-                    <span class="bg06"><img src="./assets/img/visual__emojiBg06.svg" alt=""></span>
+                    <span>
+                        <img src="./assets/img/visual__emojiBg01.svg" alt="">
+                    </span>
+                    <span>
+                        <img src="./assets/img/visual__emojiBg02.svg" alt="">
+                    </span>
+                    <span>
+                        <img src="./assets/img/visual__emojiBg03.svg" alt="">
+                    </span>
+                    <span>
+                        <img src="./assets/img/visual__emojiBg04.svg" alt="">
+                    </span>
+                    <span>
+                        <img src="./assets/img/visual__emojiBg05.svg" alt="">
+                    </span>
+                    <span>
+                        <img src="./assets/img/visual__emojiBg06.svg" alt="">
+                    </span>
                 </div>
 
                 <div class="visual__emojiCircle">
-                    <span class="circle01"><img src="./assets/img/visual__emojiCircle01.svg" alt=""></span>
-                    <span class="circle02"><img src="./assets/img/visual__emojiCircle02.svg" alt=""></span>
-                    <span class="circle03"><img src="./assets/img/visual__emojiCircle03.svg" alt=""></span>
-                    <span class="circle04"><img src="./assets/img/visual__emojiCircle04.svg" alt=""></span>
-                    <span class="circle05"><img src="./assets/img/visual__emojiCircle05.svg" alt=""></span>
-                    <span class="circle06"><img src="./assets/img/visual__emojiCircle06.svg" alt=""></span>
+                    <span>
+                        <img src="./assets/img/visual__emojiCircle01.svg" alt="">
+                    </span>
+                    <span>
+                        <img src="./assets/img/visual__emojiCircle02.svg" alt="" >
+                    </span>
+                    <span>
+                        <img src="./assets/img/visual__emojiCircle03.svg" alt="">
+                    </span>
+                    <span>
+                        <img src="./assets/img/visual__emojiCircle04.svg" alt="" >
+                    </span>
+                    <span>
+                        <img src="./assets/img/visual__emojiCircle05.svg" alt="">
+                    </span>
+                    <span>
+                        <img src="./assets/img/visual__emojiCircle06.svg" alt="" >
+                    </span>
                 </div>
 
                 <div class="visual__emojiItem">
-                    <span class="item01"><img srcset="./assets/img/visual__emojiItem01.svg 2x" src="./assets/img/visual__emojiItem01.svg" alt=""></span>
-                    <span class="item02"><img src="./assets/img/visual__emojiItem02.svg" alt=""></span>
-                    <span class="item03"><img src="./assets/img/visual__emojiItem03.svg" alt=""></span>
-                    <span class="item04"><img src="./assets/img/visual__emojiItem04.svg" alt=""></span>
-                    <span class="item05"><img src="./assets/img/visual__emojiItem05.svg" alt=""></span>
-                    <span class="item06"><img src="./assets/img/visual__emojiItem06.svg" alt=""></span>
-                    <span class="item07"><img src="./assets/img/visual__emojiItem07.svg" alt=""></span>
-                    <span class="item08"><img src="./assets/img/visual__emojiItem08.svg" alt=""></span>
-                    <span class="item09"><img src="./assets/img/visual__emojiItem09.svg" alt=""></span>
+                    <span data-scroll data-scroll-speed="3" data-scroll-direction="horizontal"><img src="./assets/img/visual__emojiItem01.svg" alt=""></span>
+                    <span data-scroll data-scroll-speed="3" data-scroll-direction="horizontal"><img src="./assets/img/visual__emojiItem02.svg" alt=""></span>
+                    <span data-scroll data-scroll-speed="3" data-scroll-direction="horizontal"><img src="./assets/img/visual__emojiItem03.svg" alt=""></span>
+                    <span data-scroll data-scroll-speed="3" data-scroll-direction="horizontal"><img src="./assets/img/visual__emojiItem04.svg" alt=""></span>
+                    <span data-scroll data-scroll-speed="3" data-scroll-direction="horizontal"><img src="./assets/img/visual__emojiItem05.svg" alt=""></span>
+                    <span data-scroll data-scroll-speed="3" data-scroll-direction="horizontal"><img src="./assets/img/visual__emojiItem06.svg" alt=""></span>
+                    <span data-scroll data-scroll-speed="3" data-scroll-direction="horizontal"><img src="./assets/img/visual__emojiItem07.svg" alt=""></span>
+                    <span data-scroll data-scroll-speed="3" data-scroll-direction="horizontal"><img src="./assets/img/visual__emojiItem08.svg" alt=""></span>
+                    <span data-scroll data-scroll-speed="3" data-scroll-direction="horizontal"><img src="./assets/img/visual__emojiItem09.svg" alt=""></span>
                 </div>
             </div>
         </section>
         <!-- //section1 -->
-        <script>
-            const showDemo = () => {
-                document.body.style.overflow = 'auto';
-                document.scrollingElement.scrollTo(0, 0);
-                //gsap.to(document.querySelector('.loader'), { autoAlpha: 0 });
-                
-                gsap.utils.toArray('.demo').forEach((section, index) => {
-                    const w = section.querySelector('.wrapper');
-                    const [x, xEnd] = (index % 2) ? ['100%', (w.scrollWidth - section.offsetWidth) * -1] : [w.scrollWidth * -1, 0];
-                    gsap.fromTo(w, {  x  }, {
-                    x: xEnd,
-                    scrollTrigger: { 
-                        trigger: section, 
-                        scrub: 0.5 
-                    }
-                    });
-                });
-            }
-            showDemo();
-        </script>
 
         <section id="section2" data-bgcolor="#e3857a" data-textcolor="#f1dba7"></section>
         <!-- //section2 -->
@@ -106,7 +140,6 @@
         <section id="section6" data-textcolor="#bcb8ad" data-bgcolor="#032f35"></section>
         <!-- //section6 -->
     </main>
-
 
     <script>
         window.addEventListener("load", function () {
