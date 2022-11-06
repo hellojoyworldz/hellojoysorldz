@@ -1,5 +1,5 @@
 /* visual */
-.visual h2 {
+.visual {
   font-family: "Montserrat";
 }
 .visual .in {
@@ -37,7 +37,7 @@
   font-style: italic;
   font-size: 6vw;
   line-height: 1em;
-  color: #222222;
+  color: #555555;
   text-transform: uppercase;
   white-space: nowrap;
   transform: rotate(-6deg);
@@ -47,30 +47,34 @@
   display: inline-block;
   padding: 0 2.5vw;
 }
+.visual__sbj--move span:hover {
+  color: #222222;
+}
 .visual__sbj--move span::before {
   content: "";
   position: absolute;
   left: 2%;
   bottom: -5%;
-  width: 15%;
+  width: 11%;
   height: 50%;
   background: #FF6488;
   transform: rotate(-10deg);
-  opacity: 0.4;
+  opacity: 0.3;
   z-index: -1;
   transition: 0.3s;
 }
 .visual__sbj--move span:hover::before {
   content: "";
+  transform: rotate(10deg);
   background: #FF6488;
-  opacity: 0.8;
+  opacity: 0.5;
 }
 .visual__sbj--move span::after {
   content: "";
   position: absolute;
   right: 1%;
   bottom: -5%;
-  width: 44%;
+  width: 45%;
   height: 50%;
   background-color: #dddddd;
   opacity: 0.5;
@@ -79,7 +83,7 @@
 }
 .visual__sbj--move span:hover::after {
   content: "";
-  width: 84%;
+  width: 86%;
   opacity: 0.8;
 }
 .visual__emoji {
@@ -103,6 +107,83 @@
   position: absolute;
   top: 0;
   right: 0;
+}
+
+/* main cate */
+.mainCate {
+  padding: 96px 0;
+  overflow-x: hidden;
+}
+.mainCate__tit {
+  margin-bottom: 64px;
+  font-family: "Fredoka";
+  font-weight: 600;
+  font-size: 6vw;
+  line-height: 1.1em;
+  color: #222222;
+  text-align: center;
+}
+.mainCate__tit .highlight {
+  color: #4BEBC9;
+}
+.mainCate__listWrap {
+  display: flex;
+  width: 100vw;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.mainCate .list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column-gap: 24px;
+  white-space: nowrap;
+}
+.mainCate .list__item {
+  position: relative;
+  aspect-ratio: 67/100;
+  width: 25%;
+  height: 100%;
+  border-radius: 32px;
+  overflow: hidden;
+}
+.mainCate .list__item img {
+  width: 100%;
+  height: auto;
+}
+.mainCate .list__icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.mainCate .list__icon img {
+  width: 100%;
+  height: auto;
+}
+.mainCate .list__tit {
+  position: absolute;
+  bottom: 10vw;
+  width: 100%;
+  font-size: 2.5vw;
+  line-height: 1.2em;
+  text-align: center;
+}
+.mainCate .list__item:nth-child(5n-4) .list__tit {
+  color: #D05FE5;
+}
+.mainCate .list__item:nth-child(5n-3) .list__tit {
+  color: #FFE30D;
+}
+.mainCate .list__item:nth-child(5n-2) .list__tit {
+  color: #89DE07;
+}
+.mainCate .list__item:nth-child(5n-1) .list__tit {
+  color: #41E0EB;
+}
+.mainCate .list__item:nth-child(5n) .list__tit {
+  color: #F06B67;
 }
 
 .horizontal-scroll {
