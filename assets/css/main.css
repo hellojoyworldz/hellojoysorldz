@@ -142,7 +142,7 @@
 .mainCate .list__item {
   position: relative;
   aspect-ratio: 67/100;
-  width: 25%;
+  width: 22vw;
   height: 100%;
   border-radius: 32px;
   overflow: hidden;
