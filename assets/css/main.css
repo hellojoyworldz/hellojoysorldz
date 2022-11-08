@@ -186,22 +186,52 @@
   color: #F06B67;
 }
 
-.horizontal-scroll {
-  height: 100vh;
-  overflow: hidden;
+.mainSite {
+  min-height: 820px;
+}
+.mainSite__header {
   display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 5vw 0;
+  margin-right: 96px;
+}
+.mainSite__tit {
+  text-align: right;
+  font-family: "Fredoka";
+  font-size: 6vw;
+  line-height: 1.2em;
+  color: #ffffff;
+}
+.mainSite__emoji {
+  position: relative;
+  width: 1200px;
+  height: 600px;
+}
+.mainSite__emoji img {
+  width: 100%;
+}
+.mainSite__emojiCircle, .mainSite__emojiIcon, .mainSite__emojiDot, .mainSite__emojiBg {
+  position: relative;
+}
+.mainSite__emojiCircle > span, .mainSite__emojiIcon > span, .mainSite__emojiDot > span, .mainSite__emojiBg > span {
+  position: absolute;
   left: 0;
+  top: 0;
 }
-
-.pin-wrap {
-  height: 100vh;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 50px 10vw;
+.mainSite .list__item {
+  margin: 0 64px;
 }
-
-.pin-wrap > * {
-  min-width: 60vw;
-  padding: 0 5vw;
+.mainSite .list__contents {
+  margin-bottom: 32px;
+}
+.mainSite .list__desc {
+  position: relative;
+  padding-left: 160px;
+  font-size: 24px;
+  color: #ffffff;
+}
+.mainSite .list__sbj {
+  position: absolute;
+  left: 0;
 }

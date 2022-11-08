@@ -90,26 +90,36 @@
     bottom: 110px;
     font-size: 32px;
   }
+  .mainSite {
+    min-height: auto;
+  }
   .mainSite__tit {
-    padding: 48px 24px 0px 24px;
+    padding: 0px;
     width: auto;
     font-size: 40px;
+  }
+  .mainSite__emoji {
+    width: 100vh;
+    height: 360px;
   }
   .mainSite .list {
     padding: 0 24px;
   }
   .mainSite .list__item {
-    flex-direction: column;
-    margin: 24px 0;
+    margin: 0 24px;
   }
   .mainSite .list__contents {
     width: auto;
+    margin-bottom: 16px;
   }
   .mainSite .list__desc {
     font-size: 16px;
   }
-  .mainSite .list__thumbimg {
+  .mainSite .list__thumb img {
     width: 100%;
+  }
+  .pin-wrap {
+    min-height: auto;
   }
   .mainCode {
     padding: 48px 24px;

@@ -65,6 +65,25 @@ html.has-scroll-dragging {
   left: 0;
 }
 
+.horizontal-scroll {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  left: 0;
+}
+
+.pin-wrap {
+  height: 100vh;
+  min-height: 820px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.pin-wrap > * {
+  min-width: 60vw;
+}
+
 /* common */
 .skipToMain {
   display: block;

@@ -229,21 +229,76 @@
     }
 }
 
-.horizontal-scroll {
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    left: 0;
+.mainSite{
+
+    min-height: 820px;
+
+    &__header{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 5vw 0;
+        margin-right:96px;
+    }
+
+    &__tit{
+        text-align:right;
+        font-family: $font__third;
+        font-size: 6vw;
+        line-height: 1.2em;
+        color: $whiteFff;
+    }
+
+    &__emoji{
+        position: relative;
+        width: 1200px;
+        height: 600px;
+
+        & img{
+            width: 100%;
+        }
+
+        &Circle,
+        &Icon,
+        &Dot,
+        &Bg{
+            position: relative;
+        }
+
+        &Circle > span,
+        &Icon > span,
+        &Dot > span,
+        &Bg > span{
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+
+    & .list{
+        &__item{
+            margin: 0 64px;
+        }
+
+        &__contents {
+            margin-bottom:32px;
+        }
+
+        &__desc{
+            position: relative;
+            padding-left: 160px;
+            font-size: 24px;
+            color: $whiteFff;
+        }
+
+        &__sbj{
+            position: absolute;
+            left: 0;
+        }
+    }
 }
-  
-.pin-wrap {
-    height: 100vh;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 50px 10vw;
-}
-.pin-wrap > * {
-    min-width: 60vw;
-    padding: 0 5vw;
-}
+
+
+
+
+
