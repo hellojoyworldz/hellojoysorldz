@@ -197,16 +197,28 @@
   margin-right: 96px;
 }
 .mainSite__tit {
+  position: relative;
   text-align: right;
   font-family: "Fredoka";
   font-size: 6vw;
   line-height: 1.2em;
   color: #ffffff;
 }
+.mainSite__titImg {
+  position: absolute;
+  right: 0;
+  bottom: -70%;
+  width: 25%;
+  z-index: -1;
+}
+.mainSite__titImg img {
+  width: 100%;
+}
 .mainSite__emoji {
   position: relative;
   width: 1200px;
   height: 600px;
+  z-index: -1;
 }
 .mainSite__emoji img {
   width: 100%;
@@ -220,7 +232,7 @@
   top: 0;
 }
 .mainSite .list__item {
-  margin: 0 64px;
+  padding: 0 64px;
 }
 .mainSite .list__contents {
   margin-bottom: 32px;

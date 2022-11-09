@@ -86,8 +86,9 @@ html.has-scroll-dragging {
     //padding: 50px 10vw;
 }
 .pin-wrap > * {
-    min-width: 60vw;
+    min-width: 860px;
     //padding: 0 5vw;
+    box-sizing:border-box;
 }
 
 /* common */

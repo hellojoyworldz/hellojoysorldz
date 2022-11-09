@@ -95,18 +95,14 @@
   }
   .mainSite__tit {
     padding: 0px;
-    width: auto;
     font-size: 40px;
   }
   .mainSite__emoji {
-    width: 100vh;
+    width: 760px;
     height: 360px;
   }
-  .mainSite .list {
-    padding: 0 24px;
-  }
   .mainSite .list__item {
-    margin: 0 24px;
+    padding: 0 24px;
   }
   .mainSite .list__contents {
     width: auto;

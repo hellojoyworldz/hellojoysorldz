@@ -60,6 +60,18 @@
                     <span>I'M FRONTEND DEVELOPER</span>
                 </div>
             </div>
+            <!--
+            <div class="visual__emoji">
+                <div class="visual__emojiImg>
+                    <span><img src="./assets/img/visual__emojiImg01.png" alt=""></span>
+                    <span><img src="./assets/img/visual__emojiImg02.png" alt=""></span>
+                    <span><img src="./assets/img/visual__emojiImg03.png" alt=""></span>
+                </div>
+                <div class="visual__emojiBg">
+                    <span><img src="./assets/img/visual__emojiBg.png" alt=""></span>
+                </div>
+            </div>
+            -->
 
             <div class="visual__emoji">
                 <div class="visual__emojiBg">
@@ -134,6 +146,7 @@
                     </span>
                 </div>
             </div>
+
         </section>
         <!-- //visual -->
 
@@ -175,35 +188,19 @@
         <section class="mainSite horizontal-scroll" data-bgcolor="#310591" >
             <div class="pin-wrap">
                 <div class="mainSite__header">
-                    <h2 class="mainSite__tit">Hello,<br/>Website Portfolio</h2>
+                    <h2 class="mainSite__tit">
+                        Hello,<br/>Website Portfolio
+                        <span class="mainSite__titImg"><img src="assets/img/mainSite__tit.png" alt=""></span>
+                    </h2>
                     <div class="mainSite__emoji"> 
                         <div class="mainSite__emojiBg">
-                            <span><img src="assets/img/mainSite__emoji--bg01.png" alt=""></span>
-                            <span><img src="assets/img/mainSite__emoji--bg02.png" alt=""></span>
-                            <span><img src="assets/img/mainSite__emoji--bg03.png" alt=""></span>
-                            <span><img src="assets/img/mainSite__emoji--bg04.png" alt=""></span>
+                            <span><img src="assets/img/mainSite__emojiBg.png" alt=""></span>
                         </div>
-                        <div class="mainSite__emojiDot">
-                            <span><img src="assets/img/mainSite__emoji--dot01.png" alt=""></span>
-                            <span><img src="assets/img/mainSite__emoji--dot02.png" alt=""></span>
-                            <span><img src="assets/img/mainSite__emoji--dot03.png" alt=""></span>
-                            <span><img src="assets/img/mainSite__emoji--dot04.png" alt=""></span>
-                            <span><img src="assets/img/mainSite__emoji--dot05.png" alt=""></span>
-                            <span><img src="assets/img/mainSite__emoji--dot06.png" alt=""></span>
-                            <span><img src="assets/img/mainSite__emoji--dot07.png" alt=""></span>
-                            <span><img src="assets/img/mainSite__emoji--dot08.png" alt=""></span>
-                        </div>
-                        <div class="mainSite__emojiIcon">
-                            <span><img src="assets/img/mainSite__emoji--icon01.png" alt=""></span>
-                            <span><img src="assets/img/mainSite__emoji--icon02.png" alt=""></span>
-                            <span><img src="assets/img/mainSite__emoji--icon03.png" alt=""></span>
-                            <span><img src="assets/img/mainSite__emoji--icon04.png" alt=""></span>
-                            <span><img src="assets/img/mainSite__emoji--icon05.png" alt=""></span>
-                        </div>
+                        
                         <div class="mainSite__emojiCircle">
-                            <span data-scroll data-scroll-speed="5" data-scroll-direction="vertical"><img src="assets/img/mainSite__emoji--circle01.png" alt=""></span>
-                            <span data-scroll data-scroll-speed="5" data-scroll-direction="vertical"><img src="assets/img/mainSite__emoji--circle02.png" alt=""></span>
-                            <span data-scroll data-scroll-speed="5" data-scroll-direction="vertical"><img src="assets/img/mainSite__emoji--circle03.png" alt=""></span>
+                            <span data-scroll data-scroll-speed="5" data-scroll-direction="vertical"><img src="assets/img/mainSite__emojiImg01.png" alt=""></span>
+                            <span data-scroll data-scroll-speed="5" data-scroll-direction="vertical"><img src="assets/img/mainSite__emojiImg02.png" alt=""></span>
+                            <span data-scroll data-scroll-speed="5" data-scroll-direction="vertical"><img src="assets/img/mainSite__emojiImg03.png" alt=""></span>
                         </div>
                     </div>
                 </div>
@@ -343,7 +340,7 @@
 
         // Pinning and horizontal scrolling
         let horizontalSections = document.querySelectorAll(".horizontal-scroll");
-
+        
         horizontalSections.forEach((horizontalSection) => {
             let pinWrap = horizontalSection.querySelector(".pin-wrap");
             let pinWrapWidth = pinWrap.offsetWidth;
@@ -364,7 +361,7 @@
                 ease: "none",
             });
         });
-
+        
         /* COLOR CHANGER */
         const scrollColorElems = document.querySelectorAll("[data-bgcolor]");
 
@@ -395,13 +392,14 @@
         ScrollTrigger.refresh(); 
     });
 
-    window.addEventListener("onresize",function(){
-        var innerWidth = window.innerWidth;
-        if(innerWidth <= "860"){
+    window.addEventListener("resize",function(){
+       
+        if(window.innerWidth <= 860){
             console.log("dddd")
         }
     })
 
+ 
    
 
     </script>
