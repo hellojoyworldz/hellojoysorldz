@@ -187,6 +187,19 @@ $in : auto;
 
     }
 
+    .mainBlog{
+
+        &__intro{
+
+            .areaLeft__tit,
+            .areaRight__tit{
+                margin-bottom: 32px;
+                font-size: 40px;
+            }
+        }
+        
+    }
+
     .mainCode{
         padding: 48px 24px;
 
