@@ -259,10 +259,15 @@
 }
 .mainSite .list__thumb {
   max-width: 860px;
+  overflow: hidden;
 }
 .mainSite .list__img {
   width: 100%;
   height: auto;
+  transition: 0.3s;
+}
+.mainSite .list__img:hover {
+  transform: scale(1.1);
 }
 
 /* mainBlog*/
@@ -317,8 +322,6 @@
   gap: 24px;
   white-space: nowrap;
   will-change: transform;
-  -webkit-animation: marquee 25s linear infinite;
-          animation: marquee 25s linear infinite;
 }
 .mainBlog__intro .list__item {
   width: 25vw;
@@ -435,6 +438,7 @@
   font-size: 48px;
   line-height: 1.2em;
   color: #ffffff;
+  z-index: 1;
 }
 .mainCode .list__cate {
   position: absolute;
@@ -444,6 +448,7 @@
   font-size: 24px;
   line-height: 1em;
   color: #ffffff;
+  z-index: 1;
 }
 .mainCode .list__item.item01 {
   grid-area: a;
@@ -477,4 +482,8 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: 0.3s;
+}
+.mainCode .list__img:hover {
+  transform: scale(1.1);
 }

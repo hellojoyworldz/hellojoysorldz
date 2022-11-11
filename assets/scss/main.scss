@@ -323,11 +323,17 @@
 
         &__thumb{
             max-width: 860px;
+            overflow:hidden; 
         }
 
         &__img{
             width: 100%;
             height: auto;
+            transition: 0.3s;
+        }
+
+        &__img:hover{
+            transform: scale(1.1);
         }
     }
 }
@@ -393,7 +399,7 @@
             gap: 24px;
             white-space: nowrap;
             will-change: transform;
-            animation: marquee 25s linear infinite;
+            //animation: marquee 25s linear infinite;
     
             &__item { 
                  width: 25vw;
@@ -522,6 +528,7 @@
             font-size: 48px;
             line-height: 1.2em;
             color: $whiteFff;
+            z-index: 1;
         }
 
         &__cate{
@@ -532,6 +539,7 @@
             font-size: 24px;
             line-height: 1em;
             color: $whiteFff;
+            z-index: 1;
         }
 
         &__item{
@@ -572,10 +580,17 @@
             }
         }
 
+
+
         &__img{
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: 0.3s;
+        }
+
+        &__img:hover{
+            transform: scale(1.1);
         }
     }
 }

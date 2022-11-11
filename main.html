@@ -230,7 +230,7 @@
                 <div class="areaLeft js-areaMove">
                     <strong class="areaLeft__tit">Hello!<br/>My Blog</strong>
                     
-                    <ul class="list">   
+                    <ul class="list js-marquee">   
                         <li class="list__item"><span class="list__thumb"><img src="./assets/img/mainPortfolio__leftItem02@2.jpg" alt=""></span></li>
                         <li class="list__item"><span class="list__thumb"><img src="./assets/img/mainPortfolio__leftItem03@2.jpg" alt=""></span></li>
                         <li class="list__item"><span class="list__thumb"><img src="./assets/img/mainPortfolio__leftItem04@2.jpg" alt=""></span></li>
@@ -246,7 +246,7 @@
                 </div>
                 <div class="areaRight">
                     <strong class="areaRight__tit">Hello!<br/>My Blog</strong>
-                    <ul class="list">
+                    <ul class="list js-marquee">
                         <li class="list__item"><span class="list__thumb"><img src="./assets/img/mainPortfolio__rightItem02@2.jpg" alt=""></span></li>
                         <li class="list__item"><span class="list__thumb"><img src="./assets/img/mainPortfolio__rightItem03@2.jpg" alt=""></span></li>
                         <li class="list__item"><span class="list__thumb"><img src="./assets/img/mainPortfolio__rightItem04@2.jpg" alt=""></span></li>
@@ -456,6 +456,20 @@
 
     document.onmousemove = e => handleMove(e);
     document.ontouchmove = e => handleMove(e.touches[0]);
+
+    var marqueeWidth = document.querySelector(".js-marquee").offsetWidth;
+    console.log(marqueeWidth);
+
+    gsap.to(".js-marquee", {
+        duration: 50,
+        ease: "none",
+        x: "+=" + marqueeWidth, //move each box 500px to right
+        modifiers: {
+            x: gsap.utils.unitize(x =>- parseFloat(x) ) //force x value to be between 0 and 500 using modulus
+        },
+        repeat: -1
+    });
+
  
    
 
