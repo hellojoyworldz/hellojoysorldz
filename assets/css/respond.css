@@ -98,15 +98,8 @@
     font-size: 40px;
   }
   .mainSite__emoji {
-    width: 760px;
+    width: 860px;
     height: 360px;
-  }
-  .mainSite .list__item {
-    padding: 0 24px;
-  }
-  .mainSite .list__contents {
-    width: auto;
-    margin-bottom: 16px;
   }
   .mainSite .list__desc {
     font-size: 16px;
@@ -127,7 +120,6 @@
   }
   .mainCode__header {
     margin: 0 auto 32px;
-    width: auto;
   }
   .mainCode .list {
     grid-template-columns: repeat(2, 1fr);

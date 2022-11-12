@@ -41,6 +41,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        width: 100vw;
         height: 100vh;
         min-height: 730px;
         font-weight: bold;
@@ -51,6 +52,7 @@
         text-transform: uppercase;
         white-space: nowrap;
         transform: rotate(-6deg);
+        overflow: hidden;
 
         &--move span {
             position: relative;
@@ -115,8 +117,7 @@
         }
 
         &Bg,
-        &Item,
-        &Circle {
+        &Item{
             position: absolute;
             top: 0;
             right: 0;
@@ -124,9 +125,24 @@
             height: 100%;
         }
 
+        &Item{
+            z-index: 1;
+
+            .item01{
+
+            }
+
+            .item02{
+
+            }
+
+            .item03{
+
+            }
+        }
+
         &Bg > span,
-        &Item > span,
-        &Circle > span {
+        &Item > span{
             position: absolute;
             top: 0;
             right: 0;  
@@ -137,7 +153,7 @@
 
 /* main cate */
 .mainCate {
-    padding: 96px 0;
+    padding: 128px 0;
     overflow-x: hidden;
 
     &__tit {
@@ -171,7 +187,7 @@
         &__item{
             position: relative;
             aspect-ratio: 67 / 100;
-            width: 22vw;
+            width: 24vw;
             min-width: 300px;
             height: 100%;
             border-radius: 32px;
@@ -240,15 +256,14 @@
 }
 
 .mainSite{
-
-    min-height: 820px;
+    margin: 128px 0;
 
     &__header{
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         padding: 5vw 0;
-        margin-right:96px;
+        margin-right:25vw;
     }
 
     &__tit{
@@ -301,40 +316,96 @@
 
     & .list{
 
-        &__item{
-            padding: 0 64px;
+        &__contents{
+            position: relative;
         }
 
-        &__contents {
-            margin-bottom:32px;
+        &__item{
+            display: flex;
+        }
+
+        &__info{
+            margin-bottom: 32px;
+        }
+
+        &__num{
+            position: absolute;
+            top: -16px;
+            left: -5vw;
+            font-weight: bold;
+            font-style: italic;
+            font-family: $font__second;
+            font-size: 6vw;
+            line-height: 1em;
+            color: $whiteFff;
+            opacity: 0.3;
+        }
+
+        &__tit{
+            display: block;
+            margin-bottom: 16px;
+            font-weight: bold;
+            font-style: italic;
+            font-family: $font__second;
+            font-size: 6vw;
+            line-height: 1em;
+            color: $whiteFff;
         }
 
         &__desc{
-            position: relative;
-            padding-left: 160px;
             font-size: 24px;
             color: $whiteFff;
         }
 
-        &__sbj{
+        &__view{
             position: absolute;
-            left: 0;
+            right:-5vw;
+            bottom: 2vw;
+            width: 160px;
+            height: 160px;
+            text-align: center;
+            background: linear-gradient(-45deg, #db403a, #fce749, #38dfc6, #68caf3);
+            background-size: 400% 400%;
+            border-radius: 50%;
+            box-shadow: inset 4px 4px 16px rgba(0,0,0,0.2), 4px 4px 16px rgba(0,0,0,0.2);
+            animation: gradient 8s ease infinite;
+            
+            &:after{
+                content:'';
+                display: inline-block;
+                vertical-align: middle;
+                width: 0px;
+                height: 100%;
+            }
+
+            > span{
+                display: inline-block;
+                vertical-align: middle;
+                font-weight: bold;
+                font-style: italic;
+                font-family: $font__second;
+                font-size: 24px;
+            }    
         }
 
         &__thumb{
-            max-width: 860px;
+            display: block;
+            min-width: 860px;
             overflow:hidden; 
         }
 
         &__img{
+            display: block;
             width: 100%;
             height: auto;
             transition: 0.3s;
+
+            &:hover{
+                transform: scale(1.1);
+            }
         }
 
-        &__img:hover{
-            transform: scale(1.1);
-        }
+        
     }
 }
 
@@ -423,84 +494,23 @@
     }
 }
 
-@keyframes marquee{
-    from{ transform: translate3d(0,0,0)}
-    to{ transform: translate3d(-100%,0,0)}
-}
-
-
-
 .mainCode {
 
     padding: 96px 0;
+
     &__header {
-        display: flex;
-        align-items: center;
-        margin: 0 auto 96px;
-        width: $in;
         font-family: $font__third;
         font-weight: 600;
     }
 
     &__tit{
-        width: 50%;
         text-align:right;
         font-size: 4vw;
         line-height: 1.2em;
         color: $black222;
     }
 
-    &__tab{
-        position: relative;
-        width: 50%;
-        padding-left: 132px;
-        box-sizing: border-box;
-
-        display: flex;
-        flex-direction: column;
-
-        &::before{
-            content:'';
-            position: absolute;
-            left: 132px;
-            width:8px;
-            height: 100%;
-            background:$greyDdd;
-            border-radius: 8px;
-        }
-
-        & .tab__item{
-            position: relative;
-            padding: 8px 8px 8px 64px;
-            display: block;
-            font-size: 2vw;
-            line-height: 1.2em;
-            color: $black555;
-
-            &::before{
-                content:'';
-                position: absolute;
-                left: 0;
-                top: 0;
-                width:8px;
-                height: 100%;
-                background:transparent;
-                border-radius: 8px;
-            }
-
-            &.active, &:hover{
-                color:#FFE30D;
-
-                &::before{
-                    background:#FFE30D;
-                }
-            }
-        }
-
-    }
-
     & .list{
-
         display: grid;
         grid-template-columns: repeat(3, 336px);
         grid-auto-rows: 336px;
@@ -595,5 +605,21 @@
     }
 }
 
+@keyframes marquee{
+    from{ transform: translate3d(0,0,0)}
+    to{ transform: translate3d(-100%,0,0)}
+}
 
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
 
