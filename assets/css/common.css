@@ -298,7 +298,7 @@ html.has-scroll-dragging {
 
 /* footer */
 .footer {
-  padding: 96px 0;
+  padding: 128px 0;
   font-family: "Montserrat";
   background: linear-gradient(180deg, #EE92A2, #FF6488);
   overflow: hidden;

@@ -14,7 +14,7 @@
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
   </head>
-  <body>
+  <div>
 
     <header id="header" class="header">
         <h1 class="headerLogo">
@@ -44,8 +44,8 @@
         </nav>
     </header>
     <!---header-->
-
-    <main id="contents">
+<div id="contents">
+    <main>
         <section class="visual" data-bgcolor="#fff">
             <div class="visual__tit">
                 <h2>G.SUNAH<br/>PORTFOLIO</h2>
@@ -166,7 +166,7 @@
                             <strong class="list__tit">JavaScript<br/>Blog</strong>
                             <p class="list__desc">Javascript 공부한 흔적입니다.</p>
                         </div>
-                        <span class="list__thumb"><img class="list__img" src="./assets/img/mainSite__thumb03.jpg" alt=""></span>
+                        <span class="list__thumb"><img class="list__img" src="./assets/img/mainSite__thumb04.jpg" alt=""></span>
                         <a href="#" class="list__view" ><span >LET'S <br/>GO SITE 👉🏻</span></a>
                     </div>
                 </div>
@@ -174,7 +174,6 @@
         </section>
 
         <section class="mainCode" data-bgcolor="#fff">
-            
             <div class="mainCode__header">
                 <h2 class="mainCode__tit">Hello,<br/>My Code!</h2>
             </div>
@@ -238,6 +237,25 @@
         </section>  
         <!--mainCode-->
 
+        <section class="mainProfile" data-bgcolor="#EE92A2">
+            <svg class="textWrap" width="1440" height="539" viewBox="0 0 1440 539" fill="none" xmlns="http://www.w3.org/2000/svg" >
+                <path d="M-17.4829 15.9294C297.2 -24.1211 339.25 187.141 393.211 351.93C447.171 516.719 617.113 575.553 790.539 486.617C963.965 397.68 1095.42 189.366 1488.7 319.17" stroke="#FF7896" stroke-width="50" id="text-path-master"></path>
+                <text dy="1.5%" y="15px">
+                    <textPath xlink:href="#text-path-master" fill="currentColor" startOffset="-197.5816">
+                        HTML • CSS • jQuery • JavaScript • React • Viw • HTML • CSS • jQuery • JavaScript • React • Viw • HTML • CSS • jQuery • JavaScript • React • Viw • HTML • CSS • jQuery • JavaScript • React • Viw • HTML • CSS • jQuery • JavaScript • React • Viw • 
+                        HTML • CSS • jQuery • JavaScript • React • Viw • HTML • CSS • jQuery • JavaScript • React • Viw • HTML • CSS • jQuery • JavaScript • React • Viw • HTML • CSS • jQuery • JavaScript • React • Viw • HTML • CSS • jQuery • JavaScript • React • Viw
+                        <animate attributeName="startOffset" begint="0" dur="20s" from="0" to="-1024" repeatCount="indefinite"/>
+                    </textPath>
+                    
+                </text>
+            </svg>
+            <div class="imgWrap">
+                <div class="img img__left"><img src="./assets/img/IMG_0183.JPG" alt=""></div>
+                <div class="img img__right"><img src="./assets/img/IMG_1333.JPG" alt=""></div>
+            </div>
+        </section>
+        <!--mainPortfolio-->
+
         <!--
         <section class="mainBlog" data-bgcolor="#fff">
             <h2 class="screenHide">Hello!<br/>My Blog</h2>
@@ -291,16 +309,34 @@
             </div>
         </section>
         //section3 -->
-
+<!--
         <section id="section4" data-bgcolor="#e3857a" data-textcolor="#f1dba7"></section>
-        <!-- //section4 -->
-
+         //section4 -->
+ <!--
         <section id="section5" data-bgcolor="#e3857a" data-textcolor="#f1dba7"></section>
-        <!-- //section5 -->
-
+        //section5 -->
+ <!--
         <section id="section6" data-textcolor="#bcb8ad" data-bgcolor="#032f35"></section>
-        <!-- //section6 -->
+        //section6 -->
     </main>
+
+    <footer class="footer">
+        <h2 class="screenHide">CONTACT ME</h2>
+        <span class="footer__sbj">CONTACT ME · CONTACT ME · CONTACT ME· CONTACT ME · CONTACT ME· CONTACT ME · CONTACT ME· CONTACT ME · CONTACT ME· CONTACT ME · CONTACT ME· CONTACT ME · CONTACT ME</span>
+        <address class="footer__info">
+            <ul class="list">
+                <li class="list__item"><strong class="list__tit">NAME</strong>Gwak Sunah</li>
+                <li class="list__item"><strong class="list__tit">E-mail</strong>clickb1270@naver.com</li>
+                <li class="list__item"><strong class="list__tit">Phone</strong>+82 10-9783-6375</li>
+                <li class="list__item"><strong class="list__tit">Portfolio</strong>wwww.naver.com</li>
+                <li class="list__item"><strong class="list__tit">Git-Hub</strong>www.sunah.co.kr</li>
+                <li class="list__item"><strong class="list__tit">Blog</strong>www.sunah.com</li>
+            </ul>  
+        </address>
+        <span class="footer__sbj">Just Do It · Just Do It · Just Do It · Just Do It · Just Do It · Just Do It · Just Do It · Just Do It · Just Do It · Just Do It · Just Do It</span>
+    </footer>
+    <!--footer-->
+</div>
 
     <script>
     window.addEventListener("load", function () {
