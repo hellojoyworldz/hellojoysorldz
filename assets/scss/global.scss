@@ -662,10 +662,8 @@
   }
 
 /* mainProfile */
-.mainProfile {
-        
+.mainProfile { 
     position: relative;
-
     & .textWrap {
         position: absolute;
         top:0;
@@ -676,7 +674,6 @@
 
         & path{
             stroke: rgba(255, 255, 255, 0.5);
-            
         }
 
         & textPath{
