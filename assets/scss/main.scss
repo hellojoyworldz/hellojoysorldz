@@ -1,38 +1,37 @@
 @charset "UTF-8";
 
-// variable 
-@import 'variable';
+// variable
+@import "variable";
 
 /* visual */
 .visual {
-
     font-family: $font__second;
 
     .in {
         position: relative;
     }
 
-    &__tit{
+    &__tit {
         position: absolute;
         top: 196px;
         left: 96px;
         z-index: 1;
 
-        & h2{
+        & h2 {
             margin-bottom: 16px;
             font-size: 40px;
             line-height: 1.2em;
             color: $black222;
         }
 
-        &--move{
+        &--move {
             display: inline-block;
             padding: 0 24px;
             height: 40px;
             font-size: 16px;
             line-height: 40px;
             color: $whitefff;
-            background: #2EA34E;
+            background: #2ea34e;
             border-radius: 40px;
         }
     }
@@ -57,36 +56,35 @@
         &--move span {
             position: relative;
             display: inline-block;
-            padding: 0 2.5vw
+            padding: 0 2.5vw;
         }
 
-        &--move span:hover{
+        &--move span:hover {
             color: $black222;
         }
 
-
-        &--move span::before{
-            content:'';
+        &--move span::before {
+            content: "";
             position: absolute;
             left: 2%;
             bottom: -5%;
             width: 11%;
             height: 50%;
-            background: #FF6488;
+            background: #ff6488;
             transform: rotate(-10deg);
             opacity: 0.3;
-            z-index:-1;
+            z-index: -1;
             transition: 0.3s;
         }
 
-        &--move span:hover::before{
-            content:'';
+        &--move span:hover::before {
+            content: "";
             transform: rotate(10deg);
-            background: #FF6488;
+            background: #ff6488;
             opacity: 0.5;
         }
-        &--move span::after{
-            content:'';
+        &--move span::after {
+            content: "";
             position: absolute;
             right: 1%;
             bottom: -5%;
@@ -94,12 +92,12 @@
             height: 50%;
             background-color: $greyddd;
             opacity: 0.5;
-            z-index:-1;
+            z-index: -1;
             transition: 0.3s;
         }
 
-        &--move span:hover::after{
-            content:'';
+        &--move span:hover::after {
+            content: "";
             width: 86%;
             opacity: 0.8;
         }
@@ -112,12 +110,12 @@
         height: 1073px;
         z-index: -1;
 
-        & img{
+        & img {
             max-width: 100%;
         }
 
         &Bg,
-        &Item{
+        &Item {
             position: absolute;
             top: 0;
             right: 0;
@@ -125,29 +123,25 @@
             height: 100%;
         }
 
-        &Item{
+        &Item {
             z-index: 1;
 
-            .item01{
-
+            .item01 {
             }
 
-            .item02{
-
+            .item02 {
             }
 
-            .item03{
-
+            .item03 {
             }
         }
 
         &Bg > span,
-        &Item > span{
+        &Item > span {
             position: absolute;
             top: 0;
-            right: 0;  
-        } 
-
+            right: 0;
+        }
     }
 }
 
@@ -165,8 +159,8 @@
         color: $black222;
         text-align: center;
 
-        & .highlight{
-            color:#4BEBC9;
+        & .highlight {
+            color: #4bebc9;
         }
     }
 
@@ -177,14 +171,14 @@
         margin: 0 auto;
     }
 
-    & .list{
+    & .list {
         display: flex;
         align-items: center;
         justify-content: center;
         grid-column-gap: 24px;
         white-space: nowrap;
-        
-        &__item{
+
+        &__item {
             position: relative;
             aspect-ratio: 67 / 100;
             width: 24vw;
@@ -193,27 +187,27 @@
             border-radius: 32px;
             overflow: hidden;
 
-            & img{
+            & img {
                 width: 100%;
                 height: auto;
             }
         }
 
-        &__icon{
+        &__icon {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index:1;
+            z-index: 1;
 
-            & img{
+            & img {
                 width: 100%;
                 height: auto;
             }
         }
 
-        &__tit{
+        &__tit {
             position: absolute;
             bottom: 8vw;
             width: 100%;
@@ -223,112 +217,111 @@
             z-index: 2;
         }
 
-        &__thumb{
+        &__thumb {
             display: block;
-            filter:brightness(0.6);
+            filter: brightness(0.6);
 
-            & img{
+            & img {
                 display: block;
             }
         }
-        
-        &__item:nth-child(5n-4) .list__tit{
-            color: #D05FE5;
+
+        &__item:nth-child(5n-4) .list__tit {
+            color: #d05fe5;
         }
 
-        &__item:nth-child(5n-3) .list__tit{
-            color: #FFE30D;
+        &__item:nth-child(5n-3) .list__tit {
+            color: #ffe30d;
         }
 
-        &__item:nth-child(5n-2) .list__tit{
-            color: #89DE07;
+        &__item:nth-child(5n-2) .list__tit {
+            color: #89de07;
         }
 
-        &__item:nth-child(5n-1) .list__tit{
-            color: #41E0EB;
+        &__item:nth-child(5n-1) .list__tit {
+            color: #41e0eb;
         }
 
-        &__item:nth-child(5n) .list__tit{
-            color: #F06B67;
+        &__item:nth-child(5n) .list__tit {
+            color: #f06b67;
         }
-        
     }
 }
 
-.mainSite{
+.mainSite {
     margin: 128px 0;
 
-    &__header{
+    &__header {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         padding: 5vw 0;
-        margin-right:25vw;
+        margin-right: 25vw;
     }
 
-    &__tit{
+    &__tit {
         position: relative;
-        text-align:right;
+        text-align: right;
         font-family: $font__third;
         font-size: 6vw;
         line-height: 1.2em;
         color: $whiteFff;
 
-        &Img{
+        &Img {
             position: absolute;
             right: 0;
             bottom: -60%;
             width: 21vw;
-            z-index:-1;
+            z-index: -1;
 
-            & img{
+            & img {
                 width: 100%;
             }
         }
     }
 
-    &__emoji{
+    &__emoji {
         position: relative;
         width: 1200px;
         height: 600px;
         z-index: -1;
 
-        & img{
+        & img {
             width: 100%;
         }
 
         &Circle,
         &Icon,
         &Dot,
-        &Bg{
+        &Bg {
             position: relative;
         }
 
         &Circle > span,
         &Icon > span,
         &Dot > span,
-        &Bg > span{
+        &Bg > span {
             position: absolute;
             left: 0;
             top: 0;
         }
     }
 
-    & .list{
-
-        &__contents{
+    & .list {
+        &__contents {
             position: relative;
         }
 
-        &__item{
+        &__item {
             display: flex;
+            justify-content: center;
         }
 
-        &__info{
+        &__info {
             margin-bottom: 32px;
         }
 
-        &__num{
+        &__num {
             position: absolute;
             top: -16px;
             left: -5vw;
@@ -341,7 +334,7 @@
             opacity: 0.3;
         }
 
-        &__tit{
+        &__tit {
             display: block;
             margin-bottom: 16px;
             font-weight: bold;
@@ -352,14 +345,14 @@
             color: $whiteFff;
         }
 
-        &__desc{
+        &__desc {
             font-size: 24px;
             color: $whiteFff;
         }
 
-        &__view{
+        &__view {
             position: absolute;
-            right:-5vw;
+            right: -5vw;
             bottom: 2vw;
             width: 160px;
             height: 160px;
@@ -367,58 +360,68 @@
             background: linear-gradient(-45deg, #db403a, #fce749, #38dfc6, #68caf3);
             background-size: 400% 400%;
             border-radius: 50%;
-            box-shadow: inset 4px 4px 16px rgba(0,0,0,0.2), 4px 4px 16px rgba(0,0,0,0.2);
+            box-shadow: inset 4px 4px 16px rgba(0, 0, 0, 0.2), 4px 4px 16px rgba(0, 0, 0, 0.2);
             animation: gradient 8s ease infinite;
-            
-            &:after{
-                content:'';
+
+            &:after {
+                content: "";
                 display: inline-block;
                 vertical-align: middle;
                 width: 0px;
                 height: 100%;
             }
 
-            > span{
+            > span {
                 display: inline-block;
                 vertical-align: middle;
                 font-weight: bold;
                 font-style: italic;
                 font-family: $font__second;
                 font-size: 24px;
-            }    
+            }
         }
 
-        &__thumb{
+        &__thumb {
             display: block;
             min-width: 860px;
-            overflow:hidden; 
+            overflow: hidden;
         }
 
-        &__img{
+        &__img {
             display: block;
             width: 100%;
             height: auto;
             transition: 0.3s;
 
-            &:hover{
+            &:hover {
                 transform: scale(1.1);
             }
         }
+    }
+}
 
-        
+.mainBanner {
+    position: relative;
+    width: 100%;
+    img {
+        width: 100%;
+    }
+    &__item {
+        position: absolute;
+        left: 0;
+        top: 0;
     }
 }
 
 /* mainBlog*/
 .mainBlog {
-
-    &__intro{
+    &__intro {
         position: relative;
         height: 100vh;
         min-height: 760px;
-    
+
         & .areaLeft,
-          .areaRight {
+        .areaRight {
             display: grid;
             align-content: center;
             position: absolute;
@@ -426,7 +429,7 @@
             height: 100%;
             overflow: hidden;
 
-            &__tit{
+            &__tit {
                 margin-bottom: 96px;
                 width: 100vw;
                 font-family: $font__third;
@@ -438,23 +441,23 @@
         }
 
         & .areaLeft {
-            background: #EE92A2;
+            background: #ee92a2;
             z-index: 1;
-            
+
             &__tit {
                 color: $whitefff;
             }
         }
 
         & .areaRight {
-            background: #FF6488;
-            
+            background: #ff6488;
+
             &__tit {
                 color: $whitefff;
             }
         }
 
-        & .handlebar{
+        & .handlebar {
             position: absolute;
             top: 35%;
             margin-top: -16px;
@@ -462,8 +465,7 @@
             z-index: 2;
         }
 
-        & .list{
-            
+        & .list {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -471,19 +473,19 @@
             white-space: nowrap;
             will-change: transform;
             //animation: marquee 25s linear infinite;
-    
-            &__item { 
-                 width: 25vw;
-                 min-width: 280px;
+
+            &__item {
+                width: 25vw;
+                min-width: 280px;
             }
-    
+
             &__thumb {
                 display: block;
                 height: 100%;
                 border-radius: 40px;
                 overflow: hidden;
-    
-                & img{
+
+                & img {
                     display: block;
                     max-width: inherit;
                     width: 100%;
@@ -501,35 +503,34 @@
         font-weight: 600;
     }
 
-    &__tit{
+    &__tit {
         margin-bottom: 96px;
-        text-align:center;
+        text-align: center;
         font-size: 6vw;
         line-height: 1.2em;
         color: $black222;
     }
 
-    & .list{
+    & .list {
         display: grid;
         grid-template-columns: repeat(3, 336px);
         grid-auto-rows: 336px;
         grid-gap: 24px;
-        grid-template-areas: 
-            'a a b d'
-            'a a c d'
-            'e f f g'
-            'e h i i'
-        ;
+        grid-template-areas:
+            "a a b d"
+            "a a c d"
+            "e f f g"
+            "e h i i";
         width: $in;
         margin: 0 auto;
 
-        &__item{
+        &__item {
             position: relative;
             border-radius: 32px;
             overflow: hidden;
         }
 
-        &__tit{
+        &__tit {
             position: absolute;
             left: 48px;
             top: 48px;
@@ -540,7 +541,7 @@
             z-index: 1;
         }
 
-        &__cate{
+        &__cate {
             position: absolute;
             left: 48px;
             bottom: 48px;
@@ -551,127 +552,145 @@
             z-index: 1;
         }
 
-        &__item{
-            &.item01{
+        &__item {
+            &.item01 {
                 grid-area: a;
             }
 
-            &.item02{
+            &.item02 {
                 grid-area: b;
             }
 
-            &.item03{
+            &.item03 {
                 grid-area: c;
             }
 
-            &.item04{
+            &.item04 {
                 grid-area: d;
             }
 
-            &.item05{
+            &.item05 {
                 grid-area: e;
             }
 
-            &.item06{
+            &.item06 {
                 grid-area: f;
             }
 
-            &.item07{
+            &.item07 {
                 grid-area: g;
             }
 
-            &.item08{
+            &.item08 {
                 grid-area: h;
             }
 
-            &.item08{
+            &.item08 {
                 grid-area: i;
             }
         }
 
-
-
-        &__img{
+        &__img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: 0.3s;
         }
 
-        &__img:hover{
+        &__img:hover {
             transform: scale(1.1);
         }
     }
 }
 
+.mainTag {
+    .tag {
+        &__list {
+            display: flex;
+            width: fit-content;
+            animation-name: loop;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: var(--direction);
+            animation-duration: var(--duration);
+        }
+        &__item {
+            box-shadow: 0 0.1rem 0.2rem rgb(0 0 0 / 20%), 0 0.1rem 0.5rem rgb(0 0 0 / 30%),
+                0 0.2rem 1.5rem rgb(0 0 0 / 40%);
+        }
+    }
+}
+
 /* mainProfile */
-.mainProfile { 
+.mainProfile {
     position: relative;
     padding: 128px 0;
     & .textWrap {
         position: absolute;
-        top:0;
+        top: 0;
         width: 100%;
         height: auto;
-        overflow:visible;
-        z-index:2;
+        overflow: visible;
+        z-index: 2;
 
-        & path{
+        & path {
             stroke: rgba(255, 255, 255, 0.5);
         }
 
-        & textPath{
+        & textPath {
             position: relative;
             font-family: $font__second;
             font-size: 1.5em;
-            font-weight: bold;;
-            color:#ff7896;
+            font-weight: bold;
+            color: #ff7896;
             filter: currentColor;
         }
     }
-    
-    & .imgWrap{
+
+    & .imgWrap {
         width: $in;
         margin: 0 auto;
     }
-    
-    & .img{
+
+    & .img {
         position: relative;
         width: 35%;
         margin: 0 0 0 auto;
 
-        &__left{
+        &__left {
             z-index: 3;
         }
 
-        &__right{
+        &__right {
             top: -100px;
             right: 30%;
             z-index: 1;
         }
 
-        img{
+        img {
             width: 100%;
             height: auto;
         }
     }
 }
 
-@keyframes marquee{
-    from{ transform: translate3d(0,0,0)}
-    to{ transform: translate3d(-100%,0,0)}
+@keyframes marquee {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        transform: translate3d(-100%, 0, 0);
+    }
 }
-
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
-

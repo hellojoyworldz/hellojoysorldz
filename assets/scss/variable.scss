@@ -1,12 +1,15 @@
 @charset "UTF-8";
 
 // variable 
-$tit__lv1 : 12px;
-$tit__lv2 : 12px;
-$tit__lv3 : 12px;
-$tit__lv4 : 12px;
-$tit__lv5 : 12px;
-$tit__lv6 : 12px;
+$fontLv1 : 6vw;
+$fontLv2 : 96px;
+$fontLv3 : 12px;
+$fontLv4 : 12px;
+$fontLv5 : 12px;
+$fontLv6 : 12px;
+
+$titSizFir : $fontLv1;
+
 
 $black222 : #222222;
 $black555 : #555555;
@@ -16,8 +19,9 @@ $greyddd : #dddddd;
 $greyDdd : $greyddd;
 $greyAaa : #aaaaaa;
 
+$color1 : #D05FE5;
 
-$purpleD05: #D05FE5;
+
 
 $font__first : 'IBM Plex Sans KR';
 $font__second: 'Montserrat';
