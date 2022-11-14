@@ -495,6 +495,7 @@
   transform: scale(1.1);
 }
 
+<<<<<<< HEAD
 .mainTag .tag__list {
   display: flex;
   width: -webkit-fit-content;
@@ -515,6 +516,8 @@
   box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.2), 0 0.1rem 0.5rem rgba(0, 0, 0, 0.3), 0 0.2rem 1.5rem rgba(0, 0, 0, 0.4);
 }
 
+=======
+>>>>>>> 74ae2c49a43912936b36b2ad4bc2e650a3ccf37c
 /* mainProfile */
 .mainProfile {
   position: relative;
