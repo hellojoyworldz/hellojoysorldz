@@ -7,45 +7,41 @@
     <title>G.SUNAH PORTFOLIO</title>
     <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/common.css" />
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/global.css" />
     <link rel="stylesheet" href="assets/css/respond.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
-    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
   </head>
-  <div>
+<body>
+<header id="header" class="header">
+    <h1 class="headerLogo">
+        <a class="headerLogo__link" href="./index.html">
+            <span class="headerLogo__icon"><span class="mouth js-mouth"></span></span>
+            <span class="headerLogo__text">FE<br/>DEVELOPER</span>
+        </a>
+    </h1>
 
-    <header id="header" class="header">
-        <h1 class="headerLogo">
-            <a class="headerLogo__link" href="./index.html">
-                <span class="headerLogo__icon"><span class="mouth js-mouth"></span></span>
-                <span class="headerLogo__text">FE<br/>DEVELOPER</span>
-            </a>
-        </h1>
+    <div class="scrollGage">
+        <span class="screenHide">현재 위치</span>
+        <span class="scrollGage__percent"></span>
+        <span class="scrollGage__position"></span>
+        
+    </div>
 
-        <div class="scrollGage">
-            <span class="screenHide">현재 위치</span>
-            <span class="scrollGage__percent"></span>
-            <span class="scrollGage__position"></span>
-            
+    <nav id="nav" class="nav">
+        <button class="nav__btn--open " type="button"><span class="screenHide">전체메뉴보기</span></button>
+        <div id="gnb" class="gnb">
+            <ul class="gnb__list">
+                <li class="gnb__item">
+                    <a class="gnb__link" href=""></a>
+                </li>
+            </ul>
+            <button class="gnb__btn--close" type="button"><span class="screenHide">전체메뉴닫기</span></button>
         </div>
+    </nav>
+</header>
+<!---header-->
 
-        <nav id="nav" class="nav">
-            <button class="nav__btn--open " type="button"><span class="screenHide">전체메뉴보기</span></button>
-            <div id="gnb" class="gnb">
-                <ul class="gnb__list">
-                    <li class="gnb__item">
-                        <a class="gnb__link" href=""></a>
-                    </li>
-                </ul>
-                <button class="gnb__btn--close" type="button"><span class="screenHide">전체메뉴닫기</span></button>
-            </div>
-        </nav>
-    </header>
-    <!---header-->
 <div id="contents">
-    <main>
+    <main class="main">
         <section class="visual" data-bgcolor="#fff">
             <div class="visual__tit">
                 <h2>G.SUNAH<br/>PORTFOLIO</h2>
@@ -72,7 +68,6 @@
                 </div>
             </div>
         </section>
-        <!-- //visual -->
 
         <section class="mainCate" data-bgcolor="#fff">
             <h2 class="mainCate__tit">Plan and<br/>orgnize<br/><span class="highlight">anything</span></h2>
@@ -108,7 +103,6 @@
                 </div>
             </div>
         </section>
-        <!-- //mainCate -->
 
         <section class="mainSite horizontal-scroll" data-bgcolor="#310591" >
             <div class="pin-wrap">
@@ -175,16 +169,15 @@
                 </div>
             </div>
         </section>
-        <!-- //mainSite -->
-
+<!--
         <section class="mainBanner" data-bgcolor="#fff">
             <span class="mainBanner__item" data-scroll data-scroll-speed="8" data-scroll-direction="vertical"><img src="assets/img/mainBanner__item.png" alt=""></span>
-            <span class="mainBanner__bg"><img src="assets/img/mainBanner__bg.png" alt=""></span>
+            <span class="mainBanner__bg"><img src="assets/img/mainBanner__item.png" alt=""></span>
         </section>
-
+-->
         <section class="mainCode" data-bgcolor="#fff">
             <div class="mainCode__header">
-                <h2 class="mainCode__tit">Hello,<br/>My Code!</h2>
+                <h2 class="mainCode__tit">Hello,<br/>CSS Animation</h2>
             </div>
 
             <ul class="list">
@@ -244,95 +237,84 @@
                 </li>
             </ul>
         </section>  
-        <!-- //mainCode -->
 
-        <!--
-        <section class="mainCard">
-            <h2 class="mainCard__tit">JavaScript</h2>
-            <ul class="mainCard__list">
-                <li class="mainCard__item">
-                    <div class="mainCard__thumb">
+        <section class="mainCard" data-bgcolor="#f1f1f1">
+            <div class="mainCode__header">
+                <h2 class="mainCode__tit">Hello,<br/>CSS Animation</h2>
+            </div>
+            <ul class="list">
+                <li class="list__item">
+                    <div class="list__thumb">
                         <img src="https://webstoryboy.github.io/studyPORT/portfolio34/img/tetris_img1.png" alt="">
                     </div>
-                    <div class="mainCard__info">
-                        <strong class="mainCard__tit">TETRIS GAME</strong>
-                        <p class="mainCard__speech">
-                            FOREACH 반복문과 SWITCH, 삼항연산자를 조건문으로 사용해 함수를 생성하여 리팩토링하기 편리하도록 작업을 진행하여 테트리스 게임을 제작하였습니다.
+                    <div class="list__info">
+                        <strong class="list__tit">TETRIS GAME</strong>
+                        <p class="list__desc">
+                            FOREACH 반복문과 SWITCH, 삼항연산자를 조건문으로 사용해<br/>
+                            함수를 생성하여 리팩토링하기 편리하도록 작업을 진행하여<br/>
+                            테트리스 게임을 제작하였습니다.
                         </p>
                     </div>
-                    <span class="mainCard__view"><a href="">VIEW</a></span>
-                </li>
-                <li class="mainCard__item">
-                    <div class="mainCard__thumb">
+                     </li>
+                <li class="list__item">
+                    <div class="list__thumb">
                         <img src="https://webstoryboy.github.io/studyPORT/portfolio34/img/musicapp.jpg" alt="">
                     </div>
-                    <div class="mainCard__info">
-                        <strong class="mainCard__tit">TETRIS GAME</strong>
-                        <p class="mainCard__desc">
-                            FOREACH 반복문과 SWITCH, 삼항연산자를 조건문으로 사용해 함수를 생성하여 리팩토링하기 편리하도록 작업을 진행하여 테트리스 게임을 제작하였습니다.
-                        </p>
+                    <div class="list__info">
+                        <strong class="list__tit">TETRIS GAME</strong>
+                        <p class="list__desc">
+                            FFOREACH 반복문과 SWITCH, 삼항연산자를 조건문으로 사용해<br/>
+                            함수를 생성하여 리팩토링하기 편리하도록 작업을 진행하여<br/>
+                            테트리스 게임을 제작하였습니다.</p>
                     </div>
-                    <span class="mainCard__view"><a href="">VIEW</a></span>
-                </li>
-                <li class="mainCard__item">
-                    <div class="mainCard__thumb">
+                     </li>
+                <li class="list__item">
+                    <div class="list__thumb">
                         <img src="https://webstoryboy.github.io/studyPORT/portfolio34/img/cardgame.png" alt="">
                     </div>
-                    <div class="mainCard__info">
-                        <strong class="mainCard__tit">TETRIS GAME</strong>
-                        <p class="mainCard__desc">
-                            FOREACH 반복문과 SWITCH, 삼항연산자를 조건문으로 사용해 함수를 생성하여 리팩토링하기 편리하도록 작업을 진행하여 테트리스 게임을 제작하였습니다.
-                        </p>
+                    <div class="list__info">
+                        <strong class="list__tit">TETRIS GAME</strong>
+                        <p class="list__desc">
+                            FOREACH 반복문과 SWITCH, 삼항연산자를 조건문으로 사용해<br/>
+                            함수를 생성하여 리팩토링하기 편리하도록 작업을 진행하여<br/>
+                            테트리스 게임을 제작하였습니다.</p>
                     </div>
-                    <span class="mainCard__view"><a href="">VIEW</a></span>
-                </li>
-                <li class="mainCard__item">
-                    <div class="mainCard__thumb">
+                    </li>
+                <li class="list__item">
+                    <div class="list__thumb">
                         <img src="https://webstoryboy.github.io/studyPORT/portfolio34/img/typing2@3x.png" alt="">
                     </div>
-                    <div class="mainCard__info">
-                        <strong class="mainCard__tit">TETRIS GAME</strong>
-                        <p class="mainCard__desc">
-                            FOREACH 반복문과 SWITCH, 삼항연산자를 조건문으로 사용해 함수를 생성하여 리팩토링하기 편리하도록 작업을 진행하여 테트리스 게임을 제작하였습니다.
-                        </p>
+                    <div class="list__info">
+                        <strong class="list__tit">TETRIS GAME</strong>
+                        <p class="list__desc">
+                            FOREACH 반복문과 SWITCH, 삼항연산자를 조건문으로 사용해<br/>
+                            함수를 생성하여 리팩토링하기 편리하도록 작업을 진행하여<br/>
+                            테트리스 게임을 제작하였습니다.</p>
                     </div>
-                    <span class="mainCard__view"><a href="">VIEW</a></span>
-                </li>
-                <li class="mainCard__item">
-                    <div class="mainCard__thumb">
+                    </li>
+                <li class="list__item">
+                    <div class="list__thumb">
                         <img src="https://webstoryboy.github.io/studyPORT/portfolio34/img/chatting_img@2x.png" alt="">
                     </div>
-                    <div class="mainCard__info">
-                        <strong class="mainCard__tit">TETRIS GAME</strong>
-                        <p class="mainCard__desc">
-                            FOREACH 반복문과 SWITCH, 삼항연산자를 조건문으로 사용해 함수를 생성하여 리팩토링하기 편리하도록 작업을 진행하여 테트리스 게임을 제작하였습니다.
-                        </p>
+                    <div class="list__info">
+                        <strong class="list__tit">TETRIS GAME</strong>
+                        <p class="list__desc">
+                            FOREACH 반복문과 SWITCH, 삼항연산자를 조건문으로 사용해<br/>
+                            함수를 생성하여 리팩토링하기 편리하도록 작업을 진행하여<br/>
+                            테트리스 게임을 제작하였습니다.</p>
                     </div>
-                    <span class="mainCard__view"><a href="">VIEW</a></span>
+                    
                 </li>
             </ul>
         </section>
-
-        <section class="mainTag">
-            <h2></h2>
-            <div class="tag__box">
-                <div class="tag__list">
-                    <span class="tag__item">HTML</span>
-                    <span class="tag__item">CSS</span>
-                    <span class="tag__item">JavaScript</span>
-                    <span class="tag__item">Typescript</span>
-                    <span class="tag__item">React</span>
-                    <span class="tag__item">Vue</span>
-                    <span class="tag__item">UI/UX</span>
-                    <span class="tag__item">DESIGN</span>
-                    <span class="tag__item">Animation</span>
-                </div>
-            </div>
+<!---
+        <section class="mainBanner" data-bgcolor="#fff">
+            <span class="mainBanner__item" data-scroll data-scroll-speed="8" data-scroll-direction="vertical"><img src="assets/img/mainBanner2__item.png" alt=""></span>
+            <span class="mainBanner__bg"><img src="assets/img/mainBanner2__item.png" alt=""></span>
         </section>
-        -->
-
-        <section class="mainProfile" data-bgcolor="#EE92A2">
-            <svg class="textWrap" width="1440" height="539" viewBox="0 0 1440 539" fill="none" xmlns="http://www.w3.org/2000/svg" >
+ -->     
+        <section class="mainProfile" data-bgcolor="#ff7896">
+            <svg class="mainProfile__svg" width="1440" height="539" viewBox="0 0 1440 539" fill="none" xmlns="http://www.w3.org/2000/svg" >
                 <path d="M-17.4829 15.9294C297.2 -24.1211 339.25 187.141 393.211 351.93C447.171 516.719 617.113 575.553 790.539 486.617C963.965 397.68 1095.42 189.366 1488.7 319.17" stroke="#FF7896" stroke-width="50" id="text-path-master"></path>
                 <text dy="1.5%" y="15px">
                     <textPath xlink:href="#text-path-master" fill="currentColor" startOffset="-197.5816">
@@ -348,73 +330,23 @@
                         HTML • CSS • jQuery • JavaScript • React • Vue
                         <animate attributeName="startOffset" begint="0" dur="20s" from="0" to="-1024" repeatCount="indefinite"/>
                     </textPath>
-                    
                 </text>
             </svg>
-            <div class="imgWrap">
-                <div class="img img__left"><img src="./assets/img/IMG_0183.JPG" alt=""></div>
-                <div class="img img__right"><img src="./assets/img/IMG_1333.JPG" alt=""></div>
-            </div>
+            <span class="mainProfile__thumb"><img src="assets/img/IMG_0419.JPG" alt=""></span>
+        
         </section>
-        <!-- //mainPortfolio -->
-
-        <!--
-        <section class="mainBlog" data-bgcolor="#fff">
-            <h2 class="screenHide">Hello!<br/>My Blog</h2>
-
-            <div class="mainBlog__intro">
-                <span class="handlebar"><img src="./assets/img/mainBlog__handlebar.svg" alt=""></span>
-                <div class="areaLeft js-areaMove">
-                    <strong class="areaLeft__tit">Hello!<br/>My Blog</strong>
-                    
-                    <ul class="list js-marquee">   
-                        <li class="list__item"><span class="list__thumb"><img src="./assets/img/mainPortfolio__leftItem02@2.jpg" alt=""></span></li>
-                        <li class="list__item"><span class="list__thumb"><img src="./assets/img/mainPortfolio__leftItem03@2.jpg" alt=""></span></li>
-                        <li class="list__item"><span class="list__thumb"><img src="./assets/img/mainPortfolio__leftItem04@2.jpg" alt=""></span></li>
-                        <li class="list__item"><span class="list__thumb"><img src="./assets/img/mainPortfolio__leftItem03@2.jpg" alt=""></span></li>
-                        <li class="list__item"><span class="list__thumb"><img src="./assets/img/mainPortfolio__leftItem02@2.jpg" alt=""></span></li>
-                        <li class="list__item"><span class="list__thumb"><img src="./assets/img/mainPortfolio__leftItem03@2.jpg" alt=""></span></li>
-                        <li class="list__item"><span class="list__thumb"><img src="./assets/img/mainPortfolio__leftItem04@2.jpg" alt=""></span></li>
-                        <li class="list__item"><span class="list__thumb"><img src="./assets/img/mainPortfolio__leftItem03@2.jpg" alt=""></span></li>
-                        <li class="list__item"><span class="list__thumb"><img src="./assets/img/mainPortfolio__leftItem02@2.jpg" alt=""></span></li>
-                        <li class="list__item"><span class="list__thumb"><img src="./assets/img/mainPortfolio__leftItem03@2.jpg" alt=""></span></li>
-                        <li class="list__item"><span class="list__thumb"><img src="./assets/img/mainPortfolio__leftItem04@2.jpg" alt=""></span></li>
-                    </ul>  
-                </div>
-                <div class="areaRight">
-                    <strong class="areaRight__tit">Hello!<br/>My Blog</strong>
-                    <ul class="list js-marquee">
-                        <li class="list__item"><span class="list__thumb"><img src="./assets/img/mainPortfolio__rightItem02@2.jpg" alt=""></span></li>
-                        <li class="list__item"><span class="list__thumb"><img src="./assets/img/mainPortfolio__rightItem03@2.jpg" alt=""></span></li>
-                        <li class="list__item"><span class="list__thumb"><img src="./assets/img/mainPortfolio__rightItem04@2.jpg" alt=""></span></li>
-                        <li class="list__item"><span class="list__thumb"><img src="./assets/img/mainPortfolio__rightItem03@2.jpg" alt=""></span></li>
-                        <li class="list__item"><span class="list__thumb"><img src="./assets/img/mainPortfolio__rightItem02@2.jpg" alt=""></span></li>
-                        <li class="list__item"><span class="list__thumb"><img src="./assets/img/mainPortfolio__rightItem03@2.jpg" alt=""></span></li>
-                        <li class="list__item"><span class="list__thumb"><img src="./assets/img/mainPortfolio__rightItem04@2.jpg" alt=""></span></li>
-                        <li class="list__item"><span class="list__thumb"><img src="./assets/img/mainPortfolio__rightItem03@2.jpg" alt=""></span></li>
-                        <li class="list__item"><span class="list__thumb"><img src="./assets/img/mainPortfolio__rightItem02@2.jpg" alt=""></span></li>
-                        <li class="list__item"><span class="list__thumb"><img src="./assets/img/mainPortfolio__rightItem03@2.jpg" alt=""></span></li>
-                        <li class="list__item"><span class="list__thumb"><img src="./assets/img/mainPortfolio__rightItem04@2.jpg" alt=""></span></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    -->
-
-     
     </main>
 
-    <footer class="footer">
+    <footer class="footer" data-bgcolor="#ff7896">
         <h2 class="screenHide">CONTACT ME</h2>
-        <span class="footer__sbj">CONTACT ME · CONTACT ME · CONTACT ME· CONTACT ME · CONTACT ME· CONTACT ME · CONTACT ME· CONTACT ME · CONTACT ME· CONTACT ME · CONTACT ME· CONTACT ME · CONTACT ME</span>
         <address class="footer__info">
             <ul class="list">
                 <li class="list__item"><strong class="list__tit">NAME</strong>Gwak Sunah</li>
-                <li class="list__item"><strong class="list__tit">E-mail</strong>clickb1270@naver.com</li>
+                <li class="list__item"><strong class="list__tit">E-mail</strong>hellojoyworldz@google.com</li>
                 <li class="list__item"><strong class="list__tit">Phone</strong>+82 10-9783-6375</li>
-                <li class="list__item"><strong class="list__tit">Portfolio</strong>wwww.naver.com</li>
-                <li class="list__item"><strong class="list__tit">Git-Hub</strong>www.sunah.co.kr</li>
-                <li class="list__item"><strong class="list__tit">Blog</strong>www.sunah.com</li>
+                <li class="list__item"><strong class="list__tit">Portfolio</strong>https://hellojoyworldz.github.io/hellojoyworldz/</li>
+                <li class="list__item"><strong class="list__tit">Git-Hub</strong>https://github.com/hellojoyworldz</li>
+                <li class="list__item"><strong class="list__tit">Blog</strong>https://hellojoyworldz.tistory.com/</li>
             </ul>  
         </address>
         <span class="footer__sbj">Just Do It · Just Do It · Just Do It · Just Do It · Just Do It · Just Do It · Just Do It · Just Do It · Just Do It · Just Do It · Just Do It</span>
@@ -422,126 +354,10 @@
     <!--footer-->
 </div>
 
-    <script>
-    window.addEventListener("load", function () {
-        gsap.registerPlugin(ScrollTrigger);
-
-        const pageContainer = document.querySelector("#contents");
-        pageContainer.setAttribute("data-scroll-container", "");
-
-        const scroller = new LocomotiveScroll({
-            el: pageContainer,
-            smooth: true,
-            getDirection: true,
-        });
-
-        scroller.on("scroll", function (t) {
-            document.documentElement.setAttribute("data-direction", t.direction);
-        });
-
-        scroller.on("scroll", ScrollTrigger.update);
-
-        ScrollTrigger.scrollerProxy(pageContainer, {
-            scrollTop(value) {
-                return arguments.length
-                ? scroller.scrollTo(value, 0, 0)
-                : scroller.scroll.instance.scroll.y;
-            },
-            getBoundingClientRect() {
-                return {
-                    left: 0,
-                    top: 0,
-                    width: window.innerWidth,
-                    height: window.innerHeight,
-                };
-            },
-            pinType: pageContainer.style.transform ? "transform" : "fixed",
-        });
-
-        // Pinning and horizontal scrolling
-        let horizontalSections = document.querySelectorAll(".horizontal-scroll");
-        
-        horizontalSections.forEach((horizontalSection) => {
-            let pinWrap = horizontalSection.querySelector(".pin-wrap");
-            let pinWrapWidth = pinWrap.offsetWidth;
-            let horizontalScrollLength = pinWrapWidth - window.innerWidth;
-
-            gsap.to(pinWrap, {
-                scrollTrigger: {
-                    scroller: "[data-scroll-container]",
-                    scrub: true,
-                    trigger: horizontalSection,
-                    pin: true,
-                    start: "top top",
-                    markers: false,
-                    end: () => `+=${pinWrapWidth}`,
-                    invalidateOnRefresh: true,
-                },
-                x: -horizontalScrollLength,
-                ease: "none",
-            });
-        });
-        
-        /* COLOR CHANGER */
-        const scrollColorElems = document.querySelectorAll("[data-bgcolor]");
-
-        scrollColorElems.forEach((colorSection, i) => {
-            const prevBg = i === 0 ? "" : scrollColorElems[i - 1].dataset.bgcolor;
-            const prevText = i === 0 ? "" : scrollColorElems[i - 1].dataset.textcolor;
-
-            ScrollTrigger.create({
-                trigger: colorSection,
-                scroller: "[data-scroll-container]",
-                start: "top 50%",
-                onEnter: () =>
-                gsap.to("body", {
-                    backgroundColor: colorSection.dataset.bgcolor,
-                    color: colorSection.dataset.textcolor,
-                    overwrite: "auto",
-                }),
-                onLeaveBack: () =>
-                gsap.to("body", {
-                    backgroundColor: prevBg,
-                    color: prevText,
-                    overwrite: "auto",
-                }),
-            });
-        });
-
-        ScrollTrigger.addEventListener("refresh", () => scroller.update());
-        ScrollTrigger.refresh(); 
-    });
-
-    /*
-    const left = document.querySelector(".js-areaMove");
-    const handlebar = document.querySelector(".handlebar")
-
-    const handleMove = e => {
-        left.style.width = `${e.clientX / window.innerWidth * 100}%`;
-        handlebar.style.left = `${e.clientX / window.innerWidth * 100}%`;
-    }
-    
-
-    document.onmousemove = e => handleMove(e);
-    document.ontouchmove = e => handleMove(e.touches[0]);
-
-    var marqueeWidth = document.querySelector(".js-marquee").offsetWidth;
-    console.log(marqueeWidth);
-
-    gsap.to(".js-marquee", {
-        duration: 50,
-        ease: "none",
-        x: "+=" + marqueeWidth, //move each box 500px to right
-        modifiers: {
-            x: gsap.utils.unitize(x =>- parseFloat(x) ) //force x value to be between 0 and 500 using modulus
-        },
-        repeat: -1
-    });
-    */
-
- 
-   
-
-    </script>
-  </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script src="assets/js/global.js"></script>
+</body>
 </html>

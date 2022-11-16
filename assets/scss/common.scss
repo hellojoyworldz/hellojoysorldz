@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
-// variable 
-@import 'variable.scss';
+// variable
+@import "variable.scss";
 
 /*! locomotive-scroll v3.5.4 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
 html.has-scroll-smooth {
@@ -76,7 +76,7 @@ html.has-scroll-dragging {
     display: flex;
     left: 0;
 }
-  
+
 .pin-wrap {
     height: 100vh;
     min-height: 820px;
@@ -88,7 +88,7 @@ html.has-scroll-dragging {
 .pin-wrap > * {
     min-width: 100vw;
     padding: 0 5vw;
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
 
 /* common */
@@ -99,7 +99,7 @@ html.has-scroll-dragging {
     text-align: center;
     overflow: hidden;
 
-    &:focus{
+    &:focus {
         height: auto;
         margin-bottom: 0;
     }
@@ -140,29 +140,6 @@ html.has-scroll-dragging {
     z-index: 99999;
 }
 
-/* cursor customizing */
-.cursorCustom {
-    position: absolute;
-    width: 3rem;
-    height: 3rem;
-    border: 2px solid #d1d1d1;
-    border-radius: 50%;
-    background-size:cover;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    transition: all 0.3s eaes;
-   
-    transition-property: background, transform;
-    transform-origin: 100% 100%;
-    backdrop-filter: sepia(20%);
-    z-index:999999;
-}
-
-.cursorCustom-active {
-    transform: scalc(2);
-    background: #d1d1d1;
-}
-
 /* header */
 .header {
     position: fixed;
@@ -171,13 +148,12 @@ html.has-scroll-dragging {
     z-index: 99999;
 
     &Logo {
-
         &__link {
             display: inline-flex;
             align-items: flex-end;
         }
 
-        &__icon{
+        &__icon {
             position: relative;
             display: block;
             width: 64px;
@@ -186,7 +162,7 @@ html.has-scroll-dragging {
             border-radius: 8px;
         }
 
-        &__icon .mouth{
+        &__icon .mouth {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -194,14 +170,14 @@ html.has-scroll-dragging {
             margin-left: -15px;
             width: 30px;
             height: 30px;
-            background: $whitefff;
+            background: $whiteFff;
             border-radius: 50%;
             transform: rotate(0);
             animation: visMouse 5s ease-in 1s infinite;
         }
 
-        &__icon .mouth::before{
-            content:'';
+        &__icon .mouth::before {
+            content: "";
             position: relative;
             top: 0;
             left: 0;
@@ -215,14 +191,14 @@ html.has-scroll-dragging {
             position: relative;
             display: block;
             margin-left: 26px;
-            font-family: $font__second;
-            font-size: 16px;
-            line-height: 1em;
+            font-family: $fontSec;
+            font-size: $fontSizLv6;
+            line-height: $lineHei100;
             color: $black222;
         }
 
         &__text::before {
-            content:'';
+            content: "";
             position: absolute;
             left: -18px;
             bottom: 0;
@@ -236,7 +212,7 @@ html.has-scroll-dragging {
 
 @keyframes visMouse {
     0% {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
     25% {
         transform: rotate(-45deg);
@@ -250,47 +226,43 @@ html.has-scroll-dragging {
     100% {
         transform: rotate(0deg);
     }
-  }
+}
 
 /* scrollGage */
 .scrollGage {
-
     position: fixed;
     top: 24px;
     right: 64px;
 
-
-    &__percen{
+    &__percent {
         display: block;
-        font-size:16px;
+        font-size: 16px;
     }
 
     &__bar {
         display: block;
         height: 16px;
-        background:#ddd;
+        background: #ddd;
     }
 }
 
 /* nav, gnb */
 .nav {
-
     position: fixed;
     left: 0;
     top: 0;
 
-
-    &__btn--open{
+    &__btn--open {
         position: fixed;
         right: 20px;
         top: 20px;
         width: 40px;
         height: 40px;
-        background-color: rgba(255,255,255,0.2);
+        background-color: rgba(255, 255, 255, 0.2);
     }
 
-    &__btn--open::before{
-        content: '';
+    &__btn--open::before {
+        content: "";
         position: absolute;
         top: 10px;
         left: 5px;
@@ -303,34 +275,36 @@ html.has-scroll-dragging {
 
 /* footer */
 .footer {
-    padding: 128px 0;
-    font-family: $font__second;
-    background: linear-gradient(180deg, #EE92A2, #FF6488);
+    position: relative;
+    padding: 0 0 $lyPadding 0;
+    background: linear-gradient(180deg, $colPoint6, $colPoint5);
     overflow: hidden;
 
     &__sbj {
         display: block;
         font-weight: bold;
         font-style: italic;
-        font-size: 96px;
-        line-height: 128px;
-        color: $whitefff;
+        font-family: $fontSec;
+        font-size: $titSizSec;
+        line-height: $lineHeiLv3;
+        color: $whiteFff;
         white-space: nowrap;
         will-change: transform;
         animation: moving 30s linear infinite;
     }
 
     &__info {
-        margin-bottom: 192px;
+        margin: 5vh 5vw 192px 5vw;
         & .list {
             &__item {
                 margin: 16px;
-                font-size: 24px;
-                line-height: 24px;
-                color: $whitefff;
+                font-family: $fontSec;
+                font-size: $fontSizLv5;
+                line-height: $lineHei100;
+                color: $whiteFff;
             }
 
-            &__tit{
+            &__tit {
                 margin-right: 52px;
             }
         }
@@ -338,10 +312,10 @@ html.has-scroll-dragging {
 }
 
 @keyframes moving {
-    from{
+    from {
         transform: translateX(0);
     }
-    to{
-        transform: translateX(-50%)
+    to {
+        transform: translateX(-50%);
     }
 }

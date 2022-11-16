@@ -13,6 +13,15 @@
   .mainProfile .imgWrap {
     width: auto;
   }
+  .mainCard {
+    width: 100%;
+  }
+  .mainCard .list {
+    justify-content: center;
+  }
+  .mainCard .list__item {
+    flex-basis: 80%;
+  }
 }
 @media (max-width: 860px) {
   .header {
@@ -66,7 +75,9 @@
     height: auto;
     padding-bottom: 75%;
   }
-  .visual .circle02, .visual .circle05, .visual .emoji06 {
+  .visual .circle02,
+.visual .circle05,
+.visual .emoji06 {
     top: -20%;
   }
   .mainWork__tit {

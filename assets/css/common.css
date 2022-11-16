@@ -134,29 +134,6 @@ html.has-scroll-dragging {
   z-index: 99999;
 }
 
-/* cursor customizing */
-.cursorCustom {
-  position: absolute;
-  width: 3rem;
-  height: 3rem;
-  border: 2px solid #d1d1d1;
-  border-radius: 50%;
-  background-size: cover;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  transition: all 0.3s eaes;
-  transition-property: background, transform;
-  transform-origin: 100% 100%;
-  -webkit-backdrop-filter: sepia(20%);
-          backdrop-filter: sepia(20%);
-  z-index: 999999;
-}
-
-.cursorCustom-active {
-  transform: scalc(2);
-  background: #d1d1d1;
-}
-
 /* header */
 .header {
   position: fixed;
@@ -173,7 +150,7 @@ html.has-scroll-dragging {
   display: block;
   width: 64px;
   height: 64px;
-  background: #222222;
+  background: #222;
   border-radius: 8px;
 }
 .headerLogo__icon .mouth {
@@ -184,7 +161,7 @@ html.has-scroll-dragging {
   margin-left: -15px;
   width: 30px;
   height: 30px;
-  background: #ffffff;
+  background: #fff;
   border-radius: 50%;
   transform: rotate(0);
   -webkit-animation: visMouse 5s ease-in 1s infinite;
@@ -198,16 +175,16 @@ html.has-scroll-dragging {
   display: block;
   width: 100%;
   height: 50%;
-  background: #222222;
+  background: #222;
 }
 .headerLogo__text {
   position: relative;
   display: block;
   margin-left: 26px;
   font-family: "Montserrat";
-  font-size: 16px;
-  line-height: 1em;
-  color: #222222;
+  font-size: 18px;
+  line-height: 100%;
+  color: #222;
 }
 .headerLogo__text::before {
   content: "";
@@ -216,7 +193,7 @@ html.has-scroll-dragging {
   bottom: 0;
   width: 10px;
   height: 10px;
-  background: #222222;
+  background: #222;
   border-radius: 50%;
 }
 
@@ -261,7 +238,7 @@ html.has-scroll-dragging {
   top: 24px;
   right: 64px;
 }
-.scrollGage__percen {
+.scrollGage__percent {
   display: block;
   font-size: 16px;
 }
@@ -292,37 +269,39 @@ html.has-scroll-dragging {
   left: 5px;
   width: 30px;
   height: 3px;
-  background: #222222;
-  box-shadow: 0 10px 0 #222222, 0 20px 0 #222222;
+  background: #222;
+  box-shadow: 0 10px 0 #222, 0 20px 0 #222;
 }
 
 /* footer */
 .footer {
-  padding: 128px 0;
-  font-family: "Montserrat";
-  background: linear-gradient(180deg, #EE92A2, #FF6488);
+  position: relative;
+  padding: 0 0 240px 0;
+  background: linear-gradient(180deg, #ff7896, #f06b67);
   overflow: hidden;
 }
 .footer__sbj {
   display: block;
   font-weight: bold;
   font-style: italic;
+  font-family: "Montserrat";
   font-size: 96px;
-  line-height: 128px;
-  color: #ffffff;
+  line-height: 120%;
+  color: #fff;
   white-space: nowrap;
   will-change: transform;
   -webkit-animation: moving 30s linear infinite;
           animation: moving 30s linear infinite;
 }
 .footer__info {
-  margin-bottom: 192px;
+  margin: 5vh 5vw 192px 5vw;
 }
 .footer__info .list__item {
   margin: 16px;
+  font-family: "Montserrat";
   font-size: 24px;
-  line-height: 24px;
-  color: #ffffff;
+  line-height: 100%;
+  color: #fff;
 }
 .footer__info .list__tit {
   margin-right: 52px;

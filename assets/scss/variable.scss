@@ -1,31 +1,65 @@
 @charset "UTF-8";
+$in: 1440px;
+$lyMargin: 96px;
+$lyPadding: 240px;
+$lyGap: 24px;
+$lyRadius: 36px;
+$lyMinHeight: 730px;
 
-// variable 
-$fontLv1 : 6vw;
-$fontLv2 : 96px;
-$fontLv3 : 12px;
-$fontLv4 : 12px;
-$fontLv5 : 12px;
-$fontLv6 : 12px;
+$font__first: "IBM Plex Sans KR";
+$font__second: "Montserrat";
+$font__third: "Fredoka";
+$fontFir: $font__first;
+$fontSec: $font__second;
+$fontThi: $font__third;
+$fontKo: $fontFir;
+$fontEn: $fontSec;
 
-$titSizFir : $fontLv1;
+// variable
 
+$fontSizLv1: 6vw;
+$fontSizLv2: 96px;
+$fontSizLv3: 48px;
+$fontSizLv4: 36px;
+$fontSizLv5: 24px;
+$fontSizLv6: 18px;
+$titSizFir: $fontSizLv1;
+$titSizSec: $fontSizLv2;
+$txtSizeLv1: $fontSizLv3;
+$txtSizeLv2: $fontSizLv4;
+$txtSizeLv3: $fontSizLv5;
+$txtSizeLv4: $fontSizLv6;
 
-$black222 : #222222;
-$black555 : #555555;
-$whitefff : #ffffff;
-$whiteFff : $whitefff;
-$greyddd : #dddddd;
-$greyDdd : $greyddd;
-$greyAaa : #aaaaaa;
+$lineHei150: 150%;
+$lineHei140: 140%;
+$lineHei130: 130%;
+$lineHei120: 120%;
+$lineHei110: 110%;
+$lineHei100: 100%;
+$lineHeiLv0: $lineHei100;
+$lineHeiLv1: $lineHei150;
+$lineHeiLv2: $lineHei140;
+$lineHeiLv3: $lineHei120;
 
-$color1 : #D05FE5;
-
-
-
-$font__first : 'IBM Plex Sans KR';
-$font__second: 'Montserrat';
-$font__third : 'Fredoka';
-
-$in : 1440px;
-
+$black111: #111;
+$black222: #222;
+$black333: #333;
+$black444: #444;
+$black555: #555;
+$black666: #666;
+$whiteFff: #fff;
+$whiteF1f: #f1f1f1;
+$whiteF5f: #f5f5f5;
+$whiteF9f: #f9f9f9;
+$greyAaa: #aaa;
+$greyDdd: #ddd;
+$greyEae: #eaeaea;
+$fontColFir: $black222;
+$fontColSec: $black444;
+$fontColThi: $black666;
+$colPoint1: #d05fe5;
+$colPoint2: #ffe30d;
+$colPoint3: #89de07;
+$colPoint4: #41e0eb;
+$colPoint5: #f06b67;
+$colPoint6: #ff7896;

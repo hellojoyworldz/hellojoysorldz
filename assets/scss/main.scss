@@ -3,7 +3,6 @@
 // variable
 @import "variable";
 
-/* visual */
 .visual {
     font-family: $font__second;
 
@@ -30,7 +29,7 @@
             height: 40px;
             font-size: 16px;
             line-height: 40px;
-            color: $whitefff;
+            color: $whiteFff;
             background: #2ea34e;
             border-radius: 40px;
         }
@@ -90,7 +89,7 @@
             bottom: -5%;
             width: 45%;
             height: 50%;
-            background-color: $greyddd;
+            background-color: $greyDdd;
             opacity: 0.5;
             z-index: -1;
             transition: 0.3s;
@@ -106,7 +105,7 @@
     &__emoji {
         position: relative;
         margin: -30% 0 0 auto;
-        width: 1440px;
+        width: $in;
         height: 1073px;
         z-index: -1;
 
@@ -145,7 +144,6 @@
     }
 }
 
-/* main cate */
 .mainCate {
     padding: 128px 0;
     overflow-x: hidden;
@@ -255,8 +253,6 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        padding: 5vw 0;
-        margin-right: 25vw;
     }
 
     &__tit {
@@ -282,8 +278,9 @@
 
     &__emoji {
         position: relative;
-        width: 1200px;
-        height: 600px;
+        margin: 0 0 -5vw -5vw;
+        width: $in;
+        height: 910px;
         z-index: -1;
 
         & img {
@@ -382,9 +379,32 @@
         }
 
         &__thumb {
+            position: relative;
             display: block;
-            min-width: 860px;
             overflow: hidden;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 30px;
+                top: 30px;
+                right: 30px;
+                bottom: 30px;
+                clip-path: polygon(
+                    0 calc(100% - 1rem),
+                    0 100%,
+                    1rem 100%,
+                    1rem 0,
+                    0 0,
+                    0 1rem,
+                    100% 1rem,
+                    100% 0,
+                    calc(100% - 1rem) 0,
+                    calc(100% - 1rem) 100%,
+                    100% 100%,
+                    100% calc(100% - 1rem)
+                );
+            }
         }
 
         &__img {
@@ -410,111 +430,21 @@
         position: absolute;
         left: 0;
         top: 0;
+        width: 100%;
+        z-index: 1;
     }
-}
-
-/* mainBlog*/
-.mainBlog {
-    &__intro {
-        position: relative;
-        height: 100vh;
-        min-height: 760px;
-
-        & .areaLeft,
-        .areaRight {
-            display: grid;
-            align-content: center;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-
-            &__tit {
-                margin-bottom: 96px;
-                width: 100vw;
-                font-family: $font__third;
-                font-weight: 600;
-                font-size: 6vw;
-                line-height: 1.2em;
-                text-align: center;
-            }
-        }
-
-        & .areaLeft {
-            background: #ee92a2;
-            z-index: 1;
-
-            &__tit {
-                color: $whitefff;
-            }
-        }
-
-        & .areaRight {
-            background: #ff6488;
-
-            &__tit {
-                color: $whitefff;
-            }
-        }
-
-        & .handlebar {
-            position: absolute;
-            top: 35%;
-            margin-top: -16px;
-            margin-left: -16px;
-            z-index: 2;
-        }
-
-        & .list {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 24px;
-            white-space: nowrap;
-            will-change: transform;
-            //animation: marquee 25s linear infinite;
-
-            &__item {
-                width: 25vw;
-                min-width: 280px;
-            }
-
-            &__thumb {
-                display: block;
-                height: 100%;
-                border-radius: 40px;
-                overflow: hidden;
-
-                & img {
-                    display: block;
-                    max-width: inherit;
-                    width: 100%;
-                    height: auto;
-                }
-            }
-        }
+    &__bg {
+        filter: blur(25px);
+        opacity: 0.4;
     }
 }
 
 .mainCode {
     padding: 128px 0;
-    &__header {
-        font-family: $font__third;
-        font-weight: 600;
-    }
 
-<<<<<<< HEAD
     &__tit {
         margin-bottom: 96px;
         text-align: center;
-=======
-    &__tit{
-        margin-bottom: 96px;
-        text-align:center;
-<<<<<<< HEAD
->>>>>>> 74ae2c49a43912936b36b2ad4bc2e650a3ccf37c
-=======
->>>>>>> 74ae2c49a43912936b36b2ad4bc2e650a3ccf37c
         font-size: 6vw;
         line-height: 1.2em;
         color: $black222;
@@ -612,87 +542,6 @@
     }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-.mainTag {
-    .tag {
-        &__list {
-            display: flex;
-            width: fit-content;
-            animation-name: loop;
-            animation-timing-function: linear;
-            animation-iteration-count: infinite;
-            animation-direction: var(--direction);
-            animation-duration: var(--duration);
-        }
-        &__item {
-            box-shadow: 0 0.1rem 0.2rem rgb(0 0 0 / 20%), 0 0.1rem 0.5rem rgb(0 0 0 / 30%),
-                0 0.2rem 1.5rem rgb(0 0 0 / 40%);
-        }
-    }
-=======
-=======
->>>>>>> 74ae2c49a43912936b36b2ad4bc2e650a3ccf37c
-/* mainProfile */
-.mainProfile { 
-    position: relative;
-    padding: 128px 0;
-    & .textWrap {
-        position: absolute;
-        top:0;
-        width: 100%;
-        height: auto;
-        overflow:visible;
-        z-index:2;
-
-        & path{
-            stroke: rgba(255, 255, 255, 0.5);
-        }
-
-        & textPath{
-            position: relative;
-            font-family: $font__second;
-            font-size: 1.5em;
-            font-weight: bold;;
-            color:#ff7896;
-            filter: currentColor;
-        }
-    }
-    
-    & .imgWrap{
-        width: $in;
-        margin: 0 auto;
-    }
-    
-    & .img{
-        position: relative;
-        width: 35%;
-        margin: 0 0 0 auto;
-
-        &__left{
-            z-index: 3;
-        }
-
-        &__right{
-            top: -100px;
-            right: 30%;
-            z-index: 1;
-        }
-
-        img{
-            width: 100%;
-            height: auto;
-        }
-    }
-}
-
-@keyframes marquee{
-    from{ transform: translate3d(0,0,0)}
-    to{ transform: translate3d(-100%,0,0)}
->>>>>>> 74ae2c49a43912936b36b2ad4bc2e650a3ccf37c
-}
-
-/* mainProfile */
 .mainProfile {
     position: relative;
     padding: 128px 0;
