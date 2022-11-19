@@ -373,6 +373,7 @@
             position: relative;
             display: block;
             overflow: hidden;
+            width: 60vw;
         }
 
         &__img {
@@ -430,8 +431,8 @@
         grid-auto-rows: 336px;
         grid-gap: $lyGap;
         grid-template-areas:
+            "a a b c"
             "a a b d"
-            "a a c d"
             "e f f g"
             "e h i i";
         width: $in;
@@ -461,6 +462,15 @@
             font-family: $fontSec;
             font-size: $txtSizeLv3;
             line-height: $lineHeiLv0;
+            color: $whiteFff;
+            z-index: 1;
+        }
+
+        &__desc {
+            position: absolute;
+            left: 36px;
+            bottom: 96px;
+            font-size: $txtSizeLv4;
             color: $whiteFff;
             z-index: 1;
         }
@@ -498,7 +508,7 @@
                 grid-area: h;
             }
 
-            &.item08 {
+            &.item09 {
                 grid-area: i;
             }
         }
