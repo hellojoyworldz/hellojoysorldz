@@ -1,12 +1,14 @@
 @charset "UTF-8";
 
-// variable 
-@import 'variable';
+// variable
+@import "variable";
 
 /* Webfonts */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;200;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
 /*
 :lang(ko) {
     font-family: 'IBM Plex Sans KR', 'Montserrat', system-ui, -apple-system, 'Malgun Gothic', sans-serif;
@@ -21,22 +23,45 @@
 body {
     max-width: 100%;
     width: 100%;
-    font-family: 'IBM Plex Sans KR', 'Montserrat', system-ui, -apple-system, 'Malgun Gothic', sans-serif;
-    word-break: keep-all;  
+    font-family: "IBM Plex Sans KR", "Montserrat", system-ui, -apple-system, "Malgun Gothic", sans-serif;
+    word-break: keep-all;
     overflow-wrap: break-word;
     transition: 0.3s ease-out;
     overflow-x: hidden;
     overscroll-behavior: none;
 }
 
-
-html, body, 
-blockquote, hr, iframe,
-h1, h2, h3, h4, h5, h6,
-table, th, td, figure,
-form, fieldset, legend, label, input, select, textarea, button,
-ul, ol, li, dl, dt, dd,
-p, pre{
+html,
+body,
+blockquote,
+hr,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+table,
+th,
+td,
+figure,
+form,
+fieldset,
+legend,
+label,
+input,
+select,
+textarea,
+button,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+p,
+pre {
     margin: 0;
     padding: 0;
 }
@@ -51,7 +76,8 @@ img {
 }
 */
 
-ol, ul {
+ol,
+ul {
     list-style: none;
 }
 
@@ -65,15 +91,20 @@ button {
     cursor: pointer;
 }
 
-button, input, table, textarea{
+button,
+input,
+table,
+textarea {
     font-family: inherit;
     border: 0;
 }
 
-fieldset, iframe{
+fieldset,
+iframe {
     border: 0;
 }
 
-address, em {
+address,
+em {
     font-style: normal;
 }
