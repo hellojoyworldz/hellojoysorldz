@@ -2,9 +2,10 @@
 
 // variable
 @import "variable";
-$in: auto;
 
 @media (max-width: 1440px) {
+    $in: auto;
+
     .visual {
         &__emoji {
             margin-left: -2%;
@@ -15,9 +16,25 @@ $in: auto;
         padding: 48px 16px;
 
         & .list {
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 12px;
             grid-auto-rows: auto;
-            width: auto;
+            justify-items: center;
+            grid-template-areas:
+                "a"
+                "b"
+                "e"
+                "f"
+                "g"
+                "h"
+                "i"
+                "j";
+            width: 100%;
+
+            &__item {
+                width: 80%;
+                height: 360px;
+            }
         }
     }
 
@@ -27,11 +44,41 @@ $in: auto;
         }
     }
 
+    .mainChat {
+        padding: 0 32px;
+        width: auto;
+        & .item {
+            font-size: 32px;
+
+            &__chat {
+                padding: 12px 24px;
+            }
+        }
+
+        & .item08 .item__chat {
+            margin-left: 0;
+        }
+    }
+
+    .mainPortfolio {
+        & .in {
+            width: auto;
+        }
+
+        & .list {
+            justify-content: center;
+            &__item {
+                flex-basis: 80%;
+            }
+        }
+    }
+
     .mainCard {
         width: 100%;
 
         .list {
             justify-content: center;
+
             &__item {
                 flex-basis: 80%;
             }
@@ -208,19 +255,29 @@ $in: auto;
                 font-size: 16px;
             }
 
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(1, 1fr);
             grid-gap: 12px;
             grid-auto-rows: auto;
             grid-template-areas:
-                "a b"
-                "c c"
-                "d e"
-                "d f"
-                "d f"
-                "g g"
-                "h i"
-                "j j";
+                "a"
+                "b"
+                "c"
+                "d"
+                "e"
+                "f"
+                "g"
+                "h"
+                "i"
+                "j";
             width: auto;
+        }
+    }
+
+    .mainPortfolio {
+        padding: 48px 24px;
+
+        &__header {
+            margin: 0 auto 32px;
         }
     }
 

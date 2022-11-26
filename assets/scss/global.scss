@@ -600,7 +600,7 @@
 
 .mainChat {
     margin: $lyPadding auto;
-    width: 860px;
+    max-width: 860px;
 
     & .item {
         font-family: $fontThi;
@@ -694,6 +694,27 @@
 
 .mainCode {
     padding: $lyPadding 0;
+
+    &__header {
+        margin-bottom: $lyMargin;
+        & h2 {
+            position: relative;
+            font-family: $fontThi;
+            font-size: $titSizThr;
+            color: $fontColSec;
+            text-align: center;
+
+            & .highlight {
+                position: relative;
+                & img {
+                    position: absolute;
+                    top: -24px;
+                    right: 0;
+                    z-index: -1;
+                }
+            }
+        }
+    }
 
     &__tit {
         margin-bottom: $lyMargin;
@@ -828,6 +849,39 @@
     width: $in;
     margin: 0 auto;
     padding: $lyPadding 0;
+
+    &__header {
+        margin-bottom: $lyMargin;
+        & h2 {
+            position: relative;
+            font-family: $fontThi;
+            font-size: $titSizThr;
+            color: $fontColSec;
+            text-align: center;
+
+            & img {
+                position: absolute;
+                top: -24px;
+                z-index: -1;
+            }
+
+            & .highlight {
+                position: relative;
+                margin-left: 16px;
+                padding: 0 16px;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 24px;
+                    background-color: $colPoint2;
+                    z-index: -1;
+                }
+            }
+        }
+    }
 
     &__tit {
         margin-bottom: $lyMargin;

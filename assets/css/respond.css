@@ -6,12 +6,41 @@
     padding: 48px 16px;
   }
   .mainCode .list {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 12px;
     grid-auto-rows: auto;
-    width: auto;
+    justify-items: center;
+    grid-template-areas: "a" "b" "e" "f" "g" "h" "i" "j";
+    width: 100%;
+  }
+  .mainCode .list__item {
+    width: 80%;
+    height: 360px;
   }
   .mainProfile .imgWrap {
     width: auto;
+  }
+  .mainChat {
+    padding: 0 32px;
+    width: auto;
+  }
+  .mainChat .item {
+    font-size: 32px;
+  }
+  .mainChat .item__chat {
+    padding: 12px 24px;
+  }
+  .mainChat .item08 .item__chat {
+    margin-left: 0;
+  }
+  .mainPortfolio .in {
+    width: auto;
+  }
+  .mainPortfolio .list {
+    justify-content: center;
+  }
+  .mainPortfolio .list__item {
+    flex-basis: 80%;
   }
   .mainCard {
     width: 100%;
@@ -133,10 +162,10 @@
     margin: 0 auto 32px;
   }
   .mainCode .list {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-gap: 12px;
     grid-auto-rows: auto;
-    grid-template-areas: "a b" "c c" "d e" "d f" "d f" "g g" "h i" "j j";
+    grid-template-areas: "a" "b" "c" "d" "e" "f" "g" "h" "i" "j";
     width: auto;
   }
   .mainCode .list__tit {
@@ -148,6 +177,12 @@
     left: 24px;
     bottom: 24px;
     font-size: 16px;
+  }
+  .mainPortfolio {
+    padding: 48px 24px;
+  }
+  .mainPortfolio__header {
+    margin: 0 auto 32px;
   }
   .footer {
     padding: 48px 0;
