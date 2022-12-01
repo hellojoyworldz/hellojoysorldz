@@ -13,6 +13,13 @@
   </head>
 <body>
 
+<!-- loading 
+<div class="loading">
+    <div class="loading__line">
+        <span class="loading__bar" style="width: 75%"></span>
+    </div>
+</div>-->
+
 <header id="header" class="header">
     <h1 class="headerLogo">
         <a class="headerLogo__link" href="./index.html">
@@ -180,38 +187,48 @@
             <div class="item item10" data-scroll data-scroll-speed="7" data-scroll-direction="vertical"><span class="item__chat">THX! 😘</span></div>
         </section>
 
-        <section class="mainPortfolio" data-bgcolor="#ffffff">
+        <section class="mainPortfolio js-ajaxTab" data-bgcolor="#ffffff">
             <div class="in">
                 <div class="mainPortfolio__header">
                     <h2>Hello,<br/>My <span class="highlight">WebSite<img src="./assets/img/icon__tit01.png" alt=""></span></h2>
-                    <div class="tab">
-                        <button type="button" data-type="All" class="active">All</button>
-                        <button type="button" data-type="react">React</button>
-                        <button type="button" data-type="vue">Vue</button>
-                        <button type="button" data-type="php">php</button>
-                    </div>
                 </div>
-                
-                <ul class="list">
-                    <li class="list__item">
-                        <a href="">
-                            <div class="list__thumb">
-                                <img class="list__img" src="./assets/img/mainSite__img01.jpg" alt="">
+
+                <article class="mainPortfolit__article">
+                    <span class="article__cate">React</span>
+                    <h3 class="article__tit">사이트 제목입니다</h3>
+                    <div class="article__desc"></div>
+                    <a href="" class="article__view">VISIT WEBSITE</a>
+                </article>
+                <!--
+                <div class="tab js-button">
+                    <button type="button" data-type="All" class="active">All</button>
+                    <button type="button" data-type="react">React</button>
+                    <button type="button" data-type="vue">Vue</button>
+                    <button type="button" data-type="php">php</button>
+                </div>
+                <div class="js-contents">
+                    <ul class="list">
+                        <li class="list__item">
+                            <a href="">
+                                <div class="list__thumb">
+                                    <img class="list__img" src="./assets/img/mainSite__img01.jpg" alt="">
+                                </div>
+                                <div class="list__body">
+                                    <strong class="list__tit">프로젝트 제목입니다</strong>
+                                    <p class="list__desc">프로젝트에 대한 간단한 설명입니다.</p>
+                                </div>
+                            </a>
+                            <div class="list__visit">
+                                <a href="">코드보기</a>
+                                <a href="">방문하기</a>
                             </div>
-                            <div class="list__body">
-                                <strong class="list__tit">프로젝트 제목입니다</strong>
-                                <p class="list__desc">프로젝트에 대한 간단한 설명입니다.</p>
-                            </div>
-                        </a>
-                        <div class="list__visit">
-                            <a href="">코드보기</a>
-                            <a href="">방문하기</a>
-                        </div>
-                        
-                    </li>
-                </ul>
+                        </li>
+                    </ul>
+                </div>
+                -->
             </div>
         </section>
+
 
         <section class="mainCode" data-bgcolor="#ffffff">
             <div class="mainCode__header">

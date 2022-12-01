@@ -92,7 +92,98 @@ html.has-scroll-dragging {
 }
 
 /* common */
-.progress {
+/* layout */
+#loader-wrapper {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* layout */
+#loader-wrapper {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.loader {
+    display: flex;
+    width: 230px;
+    height: 4px;
+    background: #bd9658;
+    overflow: hidden;
+    z-index: 1000000;
+}
+.progress-text {
+    display: flex;
+    position: absolute;
+    font-size: 25px;
+    align-items: center;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 42%;
+}
+
+.loader-line {
+    height: 4px;
+    background: #724710;
+}
+.a-loop {
+    animation: 1.7s infinite loop cubic-bezier(0.42, 0, 0.58, 1);
+}
+@keyframes loop {
+    0% {
+        width: 0%;
+        transform: translateX(0%);
+    }
+    7% {
+        width: 10%;
+        transform: translateX(0%);
+    }
+    40% {
+        width: 40%;
+    }
+    50% {
+        transform: translateX(85%);
+    }
+
+    75% {
+        width: 100%;
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.loader-section {
+    position: fixed;
+    display: flex;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #e9e0d6;
+    z-index: 100000;
+}
+
+.loaded #loader-wrapper .loader-section {
+    transform: translateY(-100%);
+    transition: all 0.5s 0.3s ease-out;
+}
+.loaded #loader-wrapper {
+    visibility: hidden;
+}
+.loaded .loader {
+    opacity: 0;
+    transition: all 0.5s 0.3s ease-out;
+}
+
+.loading {
     position: relative;
     display: flex;
     justify-content: center;
@@ -101,33 +192,32 @@ html.has-scroll-dragging {
     height: 100vh;
     background: #fff;
     z-index: 999999;
-}
-
-.progress__line {
-    display: block;
-    width: 100%;
-    max-width: 260px;
-    height: 6px;
-    background: #e1e4e8;
-    border-radius: 3px;
-    overflow: hidden;
-}
-.progress__bar {
-    display: block;
-    height: 100%;
-    background: linear-gradient(
-        90deg,
-        #ffd33d,
-        #ea4aaa 17%,
-        #b34bff 34%,
-        #01feff 51%,
-        #ffd33d 68%,
-        #ea4aaa 85%,
-        #b34bff
-    );
-    background-size: 300% 100%;
-    -webkit-animation: progress-animation 2s linear infinite;
-    animation: progress-animation 2s linear infinite;
+    &__line {
+        display: block;
+        width: 100%;
+        max-width: 260px;
+        height: 6px;
+        background: #e1e4e8;
+        border-radius: 3px;
+        overflow: hidden;
+    }
+    &__bar {
+        display: block;
+        height: 100%;
+        background: linear-gradient(
+            90deg,
+            #ffd33d,
+            #ea4aaa 17%,
+            #b34bff 34%,
+            #01feff 51%,
+            #ffd33d 68%,
+            #ea4aaa 85%,
+            #b34bff
+        );
+        background-size: 300% 100%;
+        -webkit-animation: progress-animation 2s linear infinite;
+        animation: progress-animation 2s linear infinite;
+    }
 }
 
 @-webkit-keyframes progress-animation {

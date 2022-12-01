@@ -87,29 +87,39 @@ window.addEventListener("load", function () {
   ScrollTrigger.refresh();
 });
 
-/*
-const left = document.querySelector(".js-areaMove");
-const handlebar = document.querySelector(".handlebar")
-
-const handleMove = e => {
-    left.style.width = `${e.clientX / window.innerWidth * 100}%`;
-    handlebar.style.left = `${e.clientX / window.innerWidth * 100}%`;
-}
-
-
-document.onmousemove = e => handleMove(e);
-document.ontouchmove = e => handleMove(e.touches[0]);
-
-var marqueeWidth = document.querySelector(".js-marquee").offsetWidth;
-console.log(marqueeWidth);
-
-gsap.to(".js-marquee", {
-    duration: 50,
-    ease: "none",
-    x: "+=" + marqueeWidth, //move each box 500px to right
-    modifiers: {
-        x: gsap.utils.unitize(x =>- parseFloat(x) ) //force x value to be between 0 and 500 using modulus
-    },
-    repeat: -1
+document.addEventListener("load", () => {
+  setTimeout(() => {}, 1000);
 });
-*/
+
+imagesProgress();
+function imagesProgress() {
+  let preload = document.querySelector(".preload");
+  progressText = document.querySelector(".progress-text");
+  (imgLoad = imagesLoaded("body")),
+    (imgTotal = imgLoad.images.length),
+    (imgLoaded = 0),
+    (current = 0),
+    (progressTimer = setInterval(updateProgress, 1000 / 60));
+
+  imgLoad.on("progress", function () {
+    imgLoaded++;
+  });
+
+  function updateProgress() {
+    let target = (imgLoaded / imgTotal) * 100;
+
+    current += (target - current) * 0.1;
+    progressText.text(Math.floor(current) + "%");
+
+    if (current >= 100) {
+      clearInterval(progressTimer);
+      preload.addClass("loaded");
+      progressText.delay(1000).animate({ opacity: 0 }, function () {
+        preload.fadeOut();
+      });
+    }
+    if (current > 99.9) {
+      current = 100;
+    }
+  }
+}
