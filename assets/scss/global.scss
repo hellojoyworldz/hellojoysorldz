@@ -607,7 +607,6 @@
         }
 
         &__link{
-           
             display: block;
         }
 
@@ -619,14 +618,16 @@
             line-height: 36px;
             border: 1px solid #ddd;
         }
+
         &__num{
             font-family: $fontSec;
-        
         }
+
         &__tit {
             font-size: $txtSizeLv4;
             font-weight: normal;
         }
+
         &__cate {
             
         }
