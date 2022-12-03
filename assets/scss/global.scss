@@ -600,24 +600,69 @@
 
     .list {
         &__item {
-            position: sticky;
+            position: relative;
             top: 0;
             margin: $lyGap;
+            background: #fff;
         }
+
+        &__link{
+           
+            display: block;
+        }
+
+        &__header{
+            display: flex;
+            justify-content: space-between;
+            padding: 0 16px;
+            height: 36px;
+            line-height: 36px;
+            border: 1px solid #ddd;
+        }
+        &__num{
+            font-family: $fontSec;
+        
+        }
+        &__tit {
+            font-size: $txtSizeLv4;
+            font-weight: normal;
+        }
+        &__cate {
+            
+        }
+        
+        &__body{
+            position: relative;
+
+        }
+
         &__thumb {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            
             & img {
                 width: 100%;
                 height: auto;
+                transition: 0.3s;
+                object-fit: cover;
             }
         }
-        &__cate {
-        }
-        &__tit {
-        }
+        
         &__desc {
+            position: absolute;
+            top: 48px;
+            left: 48px;
+            font-size: $txtSizeLv4;
+            line-height: $lineHeiLv1;
         }
-        &__view {
+
+        &__thumb:hover{
+            & img{
+                transform: scale(1.05);
+            }
         }
+        
     }
 }
 

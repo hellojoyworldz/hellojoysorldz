@@ -13,13 +13,6 @@
   </head>
 <body >
 
-<!-- loading 
-<div class="loading">
-    <div class="loading__line">
-        <span class="loading__bar" style="width: 75%"></span>
-    </div>
-</div>-->
-
 <header id="header" class="header">
     <h1 class="headerLogo">
         <a class="headerLogo__link" href="./index.html">
@@ -187,59 +180,43 @@
             <div class="item item10" data-scroll data-scroll-speed="7" data-scroll-direction="vertical"><span class="item__chat">THX! 😘</span></div>
         </section>
 
-        <section class="mainPortfolio" data-bgcolor="#ffffff" id="section">
+        <section class="mainPortfolio" data-bgcolor="#ffffff">
             <div class="mainPortfolio__header">
                 <h2>Hello,<br/>My <span class="highlight">WebSite<img src="./assets/img/icon__tit01.png" alt=""></span></h2>
             </div>
 
-            <div class="list" >
-                <article class="list__item">
-                    <div class="list__thumb"><img src="./assets/img/mainSite__img01.jpg" alt=""></div>
-                    <div>
-                    <h3 class="list__tit"><span class="list__cate">React</span>사이트 제목입니다</h3>
-                    <div class="list__desc">
-                        Vue 라이브러리를 이용하여 작업한 포트폴리오 사이트입니다.<br/>
-                        컴퍼넌트를 생성하여 싱글페이지를 출력시켰고 레퍼런스의 탭메뉴를 구현하였습니다.<br/>
-                        또한 SCSS를 사용하여 스타일을 지정하였고,<br/>
-                        Youtube 페이지에서 API를 이용한 동영상 목록과 검색이 가능합니다.
-                    </div>
-                    <a href="" class="list__view">VISIT WEBSITE</a>
-                    </div>
+            <div class="list" data-scroll-container id="fixed-elements">
+                <article class="list__item" data-scroll data-scroll-sticky data-scroll-target="#fixed-elements">  
+                    <a href="" class="list__link">
+                        <div class="list__header">
+                            <span class="list__num">01</span>
+                            <h3 class="list__tit">사이트 제목입니다</h3>
+                            <span class="list__cate">React</span>
+                        </div>
+                        <div class="list__body">
+                            <div class="list__thumb"><img src="./assets/img/mainSite__img01.jpg" alt=""></div>
+                            <div class="list__desc">
+                                Vue 라이브러리를 이용하여 작업한 포트폴리오 사이트입니다.<br/>
+                                컴퍼넌트를 생성하여 싱글페이지를 출력시켰고 레퍼런스의 탭메뉴를 구현하였습니다.<br/>
+                                또한 SCSS를 사용하여 스타일을 지정하였고,<br/>
+                                Youtube 페이지에서 API를 이용한 동영상 목록과 검색이 가능합니다.
+                            </div>
+                        </div>
+                    </a>
                 </article>
-                <article class="list__item">
+                <article class="list__item" data-scroll data-scroll-sticky >
+                    <div class="list__thumb"><img src="./assets/img/mainSite__img02.jpg" alt=""></div>
+                    <h3 class="list__tit"><span class="list__cate">React</span>사이트 제목입니다</h3>
+                    <div class="list__desc"></div>
+                    <a href="" class="list__view">VISIT WEBSITE</a>
+                </article>
+                <article class="list__item"data-scroll data-scroll-sticky >
                     <div class="list__thumb"><img src="./assets/img/mainSite__img02.jpg" alt=""></div>
                     <h3 class="list__tit"><span class="list__cate">React</span>사이트 제목입니다</h3>
                     <div class="list__desc"></div>
                     <a href="" class="list__view">VISIT WEBSITE</a>
                 </article>
             </div>
-            <!--
-            <div class="tab js-button">
-                <button type="button" data-type="All" class="active">All</button>
-                <button type="button" data-type="react">React</button>
-                <button type="button" data-type="vue">Vue</button>
-                <button type="button" data-type="php">php</button>
-            </div>
-            <div class="js-contents">
-                <ul class="list">
-                    <li class="list__item">
-                        <a href="">
-                            <div class="list__thumb">
-                                <img class="list__img" src="./assets/img/mainSite__img01.jpg" alt="">
-                            </div>
-                            <div class="list__body">
-                                <strong class="list__tit">프로젝트 제목입니다</strong>
-                                <p class="list__desc">프로젝트에 대한 간단한 설명입니다.</p>
-                            </div>
-                        </a>
-                        <div class="list__visit">
-                            <a href="">코드보기</a>
-                            <a href="">방문하기</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            -->     
         </section>
 
 

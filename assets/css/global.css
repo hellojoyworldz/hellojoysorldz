@@ -522,15 +522,55 @@
   font-weight: bold;
 }
 .mainPortfolio .list__item {
-  position: -webkit-sticky;
-  position: sticky;
+  position: relative;
   top: 0;
   margin: 24px;
+  background: #fff;
+}
+.mainPortfolio .list__link {
+  display: block;
+}
+.mainPortfolio .list__header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px;
+  height: 36px;
+  line-height: 36px;
+  border: 1px solid #ddd;
+}
+.mainPortfolio .list__num {
+  font-family: "Montserrat";
+}
+.mainPortfolio .list__tit {
+  font-size: 18px;
+  font-weight: normal;
+}
+.mainPortfolio .list__body {
+  position: relative;
+}
+.mainPortfolio .list__thumb {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 .mainPortfolio .list__thumb img {
   width: 100%;
   height: auto;
+  transition: 0.3s;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
+.mainPortfolio .list__desc {
+  position: absolute;
+  top: 48px;
+  left: 48px;
+  font-size: 18px;
+  line-height: 150%;
+}
+.mainPortfolio .list__thumb:hover img {
+  transform: scale(1.05);
+}
+
 .mainChat {
   margin: 240px auto;
   max-width: 860px;
