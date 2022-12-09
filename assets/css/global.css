@@ -290,7 +290,7 @@
   width: 60vw;
   font-size: 0px;
 }
-.mainSite .list__thumb::after {
+.mainSite .list__thumb a::after {
   content: "";
   position: absolute;
   top: 24px;
@@ -302,28 +302,19 @@
   transform: rotate3d(1, -1, 0, 100deg);
   opacity: 0;
 }
-.mainSite .list__thumb a {
+.mainSite .list__thumb a::before {
+  content: "";
   position: absolute;
-  left: 0;
   top: 0;
-  bottom: 0;
-  right: 0;
-  font-family: "Permanent Marker";
-  font-size: 96px;
-  color: #f7ff2f;
-  text-align: center;
-  text-shadow: 1px 10px 8px rgba(0, 0, 0, 0.3);
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../img/icon_more2.png) no-repeat 50% 50%;
+  background-size: 20% auto;
   transition: all 0.4s ease-in-out;
   transform: rotate3d(1, -1, 0, 100deg);
   opacity: 0;
   z-index: 1;
-}
-.mainSite .list__thumb a:before {
-  content: "";
-  display: inline-block;
-  vertical-align: middle;
-  width: 0px;
-  height: 100%;
 }
 .mainSite .list__img {
   display: block;
@@ -334,16 +325,16 @@
 .mainSite .list__contents:hover .list__tit a::before {
   width: 110%;
 }
-.mainSite .list__contents:hover .list__thumb::after {
+.mainSite .list__contents:hover .list__thumb a::after {
   transform: rotate3d(0, 0, 0, 0deg);
   opacity: 0.9;
 }
-.mainSite .list__contents:hover .list__thumb img {
-  transform: scale(1.1);
-}
-.mainSite .list__contents:hover .list__thumb a {
+.mainSite .list__contents:hover .list__thumb a::before {
   transform: rotate3d(0, 0, 0, 0deg);
   opacity: 1;
+}
+.mainSite .list__contents:hover .list__thumb img {
+  transform: scale(1.1);
 }
 
 .mainPortfolio {
@@ -531,6 +522,7 @@
   display: block;
 }
 .mainPortfolio .list__header {
+  position: relative;
   display: flex;
   justify-content: space-between;
   padding: 0 16px;
@@ -545,12 +537,30 @@
   font-size: 18px;
   font-weight: normal;
 }
+.mainPortfolio .list__cate::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 28px;
+  height: 28px;
+  margin-right: 4px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.mainPortfolio .list__cate.react::before {
+  background-image: url(../img/icon_react.png);
+}
+.mainPortfolio .list__cate.vue::before {
+  background-image: url(../img/icon_vue.png);
+}
+.mainPortfolio .list__cate.php::before {
+  background-image: url(../img/icon_php.png);
+}
 .mainPortfolio .list__body {
   position: relative;
 }
 .mainPortfolio .list__thumb {
   width: 100%;
-  height: 100vh;
   overflow: hidden;
 }
 .mainPortfolio .list__thumb img {
@@ -897,6 +907,7 @@
 .mainProfile__thumb {
   display: block;
   width: 40vw;
+  max-width: 600px;
   margin: 5vh 5vw 0 auto;
 }
 .mainProfile__thumb img {
