@@ -10,8 +10,23 @@
     <link rel="stylesheet" href="assets/css/common.css" />
     <link rel="stylesheet" href="assets/css/global.css" />
     <link rel="stylesheet" href="assets/css/respond.css" />
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/global.js"></script>
   </head>
 <body >
+<!--
+<div class="loading">
+    <span class="loading__line">
+        <span class="loading__bar" style="width:75%;"></span>
+    </span>
+    <span class="loading__text">70%</span>
+</div>
+-->
 
 <header id="header" class="header">
     <h1 class="headerLogo">
@@ -129,11 +144,10 @@
                         <div class="list__info">
                             <span class="list__num">02</span>
                             <strong class="list__tit">Development Site</strong>
-                            <p class="list__desc">리엑트와 뷰,php 환경에서 제작한 프로젝트를 모아두었습니다.</p>
+                            <p class="list__desc">React, vue, php 환경에서 제작한 프로젝트를 모아두었습니다.</p>
                         </div>
                         <span class="list__thumb">
                             <a href="https://hellojoyworldz.github.io/myWork/react"><img class="list__img" src="./assets/img/mainSite__img02.jpg" alt=""></a>
-                            
                         </span>
                     </div>
                 </div>
@@ -146,7 +160,6 @@
                         </div>
                         <span class="list__thumb">
                             <a href="http://clickb1270.dothome.co.kr/php2/main/main.php" target="_blank"><img class="list__img" src="./assets/img/mainSite__img04.jpg" alt=""></a>
-                            
                         </span>
                     </div> 
                 </div>
@@ -159,7 +172,6 @@
                         </div>
                         <span class="list__thumb">
                             <a href="https://hellojoyworldz.github.io/myJS/blog" target="_blank"><img class="list__img" src="./assets/img/mainSite__img05.jpg" alt=""></a>
-                            
                         </span>
                     </div>
                 </div>
@@ -186,62 +198,21 @@
                     <h2>Hello,<br/>My <span class="highlight">WebSite<img src="./assets/img/icon__tit01.png" alt=""></span></h2>
                 </div>
 
-                <div class="list">
-                    <article class="list__item">  
-                        <a href="" class="list__link">
-                            <div class="list__header">
-                                <span class="list__num">💛</span>
-                                <h3 class="list__tit">사이트 제목입니다</h3>
-                                <span class="list__cate react">React</span>
+                <ul class="list">
+                    <li class="list__item">  
+                        <div class="list__header">
+                            <span class="list__cate react">React</span>
+                            <h3 class="list__tit">사이트 제목입니다</h3>
+                        </div>
+                        <div class="list__body">
+                            <div class="list__thumb"><img src="./assets/img/mainSite__img01.jpg" alt=""></div>
+                            <div class="list__desc">
+                                리엑트 환경에서 퍼블리싱한 사이트입니다.<br/>
+                                
                             </div>
-                            <div class="list__body">
-                                <div class="list__thumb"><img src="./assets/img/mainSite__img01.jpg" alt=""></div>
-                                <div class="list__desc">
-                                    Vue 라이브러리를 이용하여 작업한 포트폴리오 사이트입니다.<br/>
-                                    컴퍼넌트를 생성하여 싱글페이지를 출력시켰고 레퍼런스의 탭메뉴를 구현하였습니다.<br/>
-                                    또한 SCSS를 사용하여 스타일을 지정하였고,<br/>
-                                    Youtube 페이지에서 API를 이용한 동영상 목록과 검색이 가능합니다.
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <article class="list__item">  
-                        <a href="" class="list__link">
-                            <div class="list__header">
-                                <span class="list__num">🧡</span>
-                                <h3 class="list__tit">사이트 제목입니다</h3>
-                                <span class="list__cate vue">vue</span>
-                            </div>
-                            <div class="list__body">
-                                <div class="list__thumb"><img src="./assets/img/mainSite__img02.jpg" alt=""></div>
-                                <div class="list__desc">
-                                    Vue 라이브러리를 이용하여 작업한 포트폴리오 사이트입니다.<br/>
-                                    컴퍼넌트를 생성하여 싱글페이지를 출력시켰고 레퍼런스의 탭메뉴를 구현하였습니다.<br/>
-                                    또한 SCSS를 사용하여 스타일을 지정하였고,<br/>
-                                    Youtube 페이지에서 API를 이용한 동영상 목록과 검색이 가능합니다.
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <article class="list__item" data-scroll data-scroll-sticky>  
-                        <a href="" class="list__link">
-                            <div class="list__header">
-                                <span class="list__num">❤️</span>
-                                <h3 class="list__tit">사이트 제목입니다</h3>
-                                <span class="list__cate php">php</span>
-                            </div>
-                            <div class="list__body">
-                                <div class="list__thumb"><img src="./assets/img/mainSite__img03.jpg" alt=""></div>
-                                <div class="list__desc">
-                                    Vue 라이브러리를 이용하여 작업한 포트폴리오 사이트입니다.<br/>
-                                    컴퍼넌트를 생성하여 싱글페이지를 출력시켰고 레퍼런스의 탭메뉴를 구현하였습니다.<br/>
-                                    또한 SCSS를 사용하여 스타일을 지정하였고,<br/>
-                                    Youtube 페이지에서 API를 이용한 동영상 목록과 검색이 가능합니다.
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </section>
 
@@ -433,10 +404,6 @@
     <!-- //footer -->
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
-<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-<script src="assets/js/global.js"></script>
+
 </body>
 </html>
