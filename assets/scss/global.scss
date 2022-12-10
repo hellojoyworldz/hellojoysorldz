@@ -550,13 +550,8 @@
             }
         }
 
-        &__body {
-            width: calc(100% - 360px);
-        }
-
         &__thumb {
-            width: 100%;
-            overflow: hidden;
+            width: calc(100% - 360px);
 
             & img {
                 width: 100%;
@@ -564,11 +559,6 @@
                 transition: 0.3s;
                 object-fit: cover;
             }
-        }
-
-        &__desc {
-            font-size: $txtSizeLv4;
-            line-height: $lineHeiLv1;
         }
 
         &__thumb:hover {

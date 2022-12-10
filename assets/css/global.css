@@ -434,12 +434,8 @@
 .mainPortfolio .list__cate.php::before {
   background-image: url(../img/icon_php.png);
 }
-.mainPortfolio .list__body {
-  width: calc(100% - 360px);
-}
 .mainPortfolio .list__thumb {
-  width: 100%;
-  overflow: hidden;
+  width: calc(100% - 360px);
 }
 .mainPortfolio .list__thumb img {
   width: 100%;
@@ -447,10 +443,6 @@
   transition: 0.3s;
   -o-object-fit: cover;
      object-fit: cover;
-}
-.mainPortfolio .list__desc {
-  font-size: 18px;
-  line-height: 150%;
 }
 .mainPortfolio .list__thumb:hover img {
   transform: scale(1.05);

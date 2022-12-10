@@ -373,11 +373,15 @@ svg rect {
   -webkit-animation: moving 30s linear infinite;
           animation: moving 30s linear infinite;
 }
+.footer__desc {
+  font-size: 24px;
+  color: #fff;
+}
 .footer__info {
   margin: 5vh 5vw 192px 5vw;
 }
 .footer__info .list__item {
-  margin: 16px;
+  margin: 16px 0;
   font-family: "Montserrat";
   font-size: 24px;
   line-height: 100%;

@@ -384,11 +384,16 @@ svg rect {
         animation: moving 30s linear infinite;
     }
 
+    &__desc {
+        font-size: $fontSizLv5;
+        color: #fff;
+    }
+
     &__info {
         margin: 5vh 5vw 192px 5vw;
         & .list {
             &__item {
-                margin: 16px;
+                margin: 16px 0;
                 font-family: $fontSec;
                 font-size: $fontSizLv5;
                 line-height: $lineHei100;

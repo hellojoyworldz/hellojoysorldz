@@ -90,7 +90,7 @@ window.addEventListener("load", function () {
 });
 
 document.addEventListener("load", () => {
-  setTimeout(() => {}, 1000);
+  setTimeout(() => {}, 500);
 });
 
 //로딩소스
@@ -126,3 +126,26 @@ function loading() {
     }
   }
 }
+
+// scrollGage
+function scrollGage() {
+  /* 
+	innerHeight : 가로 스크롤 막대를 포함하는 브라우저 창 뷰포트의 높이.
+	window.innerHeight : 브라우저 창의 높이
+	document.body.offsetHeight :body 높이
+	*/
+  var bodyHeight = document.body.offsetHeight - window.innerHeight;
+  var currentPosition = Math.round(window.pageYOffset);
+  //console.log(bodyHeight + ' - ' + currentPosition);
+  var percent = Math.round((currentPosition / bodyHeight) * 100);
+
+  //document.querySelector(".scrollGage__position").innerText = currentPosition;
+  document.querySelector(".scrollGage__percent").innerText = percent + "%";
+  //document.querySelector('.scrollGage__bar').style.width = percent + '%';
+  console.log("ee");
+}
+
+//scrollGage();
+document.addEventListener("scroll", () => {
+  //scrollGage();
+});
