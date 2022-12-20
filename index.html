@@ -170,7 +170,7 @@
                 </div>
             </div>
         </section>
-
+        <!--
         <section class="mainChat" data-bgcolor="#ffdede">
             <h2 class="screenHide">디자인용 배너</h2>
             <div class="item item01" data-scroll data-scroll-speed="3" data-scroll-direction="vertical"><span class="item__chat">😁😁😁</span></div>
@@ -184,10 +184,11 @@
             <div class="item item09" data-scroll data-scroll-speed="5" data-scroll-direction="vertical"><span class="item__chat">👾👾👾👾</span></div>
             <div class="item item10" data-scroll data-scroll-speed="7" data-scroll-direction="vertical"><span class="item__chat">THX! 😘</span></div>
         </section>
+        -->
         <!--
-        <section class="mainPortfolio" data-bgcolor="#ffffff">
+        <section class="mainProject" data-bgcolor="#ffffff">
             <div class="in">
-                <div class="mainPortfolio__header">
+                <div class="mainProject__header">
                     <h2>Hello,<br/>My <span class="highlight">WebSite<img src="./assets/img/icon__tit01.png" alt=""></span></h2>
                 </div>
                 <ul class="list">
@@ -198,7 +199,7 @@
                         </div>
                         <div class="list__thumb">
                             <a href="#">
-                                <img src="./assets/img/mainSite__img01.jpg" alt="">
+                                <img src="./assets/img/mainProject__react01.jpg" alt="">
                             </a>
                         </div>
                     </li>
@@ -208,9 +209,10 @@
                     </li>
                 </ul>
             </div>
-        </section>-->
+        </section>
+        -->
 
-        <section class="mainCode" data-bgcolor="#ffffff">
+        <section class="mainCode" data-bgcolor="#f6f3ff">
             <div class="mainCode__header">
                 <h2>Hello,<br/>My<span class="highlight"> JavaScript<img src="./assets/img/icon__tit03.png" alt=""></span></h2>
             </div>
@@ -222,26 +224,12 @@
                     <span class="list__thumb"><img class="list__img" src="./assets/img/mainCode__img01.jpg" alt=""></span>
                 </li>
                 <li class="list__item item02">
-                    <span onclick="javascript:void(0);alert('준비중입니다.');" class="list__link" target="_blank" ></span>
-                    <strong class="list__tit">Tetris<br/>Game</strong>
+                    <a href="https://hellojoyworldz.github.io/myJS/game/drawing" class="list__link" target="_blank" ></a>
+                    <strong class="list__tit">Drawing</strong>
                     <span class="list__cate">JavaScript</span>
                     
                     <span class="list__thumb"><img class="list__img" src="./assets/img/mainCode__img02.jpg" alt=""></span>
                 </li>
-                <!--
-                <li class="list__item item03">
-                    <a href="" class="list__link"></a>
-                    <strong class="list__tit">WEATHER<br/>APP</strong>
-                    <span class="list__cate">JavaScript</span>
-                    <span class="list__thumb"><img class="list__img" src="./assets/img/mainCode__img04.jpg" alt=""></span>
-                </li>
-                <li class="list__item item04">
-                    <a href="" class="list__link"></a>
-                    <strong class="list__tit">Music<br/>Player</strong>
-                    <span class="list__cate">JavaScript</span>
-                    <span class="list__thumb"><img class="list__img" src="./assets/img/mainCode__img03.jpg" alt=""></span>
-                </li>
-                -->
                 <li class="list__item item05">
                     <a href="https://hellojoyworldz.github.io/myJS/game/memory" class="list__link" target="_blank" ></a>
                     <strong class="list__tit">Memory<br/>Game</strong>
@@ -255,11 +243,6 @@
                     <span class="list__cate">JavaScript</span>
                 </li>
                 <li class="list__item item07">
-                    <!--
-                    <a href="" class="list__link"></a>
-                    <strong class="list__tit">Music<br/>Player</strong>
-                    <span class="list__cate">JavaScript</span>
-                    -->
                     <span class="list__thumb"><img class="list__img" src="./assets/img/mainCode__img07.jpg" alt=""></span>
                 </li>
                 <li class="list__item item08">
@@ -276,87 +259,91 @@
                 </li>
             </ul>
         </section>  
-        <!--
-        <section class="mainCard" data-bgcolor="#f5f5f5">
-            <div class="mainCard__header">
+    
+        <section class="mainCss" data-bgcolor="#f5f5f5">
+            <div class="mainCss__header">
                 <h2>Hello,<img src="./assets/img/icon__tit02.png" alt=""><br/>My<span class="highlight">CSS Animation </span></h2>
             </div>
             <ul class="list">
                 <li class="list__item">
-                    <a class="list__link" href=""></a>
+                    <a class="list__link" target="_blank" href="https://hellojoyworldz.github.io/myCSS/animation/marquee"></a>
                     <div class="list__thumb">
-                        <img src="https://webstoryboy.github.io/studyPORT/portfolio34/img/tetris_img1.png" alt="">
+                        <span class="list__thumbGif" style="background-image:url('./assets/img/mainCss__marquee.gif')"></span>
                     </div>
                     <div class="list__info">
-                        <strong class="list__tit">3D Over Effect</strong>
+                        <strong class="list__tit">Marquee</strong>
                         <p class="list__desc">
-                            https://wsss.tistory.com/1966
+                            transform을 사용하여 x축으로 이동하여 <br/>
+                            marquee 효과를 주었습니다.
                         </p>
                     </div>
                 </li>
                 <li class="list__item">
-                    <a class="list__link" href=""></a>
+                    <a class="list__link" target="_blank" href="https://hellojoyworldz.github.io/myCSS/animation/wave"></a>
                     <div class="list__thumb">
-                        <img src="https://webstoryboy.github.io/studyPORT/portfolio34/img/musicapp.jpg" alt="">
+                        <span class="list__thumbGif" style="background-image:url('./assets/img/mainCss__wave.gif')"></span>
+                    </div>
+                    <div class="list__info">
+                        <strong class="list__tit">Wave Effect</strong>
+                        <p class="list__desc">
+                            같은 animation 효과에 움직이는 시간을 다르게 하여 <br/>
+                            출렁거리는 물결 효과를 주었습니다.
+                        </p>
+                    </div>
+                </li>
+                <li class="list__item">
+                    <a class="list__link" target="_blank" href="https://hellojoyworldz.github.io/myCSS/animation/sticky"></a>
+                    <div class="list__thumb">
+                        <span class="list__thumbGif" style="background-image:url('./assets/img/mainCss__sticky.gif')"></span>
                     </div>
                     <div class="list__info">
                         <strong class="list__tit">Sticky Effect</strong>
                         <p class="list__desc">
-                            https://wsss.tistory.com/1962
+                            display: flex를 사용하여 이미지를 가운데 정렬하였고,<br/>position: sticky를 사용하여 겹겹이 쌓이는 효과를 만들었습니다.
                         </p>
                     </div>
                 </li>
                 <li class="list__item">
-                    <a class="list__link" href=""></a>
+                    <a class="list__link" target="_blank" href="https://hellojoyworldz.github.io/myCSS/animation/todo"></a>
                     <div class="list__thumb">
-                        <img src="https://webstoryboy.github.io/studyPORT/portfolio34/img/cardgame.png" alt="">
+                        <span class="list__thumbGif" style="background-image:url('./assets/img/mainCss__todo.gif')"></span>
                     </div>
                     <div class="list__info">
-                        <strong class="list__tit">Loading Effect</strong>
+                        <strong class="list__tit">Todo List</strong>
                         <p class="list__desc">
-                            https://wsss.tistory.com/1943
+                            before, after 가상요소를 사용하여<br/>checkbox 디자인을 하였습니다.
                         </p>
                     </div>
                 </li>
                 <li class="list__item">
-                    <a class="list__link" href=""></a>
+                    <a class="list__link" target="_blank" href="https://hellojoyworldz.github.io/myCSS/animation/card"></a>
                     <div class="list__thumb">
-                        <img src="https://webstoryboy.github.io/studyPORT/portfolio34/img/typing2@3x.png" alt="">
+                        <span class="list__thumbGif" style="background-image:url('./assets/img/mainCss__Card.gif')"></span>
                     </div>
                     <div class="list__info">
-                        <strong class="list__tit">Text Change</strong>
+                        <strong class="list__tit">Shiny Card</strong>
                         <p class="list__desc">
-                            https://wsss.tistory.com/1932
+                            background-clip 를 사용하여 글씨에 은박 효과를 주었습니다.<br/>
+                            transform : rotate 를 사용하여 움직이는 효과를 주었습니다.
                         </p>
                     </div>
                 </li>
                 <li class="list__item">
-                    <a class="list__link" href=""></a>
+                    <a class="list__link" target="_blank" href="https://hellojoyworldz.github.io/myCSS/animation/snowball"></a>
                     <div class="list__thumb">
-                        <img src="https://webstoryboy.github.io/studyPORT/portfolio34/img/tetris_img1.png" alt="">
+                        <span class="list__thumbGif" style="background-image:url('./assets/img/mainCss__snowball.gif')"></span>
                     </div>
                     <div class="list__info">
-                        <strong class="list__tit">3D Over Effect</strong>
+                        <strong class="list__tit">Snowball</strong>
                         <p class="list__desc">
-                            https://wsss.tistory.com/1966
-                        </p>
-                    </div>
-                </li>
-                <li class="list__item">
-                    <a class="list__link" href=""></a>
-                    <div class="list__thumb">
-                        <img src="https://webstoryboy.github.io/studyPORT/portfolio34/img/musicapp.jpg" alt="">
-                    </div>
-                    <div class="list__info">
-                        <strong class="list__tit">Sticky Effect</strong>
-                        <p class="list__desc">
-                            https://wsss.tistory.com/1962
+                            background gradient를 사용하여<br/>
+                            스노우볼이 움직이는 트렉에 생동감있는 효과를 주었습니다.
                         </p>
                     </div>
                 </li>
             </ul>
         </section>
-        -->
+       
    
         <section class="mainProfile" data-bgcolor="#ff7896">
             <svg class="mainProfile__svg" width="1440" height="539" viewBox="0 0 1440 539" fill="none" xmlns="http://www.w3.org/2000/svg" >
@@ -392,8 +379,8 @@
                 <li class="list__item"><strong class="list__tit">E-mail</strong><a href="toemail:hellojoyworldz@google.com">hellojoyworldz@google.com</a> </li>
                 <li class="list__item"><strong class="list__tit">Phone</strong><a href="SMS:010-9783-6375">+82 10-9783-6375</a></li>
                 <li class="list__item"><strong class="list__tit">Portfolio</strong><a href="https://hellojoyworldz.github.io/myPORTFOLIO/">hellojoyworldz.github.io/myPORTFOLIO</a></li>
-                <li class="list__item"><strong class="list__tit">Git-Hub</strong><a href="https://github.com/hellojoyworldz">github.com/hellojoyworldz</a></li>
-                <li class="list__item"><strong class="list__tit">Blog</strong><a href="https://hellojoyworldz.tistory.com/">hellojoyworldz.tistory.com</a></li>
+                <li class="list__item"><strong class="list__tit">Git-Hub</strong><a href="https://github.com/hellojoyworldz" target="_blank">github.com/hellojoyworldz</a></li>
+                <li class="list__item"><strong class="list__tit">Blog</strong><a href="https://hellojoyworldz.tistory.com/"  target="_blank">hellojoyworldz.tistory.com</a></li>
             </ul>  
         </address>
         <span class="footer__sbj">IMPOSSIBLE IS NOTING · IMPOSSIBLE IS NOTING · IMPOSSIBLE IS NOTING · IMPOSSIBLE IS NOTING · IMPOSSIBLE IS NOTING · IMPOSSIBLE IS NOTING · IMPOSSIBLE IS NOTING · IMPOSSIBLE IS NOTING · </span>
