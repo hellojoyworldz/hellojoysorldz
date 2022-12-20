@@ -16,72 +16,19 @@
         padding: 48px 16px;
 
         & .list {
-            grid-template-columns: repeat(1, 1fr);
             grid-gap: 12px;
-            grid-auto-rows: auto;
-            justify-items: center;
-            grid-template-areas:
-                "a"
-                "b"
-                "e"
-                "f"
-                "g"
-                "h"
-                "i"
-                "j";
-            width: 100%;
-
-            &__item {
-                width: 80%;
-                height: 360px;
-            }
+            width: auto;
         }
+    }
+
+    .mainCss {
+        padding: 48px 16px;
+        width: auto;
     }
 
     .mainProfile {
         & .imgWrap {
             width: auto;
-        }
-    }
-
-    .mainChat {
-        padding: 0 32px;
-        width: auto;
-        & .item {
-            font-size: 32px;
-
-            &__chat {
-                padding: 12px 24px;
-            }
-        }
-
-        & .item08 .item__chat {
-            margin-left: 0;
-        }
-    }
-
-    .mainPortfolio {
-        & .in {
-            width: auto;
-        }
-
-        & .list {
-            justify-content: center;
-            &__item {
-                flex-basis: 80%;
-            }
-        }
-    }
-
-    .mainCard {
-        width: 100%;
-
-        .list {
-            justify-content: center;
-
-            &__item {
-                flex-basis: 80%;
-            }
         }
     }
 }
@@ -171,11 +118,11 @@
 
     /* main cate*/
     .mainCate {
-        padding: 48px 0;
+        //padding: 48px 0;
 
         &__tit {
             margin-bottom: 32px;
-            font-size: 40px;
+            font-size: 52px;
         }
 
         & .list {
@@ -197,7 +144,11 @@
 
         &__tit {
             padding: 0px;
-            font-size: 40px;
+            font-size: 48px;
+
+            &Img {
+                width: 177px;
+            }
         }
 
         &__emoji {
@@ -222,24 +173,10 @@
         min-height: auto;
     }
 
-    .pin-wrap > * {
-    }
-
-    .mainBlog {
-        &__intro {
-            .areaLeft__tit,
-            .areaRight__tit {
-                margin-bottom: 32px;
-                font-size: 40px;
-            }
-        }
-    }
-
     .mainCode {
-        padding: 48px 24px;
-
-        &__header {
-            margin: 0 auto 32px;
+        &__tit {
+            margin-bottom: 32px;
+            font-size: 48px;
         }
 
         & .list {
@@ -257,36 +194,84 @@
 
             grid-template-columns: repeat(1, 1fr);
             grid-gap: 12px;
-            grid-auto-rows: auto;
+
             grid-template-areas:
                 "a"
                 "b"
-                "c"
-                "d"
                 "e"
                 "f"
-                "g"
                 "h"
                 "i"
                 "j";
-            width: auto;
+
+            &__item.item07 {
+                display: none;
+            }
         }
     }
 
-    .mainPortfolio {
-        padding: 48px 24px;
+    .mainCss {
+        &__tit {
+            margin-bottom: 32px;
+            font-size: 48px;
 
-        &__header {
-            margin: 0 auto 32px;
+            & .highlight {
+                margin-left: 0;
+                padding: 0;
+            }
+
+            & img {
+                width: 60px;
+            }
+        }
+
+        .list {
+            &__item {
+                flex-direction: column;
+            }
+
+            &__thumb {
+                width: auto;
+                padding-bottom: 56.4%;
+
+                &Gif {
+                    background-size: 125%;
+                }
+            }
+
+            &__info {
+                width: auto;
+            }
+
+            &__tit {
+                font-size: 24px;
+            }
+
+            &__desc {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .mainProfile {
+        padding: 96px 0 0 0;
+
+        &__svg {
+            width: 150%;
         }
     }
 
     .footer {
         padding: 48px 0;
+        height: 100vh;
+        box-sizing: border-box;
 
         &__sbj {
             font-size: 48px;
             line-height: 64px;
+        }
+        &__desc {
+            font-size: 18px;
         }
 
         &__info {

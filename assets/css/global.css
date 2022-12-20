@@ -455,32 +455,23 @@
   margin: 96px 0;
   padding: 240px 0;
 }
-.mainCode__header {
-  margin-bottom: 96px;
-}
-.mainCode__header h2 {
+.mainCode__tit {
   position: relative;
+  margin-bottom: 96px;
   font-family: "Fredoka";
   font-size: 72px;
   color: #222;
   text-align: center;
 }
-.mainCode__header h2 .highlight {
+.mainCode__tit .highlight {
   position: relative;
 }
-.mainCode__header h2 .highlight img {
+.mainCode__tit .highlight img {
   position: absolute;
   top: -24px;
   right: 0;
+  width: 100%;
   z-index: -1;
-}
-.mainCode__tit {
-  margin-bottom: 96px;
-  text-align: center;
-  font-family: "Fredoka";
-  font-size: 6vw;
-  line-height: 120%;
-  color: #222;
 }
 .mainCode .list {
   display: grid;
@@ -588,27 +579,25 @@
   margin: 96px auto;
   padding: 240px 0;
 }
-.mainCss__header {
+.mainCss__tit {
   margin-bottom: 96px;
-}
-.mainCss__header h2 {
   position: relative;
   font-family: "Fredoka";
   font-size: 72px;
   color: #222;
   text-align: center;
 }
-.mainCss__header h2 img {
+.mainCss__tit img {
   position: absolute;
   top: -24px;
   z-index: -1;
 }
-.mainCss__header h2 .highlight {
+.mainCss__tit .highlight {
   position: relative;
   margin-left: 16px;
   padding: 0 16px;
 }
-.mainCss__header h2 .highlight::after {
+.mainCss__tit .highlight::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -617,14 +606,6 @@
   height: 24px;
   background-color: #ffe30d;
   z-index: -1;
-}
-.mainCss__tit {
-  margin-bottom: 96px;
-  text-align: center;
-  font-family: "Fredoka";
-  font-size: 6vw;
-  line-height: 120%;
-  color: #222;
 }
 .mainCss .list__item {
   position: relative;
@@ -646,7 +627,7 @@
 .mainCss .list__tit {
   position: relative;
   display: inline-block;
-  margin: 16px 0;
+  margin-bottom: 16px;
   font-family: "Montserrat";
   font-size: 36px;
   line-height: 120%;
@@ -697,7 +678,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 12px;
+  padding: 24px;
   width: 40%;
   border-radius: 36px;
   background: #fff;
@@ -734,6 +715,7 @@
   display: block;
   width: 40vw;
   max-width: 600px;
+  min-width: 300px;
   margin: 5vh 5vw 0 auto;
 }
 .mainProfile__thumb img {

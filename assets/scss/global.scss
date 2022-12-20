@@ -574,34 +574,24 @@
     margin: $lyMargin 0;
     padding: $lyPadding 0;
 
-    &__header {
+    &__tit {
+        position: relative;
         margin-bottom: $lyMargin;
-        & h2 {
-            position: relative;
-            font-family: $fontThi;
-            font-size: $titSizThr;
-            color: $fontColFir;
-            text-align: center;
+        font-family: $fontThi;
+        font-size: $titSizThr;
+        color: $fontColFir;
+        text-align: center;
 
-            & .highlight {
-                position: relative;
-                & img {
-                    position: absolute;
-                    top: -24px;
-                    right: 0;
-                    z-index: -1;
-                }
+        & .highlight {
+            position: relative;
+            & img {
+                position: absolute;
+                top: -24px;
+                right: 0;
+                width: 100%;
+                z-index: -1;
             }
         }
-    }
-
-    &__tit {
-        margin-bottom: $lyMargin;
-        text-align: center;
-        font-family: $fontThi;
-        font-size: $fontSizLv1;
-        line-height: $lineHeiLv3;
-        color: $fontColFir;
     }
 
     & .list {
@@ -731,46 +721,35 @@
     margin: $lyMargin auto;
     padding: $lyPadding 0;
 
-    &__header {
-        margin-bottom: $lyMargin;
-        & h2 {
-            position: relative;
-            font-family: $fontThi;
-            font-size: $titSizThr;
-            color: $fontColFir;
-            text-align: center;
-
-            & img {
-                position: absolute;
-                top: -24px;
-                z-index: -1;
-            }
-
-            & .highlight {
-                position: relative;
-                margin-left: 16px;
-                padding: 0 16px;
-                &::after {
-                    content: "";
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 24px;
-                    background-color: $colPoint2;
-                    z-index: -1;
-                }
-            }
-        }
-    }
-
     &__tit {
         margin-bottom: $lyMargin;
-        text-align: center;
+        position: relative;
         font-family: $fontThi;
-        font-size: $fontSizLv1;
-        line-height: $lineHeiLv3;
+        font-size: $titSizThr;
         color: $fontColFir;
+        text-align: center;
+
+        & img {
+            position: absolute;
+            top: -24px;
+            z-index: -1;
+        }
+
+        & .highlight {
+            position: relative;
+            margin-left: 16px;
+            padding: 0 16px;
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 24px;
+                background-color: $colPoint2;
+                z-index: -1;
+            }
+        }
     }
 
     & .list {
@@ -796,7 +775,7 @@
         &__tit {
             position: relative;
             display: inline-block;
-            margin: 16px 0;
+            margin-bottom: 16px;
             font-family: $fontSec;
             font-size: $fontSizLv4;
             line-height: $lineHeiLv3;
@@ -853,7 +832,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 12px;
+            padding: 24px;
             width: 40%;
             border-radius: $lyRadius;
             background: $whiteFff;
@@ -896,6 +875,7 @@
         display: block;
         width: 40vw;
         max-width: 600px;
+        min-width: 300px;
         margin: 5vh 5vw 0 auto;
 
         img {
