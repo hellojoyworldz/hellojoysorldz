@@ -363,6 +363,7 @@
 }
 .mainSite .list__info {
   margin-right: 48px;
+  min-width: 400px;
 }
 .mainSite .list__num {
   font-weight: bold;
