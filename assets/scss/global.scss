@@ -237,6 +237,140 @@
     }
 }
 
+.mainFront {
+    padding: $lyMargin $lyPadding;
+
+    &__tit {
+        margin-bottom: $lyMargin;
+        font-family: $font__third;
+        font-size: $titSizFir;
+        color: #310591;
+    }
+
+    & .list {
+        &__item {
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin: 96px 0;
+            background-color: $whiteFff;
+            border-radius: $lyRadius;
+            box-shadow: inset 4px 4px 20px 5px rgba(0, 0, 0, 0.02), -4px -4px 20px 4px rgba(0, 0, 0, 0.02);
+            overflow: hidden;
+
+            &::before {
+                top: 20px;
+                left: -20px;
+            }
+
+            &::after {
+                bottom: 0;
+                right: -20px;
+            }
+        }
+
+        &__thumb {
+            position: relative;
+            font-size: 0px;
+            width: 70%;
+            overflow: hidden;
+
+            & img {
+                width: 100%;
+                height: auto;
+                transition: 0.3s;
+            }
+        }
+
+        &__info {
+            padding: 48px;
+            width: 40%;
+        }
+
+        &__cate {
+            position: relative;
+            display: block;
+            margin-bottom: 8px;
+            font-family: $font__second;
+            font-size: $txtSizeLv4;
+            font-weight: 500;
+            color: $fontColSec;
+
+            &::before {
+                content: "";
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 4px;
+                width: 32px;
+                height: 32px;
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+                background-size: cover;
+            }
+
+            &.cate {
+                &--react::before {
+                    background-image: url("../img/icon_react.png");
+                }
+
+                &--vue::before {
+                    background-image: url("../img/icon_vue.png");
+                }
+                &--php::before {
+                    background-image: url("../img/icon_php.png");
+                }
+            }
+        }
+
+        &__tit {
+            display: block;
+            margin-bottom: 24px;
+            font-family: $font__second;
+            font-size: $txtSizeLv1;
+            line-height: $lineHeiLv0;
+            color: $fontColFir;
+        }
+
+        &__desc {
+            font-size: $txtSizeLv4;
+            color: $fontColSec;
+        }
+
+        &__type {
+            margin-top: 48px;
+            margin-left: -4px;
+            font-size: 0px;
+            &Link {
+                display: inline-block;
+                vertical-align: middle;
+                margin: 4px;
+                padding: 12px 24px;
+                font-family: $font__second;
+                font-size: $txtSizeLv4;
+                line-height: $lineHeiLv0;
+                background-color: $whiteFff;
+                border: 1px solid #ddd;
+                border-radius: 36px;
+            }
+        }
+    }
+
+    & .list__item:hover {
+        & .list {
+            &__thumb {
+                & img {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+
+    & .list__typeLink:hover {
+        color: #fff;
+        background-color: #310591;
+    }
+}
+
 .mainSite {
     margin: $lyPadding 0;
 
@@ -300,18 +434,15 @@
         }
 
         &__item {
+            position: relative;
             display: flex;
-            justify-content: center;
         }
 
         &__info {
-            margin-bottom: 32px;
+            margin-right: 48px;
         }
 
         &__num {
-            position: absolute;
-            top: -16px;
-            left: -5vw;
             font-weight: bold;
             font-style: italic;
             font-family: $font__second;
@@ -328,7 +459,7 @@
             font-weight: bold;
             font-style: italic;
             font-family: $fontSec;
-            font-size: $fontSizLv1;
+            font-size: $fontSizLv3;
             line-height: $lineHeiLv0;
             color: $whiteFff;
         }
@@ -370,14 +501,9 @@
     }
 
     & .list {
-        &__contents:hover {
+        &__item:hover {
             & .list {
-                &__tit {
-                    a::before {
-                        width: 110%;
-                    }
-                }
-                &__thumb {
+                &__thumb:hover {
                     & a::after {
                         transform: rotate3d(0, 0, 0, 0deg);
                         opacity: 0.9;
@@ -570,9 +696,31 @@
     }
 }
 
+.mainBanner {
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: $lyPadding $lyMargin;
+    text-align: center;
+
+    img {
+        width: 80%;
+        height: auto;
+    }
+
+    &__bg {
+    }
+
+    &__emoji > span {
+        position: absolute;
+        left: 0;
+        bottom: 0px;
+    }
+}
+
 .mainCode {
     margin: $lyMargin 0;
-    padding: $lyPadding 0;
+    padding: $lyPadding $lyMargin;
 
     &__tit {
         position: relative;
@@ -596,16 +744,14 @@
 
     & .list {
         display: grid;
-        grid-template-columns: repeat(1, 336px);
-        grid-auto-rows: 336px;
+        //grid-template-columns: repeat(1, 336px);
+        //grid-auto-rows: 336px;
         grid-gap: $lyGap;
         grid-template-areas:
             "a a b b"
             "a a b b"
             "e f f g"
             "e h i i";
-        width: $in;
-        margin: 0 auto;
 
         &__item {
             position: relative;
@@ -717,9 +863,8 @@
 }
 
 .mainCss {
-    width: $in;
-    margin: $lyMargin auto;
-    padding: $lyPadding 0;
+    margin: $lyMargin 0;
+    padding: $lyPadding $lyMargin;
 
     &__tit {
         margin-bottom: $lyMargin;
@@ -756,7 +901,7 @@
         &__item {
             position: relative;
             display: flex;
-            margin: $lyGap 0;
+            margin: 48px 0;
             text-align: center;
             background: $whiteFff;
             border-radius: $lyRadius;

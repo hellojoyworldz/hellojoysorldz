@@ -12,6 +12,16 @@
         }
     }
 
+    .mainFront {
+        padding: 48px 16px;
+
+        & .list {
+            &__item {
+                margin: 12px 0;
+            }
+        }
+    }
+
     .mainCode {
         padding: 48px 16px;
 
@@ -19,6 +29,10 @@
             grid-gap: 12px;
             width: auto;
         }
+    }
+
+    .mainBanner {
+        padding: 96px 16px;
     }
 
     .mainCss {
@@ -110,12 +124,6 @@
         }
     }
 
-    .mainWork {
-        &__tit {
-            font-size: 40px;
-        }
-    }
-
     /* main cate*/
     .mainCate {
         //padding: 48px 0;
@@ -139,6 +147,46 @@
         }
     }
 
+    .mainFront {
+        &__tit {
+            font-size: 48px;
+        }
+
+        & .list {
+            &__item {
+                flex-direction: column-reverse;
+                align-items: flex-start;
+            }
+
+            &__info {
+                padding: 24px;
+                width: auto;
+            }
+
+            &__cate {
+                font-size: 16px;
+            }
+
+            &__tit {
+                font-size: 24px;
+            }
+
+            &__desc {
+                font-size: 16px;
+            }
+
+            &__type {
+                &Link {
+                    font-size: 14px;
+                }
+            }
+
+            &__thumb {
+                width: auto;
+            }
+        }
+    }
+
     .mainSite {
         min-height: auto;
 
@@ -157,14 +205,20 @@
         }
 
         & .list {
+            &__item {
+                flex-direction: column;
+            }
+
+            &__info {
+                margin-right: 0px;
+                margin-bottom: 24px;
+            }
             &__desc {
                 font-size: 16px;
             }
 
             &__thumb {
-                & img {
-                    width: 100%;
-                }
+                width: 90vw;
             }
         }
     }
@@ -180,6 +234,19 @@
         }
 
         & .list {
+            // grid-template-columns: repeat(1, 1fr);
+            grid-template-areas:
+                "a"
+                "b"
+                "e"
+                "f"
+                "h"
+                "i";
+
+            &__item {
+                height: 360px;
+            }
+
             &__tit {
                 top: 24px;
                 left: 24px;
@@ -191,17 +258,6 @@
                 bottom: 24px;
                 font-size: 16px;
             }
-
-            grid-template-columns: repeat(1, 1fr);
-            grid-gap: 12px;
-
-            grid-template-areas:
-                "a"
-                "b"
-                "e"
-                "f"
-                "h"
-                "i";
 
             &__item.item07 {
                 display: none;

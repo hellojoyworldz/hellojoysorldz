@@ -2,12 +2,21 @@
   .visual__emoji {
     margin-left: -2%;
   }
+  .mainFront {
+    padding: 48px 16px;
+  }
+  .mainFront .list__item {
+    margin: 12px 0;
+  }
   .mainCode {
     padding: 48px 16px;
   }
   .mainCode .list {
     grid-gap: 12px;
     width: auto;
+  }
+  .mainBanner {
+    padding: 96px 16px;
   }
   .mainCss {
     padding: 48px 16px;
@@ -74,9 +83,6 @@
 .visual .emoji06 {
     top: -20%;
   }
-  .mainWork__tit {
-    font-size: 40px;
-  }
   /* main cate*/
   .mainCate__tit {
     margin-bottom: 32px;
@@ -92,6 +98,32 @@
     bottom: 110px;
     font-size: 32px;
   }
+  .mainFront__tit {
+    font-size: 48px;
+  }
+  .mainFront .list__item {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+  .mainFront .list__info {
+    padding: 24px;
+    width: auto;
+  }
+  .mainFront .list__cate {
+    font-size: 16px;
+  }
+  .mainFront .list__tit {
+    font-size: 24px;
+  }
+  .mainFront .list__desc {
+    font-size: 16px;
+  }
+  .mainFront .list__typeLink {
+    font-size: 14px;
+  }
+  .mainFront .list__thumb {
+    width: auto;
+  }
   .mainSite {
     min-height: auto;
   }
@@ -106,11 +138,18 @@
     width: 860px;
     height: 360px;
   }
+  .mainSite .list__item {
+    flex-direction: column;
+  }
+  .mainSite .list__info {
+    margin-right: 0px;
+    margin-bottom: 24px;
+  }
   .mainSite .list__desc {
     font-size: 16px;
   }
-  .mainSite .list__thumb img {
-    width: 100%;
+  .mainSite .list__thumb {
+    width: 90vw;
   }
   .pin-wrap {
     min-height: auto;
@@ -120,9 +159,10 @@
     font-size: 48px;
   }
   .mainCode .list {
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 12px;
     grid-template-areas: "a" "b" "e" "f" "h" "i";
+  }
+  .mainCode .list__item {
+    height: 360px;
   }
   .mainCode .list__tit {
     top: 24px;

@@ -202,6 +202,114 @@
   color: #f06b67;
 }
 
+.mainFront {
+  padding: 96px 240px;
+}
+.mainFront__tit {
+  margin-bottom: 96px;
+  font-family: "Fredoka";
+  font-size: 6vw;
+  color: #310591;
+}
+.mainFront .list__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 96px 0;
+  background-color: #fff;
+  border-radius: 36px;
+  box-shadow: inset 4px 4px 20px 5px rgba(0, 0, 0, 0.02), -4px -4px 20px 4px rgba(0, 0, 0, 0.02);
+  overflow: hidden;
+}
+.mainFront .list__item::before {
+  top: 20px;
+  left: -20px;
+}
+.mainFront .list__item::after {
+  bottom: 0;
+  right: -20px;
+}
+.mainFront .list__thumb {
+  position: relative;
+  font-size: 0px;
+  width: 70%;
+  overflow: hidden;
+}
+.mainFront .list__thumb img {
+  width: 100%;
+  height: auto;
+  transition: 0.3s;
+}
+.mainFront .list__info {
+  padding: 48px;
+  width: 40%;
+}
+.mainFront .list__cate {
+  position: relative;
+  display: block;
+  margin-bottom: 8px;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 500;
+  color: #444;
+}
+.mainFront .list__cate::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 4px;
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.mainFront .list__cate.cate--react::before {
+  background-image: url("../img/icon_react.png");
+}
+.mainFront .list__cate.cate--vue::before {
+  background-image: url("../img/icon_vue.png");
+}
+.mainFront .list__cate.cate--php::before {
+  background-image: url("../img/icon_php.png");
+}
+.mainFront .list__tit {
+  display: block;
+  margin-bottom: 24px;
+  font-family: "Montserrat";
+  font-size: 48px;
+  line-height: 100%;
+  color: #222;
+}
+.mainFront .list__desc {
+  font-size: 18px;
+  color: #444;
+}
+.mainFront .list__type {
+  margin-top: 48px;
+  margin-left: -4px;
+  font-size: 0px;
+}
+.mainFront .list__typeLink {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 4px;
+  padding: 12px 24px;
+  font-family: "Montserrat";
+  font-size: 18px;
+  line-height: 100%;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 36px;
+}
+.mainFront .list__item:hover .list__thumb img {
+  transform: scale(1.05);
+}
+.mainFront .list__typeLink:hover {
+  color: #fff;
+  background-color: #310591;
+}
+
 .mainSite {
   margin: 240px 0;
 }
@@ -250,16 +358,13 @@
   position: relative;
 }
 .mainSite .list__item {
+  position: relative;
   display: flex;
-  justify-content: center;
 }
 .mainSite .list__info {
-  margin-bottom: 32px;
+  margin-right: 48px;
 }
 .mainSite .list__num {
-  position: absolute;
-  top: -16px;
-  left: -5vw;
   font-weight: bold;
   font-style: italic;
   font-family: "Montserrat";
@@ -275,7 +380,7 @@
   font-weight: bold;
   font-style: italic;
   font-family: "Montserrat";
-  font-size: 6vw;
+  font-size: 48px;
   line-height: 100%;
   color: #fff;
 }
@@ -310,14 +415,11 @@
   height: auto;
   transition: 0.3s;
 }
-.mainSite .list__contents:hover .list__tit a::before {
-  width: 110%;
-}
-.mainSite .list__contents:hover .list__thumb a::after {
+.mainSite .list__item:hover .list__thumb:hover a::after {
   transform: rotate3d(0, 0, 0, 0deg);
   opacity: 0.9;
 }
-.mainSite .list__contents:hover .list__thumb img {
+.mainSite .list__item:hover .list__thumb:hover img {
   transform: scale(1.1);
 }
 
@@ -451,9 +553,26 @@
   transform: scale(1.05);
 }
 
+.mainBanner {
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 240px 96px;
+  text-align: center;
+}
+.mainBanner img {
+  width: 80%;
+  height: auto;
+}
+.mainBanner__emoji > span {
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+}
+
 .mainCode {
   margin: 96px 0;
-  padding: 240px 0;
+  padding: 240px 96px;
 }
 .mainCode__tit {
   position: relative;
@@ -475,12 +594,8 @@
 }
 .mainCode .list {
   display: grid;
-  grid-template-columns: repeat(1, 336px);
-  grid-auto-rows: 336px;
   grid-gap: 24px;
   grid-template-areas: "a a b b" "a a b b" "e f f g" "e h i i";
-  width: 1440px;
-  margin: 0 auto;
 }
 .mainCode .list__item {
   position: relative;
@@ -575,9 +690,8 @@
 }
 
 .mainCss {
-  width: 1440px;
-  margin: 96px auto;
-  padding: 240px 0;
+  margin: 96px 0;
+  padding: 240px 96px;
 }
 .mainCss__tit {
   margin-bottom: 96px;
@@ -610,7 +724,7 @@
 .mainCss .list__item {
   position: relative;
   display: flex;
-  margin: 24px 0;
+  margin: 48px 0;
   text-align: center;
   background: #fff;
   border-radius: 36px;
