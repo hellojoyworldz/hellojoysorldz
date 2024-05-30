@@ -1,0 +1,26 @@
+@use "../../../../assets/styles/variable.scss" as *;
+
+.mainFront {
+  padding: $lyMargin $lyPadding;
+
+  &__tit {
+    margin-bottom: $lyMargin;
+    font-family: $font__third;
+    font-size: $titSizFir;
+    color: #310591;
+  }
+}
+
+@media (max-width: 1440px) {
+  .mainFront {
+    padding: 48px 16px;
+  }
+}
+
+@media (max-width: 860px) {
+  .mainFront {
+    &__tit {
+      font-size: 48px;
+    }
+  }
+}
