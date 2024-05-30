@@ -1,4 +1,5 @@
 import "./assets/styles/reset.scss";
+import "./assets/styles/common.scss";
 import { Routes, Route } from "react-router-dom";
 import HomepageLayout from "./Layout/HomepageLayout/HomepageLayout";
 import Homepage from "./pages/Homepage/Homepage";

@@ -1,0 +1,249 @@
+@use "variable.scss" as *;
+
+/*! locomotive-scroll v3.5.4 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+
+html.has-scroll-dragging {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.has-scroll-smooth body {
+  overflow: hidden;
+}
+
+.has-scroll-smooth [data-scroll-container] {
+  min-height: 100vh;
+}
+
+.c-scrollbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 11px;
+  height: 100vh;
+  transform-origin: center right;
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0;
+}
+
+.c-scrollbar:hover {
+  transform: scaleX(1.45);
+}
+
+.c-scrollbar:hover,
+.has-scroll-scrolling .c-scrollbar,
+.has-scroll-dragging .c-scrollbar {
+  opacity: 1;
+}
+
+.c-scrollbar_thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0.5;
+  width: 7px;
+  border-radius: 10px;
+  margin: 2px;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.has-scroll-dragging .c-scrollbar_thumb {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.has-scroll-smooth {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.horizontal-scroll {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  left: 0;
+}
+
+.pin-wrap {
+  height: 100vh;
+  min-height: 820px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  //padding: 50px 10vw;
+}
+.pin-wrap > * {
+  min-width: 100vw;
+  padding: 0 20vw;
+  box-sizing: border-box;
+}
+
+/* common */
+.loading {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  z-index: 999999;
+  &__line {
+    display: block;
+    width: 100%;
+    max-width: 260px;
+    height: 6px;
+    background: #e1e4e8;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  &__bar {
+    display: block;
+    height: 100%;
+    background: linear-gradient(
+                    90deg,
+                    #ffd33d,
+                    #ea4aaa 17%,
+                    #b34bff 34%,
+                    #01feff 51%,
+                    #ffd33d 68%,
+                    #ea4aaa 85%,
+                    #b34bff
+    );
+    background-size: 300% 100%;
+    -webkit-animation: progress-animation 2s linear infinite;
+    animation: progress-animation 2s linear infinite;
+  }
+  &__text {
+  }
+}
+
+@-webkit-keyframes progress-animation {
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 0;
+  }
+}
+
+@keyframes progress-animation {
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 0;
+  }
+}
+
+.loader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: inline-block;
+  background: #dbdbdb;
+  z-index: 999999;
+  /* display: none; */
+}
+
+.loader svg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loader svg path,
+svg rect {
+  fill: #e95c43;
+}
+
+.loader-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: #e95c43;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 200%);
+  line-height: 1;
+}
+
+.skipToMain {
+  display: block;
+  margin-bottom: -1px;
+  height: 1px;
+  text-align: center;
+  overflow: hidden;
+
+  &:focus {
+    height: auto;
+    margin-bottom: 0;
+  }
+}
+
+.screenHide {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  line-height: 1px;
+  border: 0;
+  clip: rect(1px, 1px, 1px 1px);
+  overflow: hidden;
+}
+
+.in {
+  width: $in;
+  margin: 0 auto;
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+
+.goTop {
+  position: fixed;
+  bottom: 56px;
+  right: 24px;
+  width: 36px;
+  height: 36px;
+  z-index: 99999;
+}
+
+.goDown {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 36px;
+  height: 36px;
+  z-index: 99999;
+}
+
+/* scrollGage */
+.scrollGage {
+  position: fixed;
+  top: 24px;
+  right: 64px;
+
+  &__percent {
+    display: block;
+    font-size: 16px;
+  }
+
+  &__bar {
+    display: block;
+    height: 16px;
+    background: #ddd;
+  }
+}
