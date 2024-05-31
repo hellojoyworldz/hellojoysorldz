@@ -3,44 +3,11 @@
 .mainCss {
   margin: $lyMargin 0;
   padding: $lyPadding $lyMargin;
-
-  &__tit {
-    margin-bottom: $lyMargin;
-    position: relative;
-    font-family: $fontThi;
-    font-size: $titSizThr;
-    color: $fontColFir;
-    text-align: center;
-
-    & img {
-      position: absolute;
-      top: -24px;
-      z-index: -1;
-    }
-  }
 }
 
 @media (max-width: 1440px) {
   .mainCss {
     padding: 48px 16px;
     width: auto;
-  }
-}
-
-@media (max-width: 860px) {
-  .mainCss {
-    &__tit {
-      margin-bottom: 32px;
-      font-size: 48px;
-
-      & .highlight {
-        margin-left: 0;
-        padding: 0;
-      }
-
-      & img {
-        width: 60px;
-      }
-    }
   }
 }
