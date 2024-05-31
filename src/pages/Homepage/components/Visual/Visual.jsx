@@ -4,16 +4,17 @@ import emojiImg02 from "../../../../assets/images/visual__emojiImg02.png";
 import emojiImg03 from "../../../../assets/images/visual__emojiImg03.png";
 import emojiBg from "../../../../assets/images/visual__emojiBg.png";
 
-const Visual = () => {
+const data = {
+  title: "G.SUNAH\nPORTFOLIO",
+  subtitle: "HELLO, WORLD!",
+  sbj: "I'M FRONTEND DEVELOPER",
+};
+const Visual = ({ bgcolor }) => {
   return (
-    <section className="visual" data-bgcolor="#fff">
+    <section className="visual" data-bgcolor={bgcolor}>
       <div className="visual__tit">
-        <h2>
-          G.SUNAH
-          <br />
-          PORTFOLIO
-        </h2>
-        <span className="visual__tit--move">HELLO, WORLD!</span>
+        <h2>{data.title}</h2>
+        <span className="visual__tit--move">{data.subtitle}</span>
       </div>
 
       <div className="visual__sbj">
@@ -23,10 +24,10 @@ const Visual = () => {
           data-scroll-speed="3"
           data-scroll-direction="horizontal"
         >
-          <span>I'M FRONTEND DEVELOPER</span>
-          <span>I'M FRONTEND DEVELOPER</span>
-          <span>I'M FRONTEND DEVELOPER</span>
-          <span>I'M FRONTEND DEVELOPER</span>
+          <span>{data.sbj}</span>
+          <span>{data.sbj}</span>
+          <span>{data.sbj}</span>
+          <span>{data.sbj}</span>
         </div>
       </div>
 
