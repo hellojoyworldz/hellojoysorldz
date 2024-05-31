@@ -7,7 +7,9 @@ import thumb04 from "../../../../assets/images/mainCode__img06.jpg";
 import thumb05 from "../../../../assets/images/mainCode__img07.jpg";
 import thumb06 from "../../../../assets/images/mainCode__img09.jpg";
 import thumb07 from "../../../../assets/images/mainCode__img10.jpg";
-import SiteJavaScriptItem from "./SiteJavaScriptItem";
+
+import TitleType5 from "../../../../components/Title/TitleType5/TitleType5";
+import ListType5 from "../../../../components/List/ListType5/ListType5";
 
 const items = [
   {
@@ -61,32 +63,11 @@ const items = [
   },
 ];
 
-const SiteJavaScript = () => {
+const SiteJavaScript = ({ bgcolor }) => {
   return (
-    <section className="mainCode" data-bgcolor="#f6f3ff">
-      <h2 className="mainCode__tit">
-        Hello,
-        <br />
-        My
-        <span className="highlight">
-          JavaScript
-          <img src={titleImg} alt="" />
-        </span>
-      </h2>
-
-      <ul className="list">
-        {items.map((item) => (
-          <li className={`list__item item${item.id}`} key={item.id}>
-            <SiteJavaScriptItem
-              id={item.id}
-              title={item.title}
-              type={item.type}
-              site={item.site}
-              thumb={item.thumb}
-            />
-          </li>
-        ))}
-      </ul>
+    <section className="mainCode" data-bgcolor={bgcolor}>
+      <TitleType5 title={"hello,"} subtitle={"My"} hightlight={"JavaScript"} />
+      <ListType5 items={items} />
     </section>
   );
 };
