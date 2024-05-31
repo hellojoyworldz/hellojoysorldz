@@ -1,0 +1,15 @@
+@use "../../../assets/styles/variable" as *;
+
+.titleType2{
+  margin-bottom: $lyMargin;
+  font-family: $font__third;
+  font-size: $titSizFir;
+  color: #310591;
+  white-space: break-spaces;
+}
+
+@media (max-width: 860px) {
+  .titleType2 {
+    font-size: 48px;
+  }
+}
