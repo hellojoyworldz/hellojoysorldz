@@ -1,79 +1,61 @@
 import "./Intro.style.scss";
-import IntroItem from "./IntroItem";
-import itemIcon01 from "../../../../assets/images/mainCate__itemIcon01.png";
-import itemIcon02 from "../../../../assets/images/mainCate__itemIcon02.png";
-import itemIcon03 from "../../../../assets/images/mainCate__itemIcon03.png";
-import itemIcon04 from "../../../../assets/images/mainCate__itemIcon04.png";
-import itemIcon05 from "../../../../assets/images/mainCate__itemIcon05.png";
-import itemBg01 from "../../../../assets/images/mainCate__itemBg01.jpg";
-import itemBg02 from "../../../../assets/images/mainCate__itemBg02.jpg";
-import itemBg03 from "../../../../assets/images/mainCate__itemBg03.jpg";
-import itemBg04 from "../../../../assets/images/mainCate__itemBg04.jpg";
-import itemBg05 from "../../../../assets/images/mainCate__itemBg05.jpg";
+import icon01 from "../../../../assets/images/mainCate__itemIcon01.png";
+import icon02 from "../../../../assets/images/mainCate__itemIcon02.png";
+import icon03 from "../../../../assets/images/mainCate__itemIcon03.png";
+import icon04 from "../../../../assets/images/mainCate__itemIcon04.png";
+import icon05 from "../../../../assets/images/mainCate__itemIcon05.png";
+import thumb01 from "../../../../assets/images/mainCate__itemBg01.jpg";
+import thumb02 from "../../../../assets/images/mainCate__itemBg02.jpg";
+import thumb03 from "../../../../assets/images/mainCate__itemBg03.jpg";
+import thumb04 from "../../../../assets/images/mainCate__itemBg04.jpg";
+import thumb05 from "../../../../assets/images/mainCate__itemBg05.jpg";
+
+import TitleType1 from "../../../../components/Title/TitleType1/TitleType1";
+import ListType1 from "../../../../components/List/ListType1/ListType1";
+
+const title = {
+  title: "Plan and\norgnize\n",
+  highlight: "anything",
+};
 
 const items = [
   {
-    id: 1,
+    id: "01",
     title: "Blog",
-    icon: itemIcon01,
-    thumb: itemBg01,
+    icon: icon01,
+    thumb: thumb01,
   },
   {
-    id: 2,
+    id: "02",
     title: "JavaScript &\n CSS Animation",
-    icon: itemIcon02,
-    thumb: itemBg02,
+    icon: icon02,
+    thumb: thumb02,
   },
   {
-    id: 3,
+    id: "03",
     title: `Work &\n Projects`,
-    icon: itemIcon03,
-    thumb: itemBg03,
+    icon: icon03,
+    thumb: thumb03,
   },
   {
-    id: 4,
+    id: "04",
     title: `Website &\n Portfolio`,
-    icon: itemIcon04,
-    thumb: itemBg04,
+    icon: icon04,
+    thumb: thumb04,
   },
   {
-    id: 5,
+    id: "05",
     title: `Contact Me`,
-    icon: itemIcon05,
-    thumb: itemBg05,
+    icon: icon05,
+    thumb: thumb05,
   },
 ];
 
-const Intro = () => {
+const Intro = ({ bgcolor }) => {
   return (
-    <section className="mainCate" data-bgcolor="#f5feff">
-      <h2 className="mainCate__tit">
-        Plan and
-        <br />
-        orgnize
-        <br />
-        <span className="highlight">anything</span>
-      </h2>
-      <div className="mainCate__listWrap">
-        <div
-          className="mainCate__list"
-          data-scroll
-          data-scroll-speed="8"
-          data-scroll-direction="horizontal"
-        >
-          <ul className="list">
-            {items.map((item) => (
-              <li key={item.id}>
-                <IntroItem
-                  title={item.title}
-                  icon={item.icon}
-                  thumb={item.thumb}
-                />
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
+    <section className="mainCate" data-bgcolor={bgcolor}>
+      <TitleType1 title={title.title} highlight={title.highlight} />
+      <ListType1 items={items} />
     </section>
   );
 };

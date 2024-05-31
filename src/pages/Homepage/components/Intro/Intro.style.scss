@@ -3,48 +3,4 @@
 .mainCate {
   padding: $lyPadding 0;
   overflow-x: hidden;
-
-  &__tit {
-    margin-bottom: $lyMargin;
-    font-family: $fontThi;
-    font-weight: 600;
-    font-size: $fontSizLv1;
-    line-height: $lineHeiLv3;
-    color: $fontColFir;
-    text-align: center;
-
-    & .highlight {
-      color: $colPoint4;
-    }
-  }
-
-  &__listWrap {
-    display: flex;
-    width: 100vw;
-    max-width: $in;
-    margin: 0 auto;
-  }
-
-  & .list {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    grid-column-gap: $lyGap;
-    white-space: nowrap;
-  }
-}
-
-@media (max-width: 860px) {
-  .mainCate {
-    //padding: 48px 0;
-
-    &__tit {
-      margin-bottom: 32px;
-      font-size: 52px;
-    }
-
-    & .list {
-      grid-column-gap: 16px;
-    }
-  }
 }
