@@ -5,9 +5,9 @@ import emoji02 from "../../../../assets/images/mainBanner__emoji02.png";
 import emoji03 from "../../../../assets/images/mainBanner__emoji03.png";
 import emoji04 from "../../../../assets/images/mainBanner__emoji04.png";
 
-const Banner = () => {
+const Banner = ({ bgcolor }) => {
   return (
-    <section className="mainBanner" data-bgcolor="#fde445">
+    <section className="mainBanner" data-bgcolor={bgcolor}>
       <div className="mainBanner__bg">
         <img src={emojiBg} alt="" />
       </div>
