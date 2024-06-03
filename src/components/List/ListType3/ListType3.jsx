@@ -1,51 +1,17 @@
 import "./ListType3.style.scss";
-import React, { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import emojiBg from "../../../assets/images/mainSite__emojiBg.png";
 import emoji01 from "../../../assets/images/mainSite__emojiImg01.png";
 import emoji02 from "../../../assets/images/mainSite__emojiImg02.png";
 import emoji03 from "../../../assets/images/mainSite__emojiImg03.png";
 
-const ListType3 = ({ bgcolor, scroller, titleType, items }) => {
-  const horizontalSectionRef = useRef(null);
-  const pinWrapRef = useRef(null);
-
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    const horizontalSection = horizontalSectionRef.current;
-    const pinWrap = pinWrapRef.current;
-    const pinWrapWidth = pinWrap.offsetWidth;
-    const horizontalScrollLength = pinWrapWidth - window.innerWidth;
-
-    const pin = gsap.to(pinWrap, {
-      scrollTrigger: {
-        scroller: scroller.current,
-        trigger: horizontalSection,
-        start: "top top",
-        end: () => `+=${pinWrapWidth}`,
-        scrub: true,
-        pin: true,
-        markers: false,
-        invalidateOnRefresh: true,
-      },
-      x: -horizontalScrollLength,
-      ease: "none",
-    });
-
-    return () => {
-      pin.kill();
-    };
-  }, []);
-
+const ListType3 = ({ bgcolor, titleType, items }) => {
   return (
     <div
       className="listType3 horizontal-scroll"
       data-bgcolor={bgcolor}
-      ref={horizontalSectionRef}
+      data-horizontal-scroll
     >
-      <div className="pin-wrap" ref={pinWrapRef}>
+      <div className="pin-wrap" data-pin-wrap>
         <div className="listType3__header">
           {titleType}
           <div className="listType3__emoji">

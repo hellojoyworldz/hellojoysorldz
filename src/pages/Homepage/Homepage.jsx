@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import locomotiveScroll from "locomotive-scroll";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -16,6 +16,8 @@ const Homepage = () => {
   const scrollRef = useRef(null);
 
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
     scrollRef.current.setAttribute("data-scroll-container", "");
 
     // locomotive
@@ -41,6 +43,32 @@ const Homepage = () => {
         };
       },
       pinType: scrollRef.current.style.transform ? "transform" : "fixed",
+    });
+
+    // 가로스크롤
+    const horizontalSections = document.querySelectorAll(
+      "[data-horizontal-scroll]",
+    );
+
+    horizontalSections.forEach((horizontalSection) => {
+      const pinWrap = horizontalSection.querySelector("[data-pin-wrap]");
+      const pinWrapWidth = pinWrap.offsetWidth;
+      const horizontalScrollLength = pinWrapWidth - window.innerWidth;
+
+      gsap.to(pinWrap, {
+        scrollTrigger: {
+          scroller: scrollRef.current,
+          scrub: true,
+          trigger: horizontalSection,
+          pin: true,
+          start: "top top",
+          markers: false,
+          end: () => `+=${pinWrapWidth}`,
+          invalidateOnRefresh: true,
+        },
+        x: -horizontalScrollLength,
+        ease: "none",
+      });
     });
 
     // 배경 색상 변경
@@ -82,7 +110,7 @@ const Homepage = () => {
         <Visual bgcolor={"#fff"} />
         <Intro bgcolor={"#f5feff"} />
         <SiteProject bgcolor={"#c2aeec"} />
-        <SitePublishing bgcolor={"#310591"} scroller={scrollRef} />
+        <SitePublishing bgcolor={"#310591"} />
         <Banner bgcolor={"#fde445"} />
         <SiteCss bgcolor={"#f5f5f5"} />
         <SiteJavaScript bgcolor={"#f6f3ff"} />

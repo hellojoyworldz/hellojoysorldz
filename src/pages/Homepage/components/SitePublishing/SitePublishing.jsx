@@ -4,7 +4,6 @@ import thumb02 from "../../../../assets/images/mainSite__thumb02.jpg";
 import thumb03 from "../../../../assets/images/mainSite__thumb03.jpg";
 import thumb04 from "../../../../assets/images/mainSite__thumb04.jpg";
 import thumb05 from "../../../../assets/images/mainSite__thumb05.jpg";
-import img01 from "../../../../assets/images/mainSite__img01.jpg";
 
 import TitleType3 from "../../../../components/Title/TitleType3/TitleType3";
 import ListType3 from "../../../../components/List/ListType3/ListType3";
@@ -26,11 +25,10 @@ const items = [
   },
 ];
 
-const SitePublishing = ({ bgcolor, scroller }) => {
+const SitePublishing = ({ bgcolor }) => {
   return (
     <ListType3
       bgcolor={bgcolor}
-      scroller={scroller}
       titleType={<TitleType3 title={" Hello,\nMy Publishing Site"} />}
       items={items}
     />
