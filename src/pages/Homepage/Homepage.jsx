@@ -1,8 +1,12 @@
+import "../../assets/styles/reset.scss";
+import "../../assets/styles/common.scss";
+
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import locomotiveScroll from "locomotive-scroll";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
+import Header from "./components/Header/Header";
 import Visual from "./components/Visual/Visual";
 import Intro from "./components/Intro/Intro";
 import SiteProject from "./components/SiteProject/SiteProject";
@@ -105,18 +109,21 @@ const Homepage = () => {
     };
   }, []);
   return (
-    <div id="contents" ref={scrollRef}>
-      <main className="main">
-        <Visual bgcolor={"#fff"} />
-        <Intro bgcolor={"#f5feff"} />
-        <SiteProject bgcolor={"#c2aeec"} />
-        <SitePublishing bgcolor={"#310591"} />
-        <Banner bgcolor={"#fde445"} />
-        <SiteCss bgcolor={"#f5f5f5"} />
-        <SiteJavaScript bgcolor={"#f6f3ff"} />
-        <Profile bgcolor={"#ff7896"} />
-      </main>
-    </div>
+    <>
+      <Header />
+      <div id="contents" ref={scrollRef}>
+        <main className="main">
+          <Visual bgcolor={"#fff"} />
+          <Intro bgcolor={"#f5feff"} />
+          <SiteProject bgcolor={"#c2aeec"} />
+          <SitePublishing bgcolor={"#310591"} />
+          <Banner bgcolor={"#fde445"} />
+          <SiteCss bgcolor={"#f5f5f5"} />
+          <SiteJavaScript bgcolor={"#f6f3ff"} />
+          <Profile bgcolor={"#ff7896"} />
+        </main>
+      </div>
+    </>
   );
 };
 

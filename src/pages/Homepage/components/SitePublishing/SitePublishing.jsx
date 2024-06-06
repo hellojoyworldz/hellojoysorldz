@@ -1,4 +1,4 @@
-import "./sitePublishing.style.scss";
+import "./SitePublishing.style.scss";
 import thumb01 from "../../../../assets/images/mainSite__thumb01.jpg";
 import thumb02 from "../../../../assets/images/mainSite__thumb02.jpg";
 import thumb03 from "../../../../assets/images/mainSite__thumb03.jpg";
