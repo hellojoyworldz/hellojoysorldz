@@ -11,9 +11,9 @@ const data = {
     name: "Gwak Sunah",
     email: "hellojoyworldz@gmail.com",
     phone: "+82 10-9783-6375",
-    portfolio: "hellojoyworldz.github.io/myPORTFOLIO",
-    github: "github.com/hellojoyworldz",
-    blog: "hellojoyworldz.tistory.com",
+    portfolio: "https://hellojoyworldz.netlify.app/",
+    github: "https:/github.com/hellojoyworldz",
+    blog: "https://velog.io/@hellojoyworldz/",
   },
 };
 
