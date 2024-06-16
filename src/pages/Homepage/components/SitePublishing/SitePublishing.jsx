@@ -11,17 +11,31 @@ import ListType3 from "../../../../components/List/ListType3/ListType3";
 const items = [
   {
     id: "01",
-    title: "title",
-    desc: "desc",
-    site: "url",
+    title: "Lee Seung Gi",
+    desc: "데스크탑, 모바일 UI 개발\n" + "참여도 100%",
+    site: "http://hookent.webmaker21.kr/?device=pc",
     thumb: thumb01,
   },
   {
     id: "02",
-    title: "title2",
-    desc: "desc2",
-    site: "url",
+    title: "DSP Media",
+    desc: "반응형 UI 개발\n" + "참여도 100%",
+    site: "http://dspmedia.co.kr/",
     thumb: thumb02,
+  },
+  {
+    id: "03",
+    title: "Amway\nFoundation",
+    desc: "반응형 UI 개발\n" + "참여도 100%",
+    site: "https://www.afuture.or.kr/",
+    thumb: thumb03,
+  },
+  {
+    id: "03",
+    title: "more",
+    desc: "그 외 작업물",
+    site: "https://hellojoyworldz.github.io/myWork/work/",
+    thumb: thumb05,
   },
 ];
 
