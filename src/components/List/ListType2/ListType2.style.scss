@@ -1,6 +1,6 @@
-@use "../../../../assets/styles/variable.scss" as *;
+@use "../../../assets/styles/variable" as *;
 
-.mainFront {
+.listType2 {
   & .list {
     &__item {
       position: relative;
@@ -64,14 +64,14 @@
 
       &.cate {
         &--react::before {
-          background-image: url("../../../../assets/images/icon_react.png");
+          background-image: url("../../../assets/images/icon_react.png");
         }
 
         &--vue::before {
-          background-image: url("../../../../assets/images/icon_vue.png");
+          background-image: url("../../../assets/images/icon_vue.png");
         }
         &--php::before {
-          background-image: url("../../../../assets/images/icon_php.png");
+          background-image: url("../../../assets/images/icon_php.png");
         }
       }
     }
@@ -126,7 +126,7 @@
 }
 
 @media (max-width: 1440px) {
-  .mainFront {
+  .listType2 {
     & .list {
       &__item {
         margin: 12px 0;
@@ -136,7 +136,7 @@
 }
 
 @media (max-width: 860px) {
-  .mainFront {
+  .listType2 {
     & .list {
       &__item {
         flex-direction: column-reverse;

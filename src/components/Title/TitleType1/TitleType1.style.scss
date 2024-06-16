@@ -1,0 +1,23 @@
+@use "../../../assets/styles/variable" as *;
+
+.TitleType1 {
+  margin-bottom: $lyMargin;
+  font-family: $fontThi;
+  font-weight: 600;
+  font-size: $fontSizLv1;
+  line-height: $lineHeiLv3;
+  color: $fontColFir;
+  text-align: center;
+  white-space: break-spaces;
+
+  & .highlight {
+    color: $colPoint4;
+  }
+}
+
+@media (max-width: 860px) {
+  .TitleType1 {
+    margin-bottom: 32px;
+    font-size: 52px;
+  }
+}

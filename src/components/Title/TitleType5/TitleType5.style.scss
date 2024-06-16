@@ -1,0 +1,29 @@
+@use "../../../assets/styles/variable" as *;
+
+.titleType5 {
+  position: relative;
+  margin-bottom: $lyMargin;
+  font-family: $fontThi;
+  font-size: $titSizThr;
+  color: $fontColFir;
+  text-align: center;
+
+  & .highlight {
+    position: relative;
+
+    & img {
+      position: absolute;
+      top: -24px;
+      right: 0;
+      width: 100%;
+      z-index: -1;
+    }
+  }
+}
+
+@media (max-width: 860px) {
+  .titleType5 {
+    margin-bottom: 32px;
+    font-size: 48px;
+  }
+}

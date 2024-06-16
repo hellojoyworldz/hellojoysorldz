@@ -1,6 +1,6 @@
-@use "../../../../assets/styles/variable.scss" as *;
+@use "../../../assets/styles/variable" as *;
 
-.mainCss {
+.listType4 {
   & .list {
     &__item {
       position: relative;
@@ -98,15 +98,8 @@
   }
 }
 
-@media (max-width: 1440px) {
-  .mainCss {
-    padding: 48px 16px;
-    width: auto;
-  }
-}
-
 @media (max-width: 860px) {
-  .mainCss {
+  .listType4 {
     .list {
       &__item {
         flex-direction: column;

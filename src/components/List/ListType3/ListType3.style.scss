@@ -1,6 +1,82 @@
-@use "../../../../assets/styles/variable.scss" as *;
+@use "../../../assets/styles/variable" as *;
 
-.mainSite {
+.horizontal-scroll {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  left: 0;
+}
+
+.pin-wrap {
+  height: 100vh;
+  min-height: 820px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  //padding: 50px 10vw;
+}
+
+.pin-wrap > * {
+  min-width: 100vw;
+  padding: 0 20vw;
+  box-sizing: border-box;
+}
+
+.listType3 {
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &__tit {
+    position: relative;
+    text-align: right;
+    font-family: $font__third;
+    font-size: $fontSizLv1;
+    line-height: $lineHeiLv3;
+    color: $whiteFff;
+
+    &Img {
+      position: absolute;
+      right: 0;
+      bottom: -60%;
+      width: 21vw;
+      z-index: -1;
+      & img {
+        width: 100%;
+      }
+    }
+  }
+
+  &__emoji {
+    position: relative;
+    margin: 0 0 -30vh -5vw;
+    width: $in;
+    height: 910px;
+    z-index: -1;
+
+    & img {
+      width: 100%;
+    }
+
+    &Circle,
+    &Icon,
+    &Dot,
+    &Bg {
+      position: relative;
+    }
+
+    &Circle > span,
+    &Icon > span,
+    &Dot > span,
+    &Bg > span {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+
   & .list {
     &__contents {
       position: relative;
@@ -57,7 +133,7 @@
         right: 24px;
         bottom: 24px;
         left: 24px;
-        background: rgba(255, 255, 255, 0.5) url(../../../../assets/images/icon_more2.png) no-repeat 50% 50%;
+        background: rgba(255, 255, 255, 0.5) url(../../../assets/images/icon_more2.png) no-repeat 50% 50%;
         background-size: 20% auto;
         transition: all 0.4s ease-in-out;
         transform: rotate3d(1, -1, 0, 100deg);
@@ -94,7 +170,13 @@
 
 @media (max-width: 860px) {
 
-  .mainSite {
+  .listType3 {
+
+    &__emoji {
+      width: 860px;
+      height: 360px;
+    }
+
     & .list {
       &__item {
         flex-direction: column;

@@ -1,7 +1,18 @@
-@use "../../../../assets/styles/variable.scss" as *;
+@use "../../../assets/styles/variable" as *;
 
-.mainCate {
+.listType1 {
+  display: flex;
+  width: 100vw;
+  max-width: $in;
+  margin: 0 auto;
+
   & .list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column-gap: $lyGap;
+    white-space: nowrap;
+
     &__item {
       position: relative;
       aspect-ratio: 67 / 100;
@@ -36,7 +47,7 @@
       text-align: center;
       font-size: 2.5vw;
       line-height: 1.2em;
-      white-space: pre-line;
+      white-space: break-spaces;
       z-index: 2;
     }
 
@@ -48,31 +59,30 @@
       }
     }
 
-    li:nth-child(5n-4) .list__tit {
+    &__item:nth-child(5n-4) .list__tit {
       color: $colPoint1;
     }
 
-    li:nth-child(5n-3) .list__tit {
+    &__item:nth-child(5n-3) .list__tit {
       color: $colPoint2;
     }
 
-    li:nth-child(5n-2) .list__tit {
+    &__item:nth-child(5n-2) .list__tit {
       color: $colPoint3;
     }
 
-    li:nth-child(5n-1) .list__tit {
+    &__item:nth-child(5n-1) .list__tit {
       color: $colPoint4;
     }
 
-    li:nth-child(5n) .list__tit {
+    &__item:nth-child(5n) .list__tit {
       color: $colPoint5;
     }
   }
 }
 
 @media (max-width: 860px) {
-  .mainCate {
-
+  .listType1 {
     & .list {
       grid-column-gap: 16px;
 
@@ -86,4 +96,5 @@
       }
     }
   }
+
 }

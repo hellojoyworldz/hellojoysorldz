@@ -1,0 +1,15 @@
+@use "../../../../assets/styles/variable.scss" as *;
+
+.mainSite {
+  margin: $lyPadding 0;
+}
+
+@media (max-width: 860px) {
+  .mainSite {
+    min-height: auto;
+  }
+
+  .pin-wrap {
+    min-height: auto;
+  }
+}

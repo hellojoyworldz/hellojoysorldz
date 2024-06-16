@@ -1,13 +1,15 @@
 import "./SiteProject.style.scss";
-import SiteProjectItem from "./SiteProjectItem";
 import img01 from "../../../../assets/images/mainReact__img01.jpg";
 import img02 from "../../../../assets/images/mainReact__img02.jpg";
 import img03 from "../../../../assets/images/mainReact__img03.jpg";
 import img04 from "../../../../assets/images/mainReact__img04.jpg";
 
+import TitleType2 from "../../../../components/Title/TitleType2/TitleType2";
+import ListType2 from "../../../../components/List/ListType2/ListType2";
+
 const items = [
   {
-    id: 1,
+    id: "01",
     type: "react",
     desc: "첫 번째로 제작한 React 사이트입니다.",
     title: "title",
@@ -16,7 +18,7 @@ const items = [
     thumb: img01,
   },
   {
-    id: 2,
+    id: "02",
     type: "react",
     desc: "두 번째로 제작한 React 사이트입니다.",
     title: "title",
@@ -25,28 +27,11 @@ const items = [
     thumb: img02,
   },
 ];
-const SiteProject = () => {
+const SiteProject = ({ bgcolor }) => {
   return (
-    <section className="mainFront" data-bgcolor="#c2aeec">
-      <h2 className="mainFront__tit">
-        Hello✋🏻
-        <br />
-        My SideProject
-      </h2>
-      <ul className="list">
-        {items.map((item) => (
-          <li key={item.id}>
-            <SiteProjectItem
-              type={item.type}
-              title={item.title}
-              desc={item.desc}
-              github={item.github}
-              site={item.site}
-              thumb={item.thumb}
-            />
-          </li>
-        ))}
-      </ul>
+    <section className="mainFront" data-bgcolor={bgcolor}>
+      <TitleType2 title={"Hello✋🏻\nMy SideProject"} />
+      <ListType2 items={items} />
     </section>
   );
 };

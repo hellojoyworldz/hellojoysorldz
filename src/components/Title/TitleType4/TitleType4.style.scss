@@ -1,0 +1,34 @@
+@use "../../../assets/styles/variable" as *;
+
+.titleType4 {
+  margin-bottom: $lyMargin;
+  position: relative;
+  font-family: $fontThi;
+  font-size: $titSizThr;
+  color: $fontColFir;
+  text-align: center;
+
+  & img {
+    position: absolute;
+    top: -24px;
+    z-index: -1;
+  }
+}
+
+@media (max-width: 860px) {
+
+  .titleType4 {
+    margin-bottom: 32px;
+    font-size: 48px;
+
+    & .highlight {
+      margin-left: 0;
+      padding: 0;
+    }
+
+    & img {
+      width: 60px;
+    }
+  }
+
+}

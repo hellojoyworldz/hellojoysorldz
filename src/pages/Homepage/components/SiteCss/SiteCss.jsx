@@ -7,11 +7,12 @@ import thumb04 from "../../../../assets/images/mainCss__todo.gif";
 import thumb05 from "../../../../assets/images/mainCss__card.gif";
 import thumb06 from "../../../../assets/images/mainCss__snowball.gif";
 
-import SiteCssItem from "./SiteCssItem";
+import TitleType4 from "../../../../components/Title/TitleType4/TitleType4";
+import ListType4 from "../../../../components/List/ListType4/ListType4";
 
 const items = [
   {
-    id: 1,
+    id: "01",
     site: "https://hellojoyworldz.github.io/myCSS/animation/marquee",
     thumb: thumb01,
     title: "title",
@@ -19,28 +20,11 @@ const items = [
   },
 ];
 
-const SiteCss = () => {
+const SiteCss = ({ bgcolor }) => {
   return (
-    <section className="mainCss" data-bgcolor="#f5f5f5">
-      <h2 className="mainCss__tit">
-        Hello,
-        <img src={titleImg} alt="" />
-        <br />
-        My
-        <span className="highlight">CSS Animation</span>
-      </h2>
-
-      <ul className="list">
-        {items.map((item) => (
-          <SiteCssItem
-            key={item.id}
-            site={item.site}
-            thumb={item.thumb}
-            title={item.title}
-            desc={item.desc}
-          />
-        ))}
-      </ul>
+    <section className="mainCss" data-bgcolor={bgcolor}>
+      <TitleType4 title={"Hello,"} subtitle={"MyCSS Animation"} />
+      <ListType4 items={items} />
     </section>
   );
 };
