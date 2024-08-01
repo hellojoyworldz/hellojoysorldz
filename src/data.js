@@ -265,7 +265,7 @@ const portfolioData = {
         email: "hellojoyworldz@gmail.com",
         phone: "+82 10-9783-6375",
         portfolio: "https://hellojoyworldz.netlify.app/",
-        github: "https:/github.com/hellojoyworldz",
+        github: "https://github.com/hellojoyworldz",
         blog: "https://velog.io/@hellojoyworldz/",
       },
     },
