@@ -45,35 +45,32 @@ const portfolioData = {
       {
         id: "01",
         type: "react",
-        desc: "섹션 별로 jsx 파일을 만들어 export 한 후 App.js에서 import 하여 받아와 컴포넌트 단위로 사이트를 제작하였습니다. 또한 props를 사용하여 폰트명, 배경색 등을 전달하고 적용시켰습니다.",
-        title: "Auckland",
-        github:
-          "https://github.com/hellojoyworldz/webs/tree/master/myREACT/react_site1",
-        site: "https://subtle-caramel-58a09a.netlify.app/",
-        thumb: `${IMG_PATH}/mainReact__img01.jpg`,
+        desc: `디자인 시스템에 대한 모든 것을 알려주는 AI 챗봇 입니다.\n\n이미지 기반 대화를 지원하며, SSE 방식으로 실시간 응답을 제공합니다. 또한 API 키 노출 방지를 위해 Express.js로 백엔드 서버를 구축하여 OpenAI API 호출 로직을 구현하였습니다.`,
+        title: "디자인 시스템에 특화된 AI 챗봇💬",
+        github: "https://github.com/hellojoyworldz/ChatGPT-for-design-system",
+        site: "https://chat-gpt-for-design-system-plugin.vercel.app/",
+        thumb: `https://github.com/user-attachments/assets/b42a4bd4-8af6-422c-82b3-9f69e6be2f8f`,
         speed: 1,
       },
       {
         id: "02",
         type: "react",
-        desc: "npm을 통해 Swiper를 설치하여 Autoplay와 loop 기능이 추가된 슬라이드를 구현하였고, SCSS를 사용해 스타일링 하였습니다.",
-        title: "Hotels Combined",
+        desc: "포트폴리오를 npm 패키지로 배포하여 라이브러리로 제작하였습니다.\n\nSCSS 변수와 믹스인으로 디자인 시스템을 구축하였고 TypeScript를 사용하여 잘못된 디자인 토큰값이 전달되는것을 방지하였습니다.",
+        title: "React 포트폴리오 컴포넌트 라이브러리",
         github:
-          "https://github.com/hellojoyworldz/webs/tree/master/myREACT/react_site2",
-        site: "https://nimble-marzipan-2527bd.netlify.app/",
-        thumb: `${IMG_PATH}/mainReact__img02.jpg`,
+          "https://github.com/hellojoyworldz/react-portfolio-component-library",
+        site: "https://www.npmjs.com/package/react-portfolio-component-library",
+        thumb: `https://camo.githubusercontent.com/40a8f48c47e20f6d2260b3155b3dbf48bdbc24ce48ff6f60e78c7cd0a689abf4/68747470733a2f2f76656c6f672e76656c63646e2e636f6d2f696d616765732f68656c6c6f6a6f79776f726c647a2f706f73742f31643266346134352d646139652d343261332d613932362d3637633234316662313038652f696d6167652e676966`,
         speed: 3,
       },
       {
         id: "03",
         type: "react",
-        desc:
-          "API를 활용한 React 사이트입니다.\n" +
-          "TMDB , Youtube , Unsplash API를 활용하여 영화, 영상, 이미지 검색 기능을 제작하였고 BrowserRouter를 사용하여 URL 주소에 따라 다른 화면을 렌더링 해주었습니다.",
-        title: "API Site",
+        desc: "TMDB API를 활용한 영화 추천 웹사이트입니다. \n\nReact Query를 통해 영화 데이터를 비동기적으로 관리합니다. 사용자는 인기 영화, 평점 높은 영화, 상영 예정작을 볼 수 있고, 영화 상세 정보와 검색, 필터링 기능도 제공합니다",
+        title: "Movie-App",
         github:
-          "https://github.com/hellojoyworldz/webs/tree/master/myREACT/react_site3",
-        site: "https://creative-cheesecake-090cdf.netlify.app/",
+          "https://github.com/hellojoyworldz/lego-project/tree/main/movie-app",
+        site: "https://movie-app-react-sa.netlify.app/",
         thumb: `${IMG_PATH}/mainReact__img03.jpg`,
         speed: 2,
       },
@@ -106,7 +103,7 @@ const portfolioData = {
     ],
   },
   listHorizontal: {
-    title: "Hello,\nMy Publishing Site",
+    title: "Hello,\nMy Work Experience",
     items: [
       {
         id: "01",
@@ -124,7 +121,7 @@ const portfolioData = {
       },
       {
         id: "03",
-        title: "Amway\nFoundation",
+        title: "Amway\nFuture-Foundation",
         desc: "반응형 UI 개발\n" + "참여도 100%",
         site: "https://www.afuture.or.kr/",
         thumb: `${IMG_PATH}/mainSite__thumb03.jpg`,
@@ -133,7 +130,7 @@ const portfolioData = {
         id: "04",
         title: "more",
         desc: "그 외 작업물",
-        site: "https://hellojoyworldz.github.io/myWork/work/",
+        site: "https://docs.google.com/spreadsheets/d/1jXh5vqdmWQk-j75eBMaGQGPAG2jdtDxmLR7cPIN3oCw/edit?usp=sharing",
         thumb: `${IMG_PATH}/mainSite__img01.jpg`,
       },
     ],
@@ -259,7 +256,6 @@ const portfolioData = {
       textpath: "Welcome My Portfolio Site · Hello My World ·",
       footersbj: "IMPOSSIBLE IS NOTING · ",
       notice: "더 좋은 결과를 위해 계속 수정 중에 있습니다",
-      photo: `${IMG_PATH}/IMG_0419.JPG`,
       info: {
         name: "Gwak Sunah",
         email: "hellojoyworldz@gmail.com",
